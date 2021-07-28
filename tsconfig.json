@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+
+    // Modules
+    "baseUrl": ".",
+    "module": "es6",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+
+    // Language and Environment
+    "jsx": "react",
+    "target": "es6",
+    "lib": ["esnext", "dom"],
+
+    // Emit
+    "outDir": "static/scripts",
+    "sourceMap": true,
+
+    // Interop Constraints
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    // Type Checking
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+
+  },
+  "include": ["src"],
+  "exclude": ["builder"]
+}

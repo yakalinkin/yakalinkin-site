@@ -1,0 +1,37 @@
+// Typography
+//
+
+// Font path
+$font-path: map-deep-get($font, 'path') !default;
+
+// Typefaces
+$font-typefaces: map-deep-get($font, 'typefaces') !default;
+
+// Font family
+$font-family: system-ui, sans-serif !default;
+$font-family-primary: map-deep-get($font-typefaces, 'primary', 'family'), $font-family !default;
+
+// Font size
+$font-size: rem(16px) !default;
+$font-size-sm: rem(16px - 2) !default;
+$font-size-lg: rem(16px + 2) !default;
+
+// Line height
+$font-height-default: 1.5em !default;
+$font-height-condensed: 1.25em !default;
+$font-height-condensed-ultra: 1 !default;
+
+// Font weight
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+// Body
+//
+
+$body-family: $font-family-primary !default;
+$body-size: $font-size !default;
+$body-line-height: $font-height-default !default;
+$body-weight: $font-weight-normal !default;
+$body-color: black !default;
+
+$color-red: red;

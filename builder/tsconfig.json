@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+
+    // Language and Environment
+    "target": "es5",
+
+    // Modules
+    "baseUrl": ".",
+    "module": "commonjs",
+    "paths": {
+      "@configs": ["configs/index.ts"],
+      "@utils": ["utils/index.ts"],
+    },
+
+    // Interop Constraints
+    "esModuleInterop": true,
+
+  }
+}

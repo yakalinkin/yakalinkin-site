@@ -1,0 +1,43 @@
+@include load-fonts($font-typefaces);
+
+#root {
+  @include body-typo;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+html {
+  cursor: default;
+  tab-size: 4;
+  word-break: break-all;
+}
+
+body {
+  margin: 0;
+}
+
+nav ol,
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
