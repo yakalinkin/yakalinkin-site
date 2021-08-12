@@ -2,6 +2,18 @@
 
 #root {
   @include body-typo;
+
+  min-height: 100vh;
+}
+
+:root {
+  cursor: default;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
 }
 
 *,
@@ -25,17 +37,20 @@ html {
 
 body {
   margin: 0;
+  background-color: color-rgb('background');
 }
 
-nav ol,
-nav ul {
+nav :where(ol, ul) {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 img,
 svg {
   vertical-align: middle;
+  width: auto;
+  height: 100%;
 }
 
 svg:not([fill]) {

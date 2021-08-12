@@ -13,7 +13,12 @@ const builderConfig: Configs = {
         ],
       },
       resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.scss'],
+        extensions: [
+          '.tsx',
+          '.ts',
+          '.js',
+          '.scss',
+        ],
         alias: {
           'react-dom': '@hot-loader/react-dom',
         },

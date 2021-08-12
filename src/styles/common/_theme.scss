@@ -1,0 +1,19 @@
+@mixin light-mode {
+  @include color-theme($colors, 'light');
+}
+
+@mixin dark-mode {
+  @include color-theme($colors, 'dark');
+}
+
+:root {
+  @include light-mode;
+}
+
+[data-theme="light"] {
+  @include light-mode;
+}
+
+[data-theme="dark"] {
+  @include dark-mode;
+}

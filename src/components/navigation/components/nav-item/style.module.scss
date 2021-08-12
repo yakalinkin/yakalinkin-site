@@ -1,0 +1,9 @@
+@import '~styles/main-utils';
+
+.navigation__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: map-get($spacers, '3lg');
+  }
+}

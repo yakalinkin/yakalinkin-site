@@ -1,0 +1,12 @@
+@import '~styles/main-utils';
+
+.action {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: map-get($spacers, '4lg');
+  width: map-get($spacers, '4lg');
+  cursor: pointer;
+  user-select: none;
+}

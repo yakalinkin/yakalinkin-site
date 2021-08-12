@@ -7,7 +7,8 @@ export const typescriptRule: Rule = function ({ paths }) {
     include: paths.root.dev,
     use: [
       { loader: 'cache-loader' },
-      { loader: 'ts-loader' },
+      { loader: 'babel-loader' },
+      { loader: 'ts-loader', options: { transpileOnly: true } },
     ],
   };
 };

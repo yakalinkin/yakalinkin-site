@@ -32,7 +32,6 @@
       "comma-dangle": ["warn", "always-multiline"],
       "space-before-blocks": ["warn", "always"],
       "func-call-spacing": ["warn", "never"],
-      // "space-before-function-paren": ["warn", "never"],
       "block-spacing": ["warn", "always"],
       "arrow-parens": ["warn", "always"],
       "object-curly-spacing": ["warn", "always"],
@@ -53,6 +52,7 @@
 
       "react/jsx-uses-react": "error",
       "react/jsx-uses-vars": "error",
+      "react/prop-types": "off",
 
       "react-hooks/exhaustive-deps": "warn"
     }

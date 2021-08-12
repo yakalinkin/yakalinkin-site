@@ -1,5 +1,6 @@
 import { Configuration } from 'webpack';
 import webpackMerge from 'webpack-merge';
+import { join } from 'path';
 
 import { filesRules, stylesRules, typescriptRule } from './rules';
 
@@ -70,6 +71,8 @@ export default (paths: Paths, config: Config) => {
         'styles': paths.dev.styles,
         'images': paths.assets.images,
         'fonts': paths.assets.fonts,
+        '@components': join(paths.root.dev, 'components'),
+        '@styles': join(paths.root.dev, 'styles'),
       },
     },
 

@@ -6,6 +6,10 @@
     "module": "es6",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
+    },
 
     // Language and Environment
     "jsx": "react",

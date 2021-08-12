@@ -1,3 +1,25 @@
+// Color palette
+//
+
+$color-background: map-deep-get($colors, 'light', 'background') !default;
+$color-main: map-deep-get($colors, 'light', 'main') !default;
+
+
+// Breakpoints
+//
+
+$grid-columns: map-deep-get($grid, 'columns') !default;
+$grid-gutter: map-deep-get($grid, 'gutter') !default;
+$grid-breakpoints: map-deep-get($grid, 'breakpoints') !default;
+$grid-max-widths: map-deep-get($grid, 'max-widths') !default;
+
+// Spacing
+//
+
+$spacers: map-deep-get($spacers) !default;
+$spacers-em: em-map($spacers) !default;
+
+
 // Typography
 //
 
@@ -32,6 +54,4 @@ $body-family: $font-family-primary !default;
 $body-size: $font-size !default;
 $body-line-height: $font-height-default !default;
 $body-weight: $font-weight-normal !default;
-$body-color: black !default;
-
-$color-red: red;
+$body-color: color-rgb('main') !default;

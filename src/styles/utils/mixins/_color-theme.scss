@@ -1,0 +1,5 @@
+@mixin color-theme($colors, $theme) {
+  @each $key, $color in map-get($colors, $theme) {
+    #{color-property($key)}: unquote("#{red($color)}, #{green($color)}, #{blue($color)}");
+  }
+}

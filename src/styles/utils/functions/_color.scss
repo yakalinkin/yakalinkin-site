@@ -1,0 +1,11 @@
+@function color-property($color-key) {
+  @return #{'--color-#{$color-key}'};
+}
+
+@function color-rgb($color-name) {
+  @return unquote('rgb(#{var(color-property($color-name))})');
+}
+
+@function color-rgba($color-name, $opacity) {
+  @return unquote('rgba(#{var(color-property($color-name))}, #{$opacity})');
+}
