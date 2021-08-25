@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
 
-    // Modules
     "baseUrl": ".",
     "module": "es6",
     "moduleResolution": "node",
@@ -10,29 +9,24 @@
       "@components/*": ["src/components/*"],
       "@styles/*": ["src/styles/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@utils/*": ["src/utils/*"],
+      "@utils/*": ["src/utils/*"]
     },
 
-    // Language and Environment
     "jsx": "react",
     "target": "es6",
     "lib": ["esnext", "dom"],
 
-    // Emit
     "outDir": "static/scripts",
     "sourceMap": true,
 
-    // Interop Constraints
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
 
-    // Type Checking
     "noImplicitAny": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "alwaysStrict": true,
-    "strictNullChecks": true,
-
+    "strictNullChecks": true
   },
   "include": ["src"],
   "exclude": ["builder"]

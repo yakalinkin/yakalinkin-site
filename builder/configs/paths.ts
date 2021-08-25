@@ -17,7 +17,7 @@ const defaultPaths: Partial<Paths> = {
   scriptsFolder: 'scripts',
 };
 
-const paths: Paths = merge(defaultPaths, builderConfig.paths);
+const paths = merge(defaultPaths, builderConfig.paths) as Paths;
 
 paths.root = {
   dev: path.join(paths.rootPath, paths.devFolder),

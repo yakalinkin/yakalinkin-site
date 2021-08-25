@@ -45,3 +45,7 @@ export type Configs = {
   paths?: Partial<Paths>;
   config: Partial<Config>;
 }
+
+export type YargsOptions = {
+  mode: string;
+}

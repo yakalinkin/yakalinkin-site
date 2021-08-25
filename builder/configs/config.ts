@@ -1,12 +1,16 @@
-import { argv } from 'yargs';
+import * as yargs from 'yargs';
 import { merge } from 'lodash';
 
-import { Config } from './types';
+import { Config, YargsOptions } from './types';
 
 // :FIX: Cannot find modules: @utils
 import { networkAddress } from '../utils';
 
 import builderConfig from '../../builder.config';
+
+const argv = yargs.options({
+  mode: { type: 'string' },
+}).argv as YargsOptions;
 
 export const isProd = argv.mode === 'production';
 

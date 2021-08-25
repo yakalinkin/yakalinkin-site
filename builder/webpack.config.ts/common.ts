@@ -1,10 +1,13 @@
 import { Configuration } from 'webpack';
 import webpackMerge from 'webpack-merge';
-import { join } from 'path';
+
+import { Paths, Config } from '@configs';
 
 import { filesRules, stylesRules, typescriptRule } from './rules';
 
-import { Paths, Config, isProd } from '@configs';
+import { tsconfigPathsToAlias } from '../utils';
+
+import tsconfig from '../../tsconfig.json';
 
 import {
   cleanPlugin,
@@ -71,10 +74,7 @@ export default (paths: Paths, config: Config) => {
         'styles': paths.dev.styles,
         'images': paths.assets.images,
         'fonts': paths.assets.fonts,
-        '@components': join(paths.root.dev, 'components'),
-        '@styles': join(paths.root.dev, 'styles'),
-        '@hooks': join(paths.root.dev, 'hooks'),
-        '@utils': join(paths.root.dev, 'utils'),
+        ...tsconfigPathsToAlias(paths.rootPath, tsconfig.compilerOptions.paths),
       },
     },
 
