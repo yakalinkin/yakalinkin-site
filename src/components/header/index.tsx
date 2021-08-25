@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { Logo } from '@components/logo';
 import { Navigation, NavItem, NavTagName } from '@components/navigation';
-import { LanguageAction, ThemeAction } from '@components/action';
+import { ThemeAction } from '@components/action';
 
 import style from './style.module.scss';
 
@@ -34,7 +34,7 @@ export const Header: FC = () => {
         </div>
         <div className="grid__col-sm">
           <div className={style.headerAction}>
-            <LanguageAction />
+            {/* :TODO: <LanguageAction /> */}
             <ThemeAction />
           </div>
         </div>

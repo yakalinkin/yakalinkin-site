@@ -1,0 +1,51 @@
+.h0 {
+  font-size: $h0-size;
+  line-height: $h0-height;
+  font-weight: $h0-weight;
+  margin: 0;
+  padding-bottom: map-get($spacers-rem, 'md');
+
+  @include media-breakpoint-down(md) {
+    font-size: $h0-tablet-size;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: $h0-mobile-size;
+  }
+}
+
+h1,
+.h1 {
+  font-size: $h1-size;
+  line-height: $h1-height;
+  font-weight: $h1-weight;
+  margin: 0;
+  padding-bottom: map-get($spacers-rem, 'md');
+}
+
+h2,
+.h2 {
+  font-size: $h2-size;
+  line-height: $h2-height;
+  font-weight: $h2-weight;
+  margin: 0;
+  padding-bottom: map-get($spacers-rem, 'md');
+}
+
+h3,
+.h3 {
+  font-size: $h3-size;
+  line-height: $h3-height;
+  font-weight: $h3-weight;
+  margin: 0;
+  padding-bottom: map-get($spacers-rem, 'md');
+}
+
+h4,
+.h4 {
+  font-size: $h4-size;
+  line-height: $h4-height;
+  font-weight: $h4-weight;
+  margin: 0;
+  padding-bottom: map-get($spacers-rem, 'md');
+}

@@ -1,0 +1,138 @@
+@import '~styles/main-utils';
+
+.company {}
+
+.company__container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: map-get($spacers, '7lg');
+
+  @include media-breakpoint-down(md) {
+    margin-top: map-get($spacers, '5lg');
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-top: map-get($spacers, '3lg');
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: map-get($grid-max-widths, 'xl');
+    padding: 0 map-get($spacers, '5lg');
+  }
+}
+
+.company__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  &:before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background: linear-gradient(-90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
+    width: 16px;
+    height: 100%;
+
+    z-index: 9999;
+  }
+
+  &:after {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background: linear-gradient(90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
+    width: 32px;
+    height: 100%;
+
+    z-index: 9999;
+  }
+}
+
+.company__item {
+  position: relative;
+  margin-bottom: map-get($spacers, '3lg');
+
+  &[class*="active"] {
+    .company__image {
+      opacity: 1;
+    }
+
+    .company__text {
+      opacity: 0.4;
+    }
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-right: map-get($spacers, '3lg');
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: map-get($spacers, 'md');
+  }
+
+  @include media-breakpoint-up(md) {
+    &:hover {
+      .company__image {
+        opacity: 1;
+      }
+
+      .company__text {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.company__image,
+.company__text {
+  transition: opacity 250ms ease-in-out;
+}
+
+.company__image {
+  opacity: 0.3;
+
+  @include media-breakpoint-down(xs) {
+    height: 24px;
+  }
+}
+
+.company__text {
+  position: absolute;
+  opacity: 0;
+  font-size: 14px;
+  bottom: -#{map-get($spacers, 'lg')};
+  left: 50%;
+  transform: translate(-50%, 100%);
+  white-space: nowrap;
+  color: currentColor;
+  // padding-left: 1em;
+  // padding-right: 1em;
+
+  @include media-breakpoint-down(sm) {
+    bottom: -#{map-get($spacers, 'md')};
+    left: 0;
+    transform: translate(0, 100%);
+  }
+}
+
+[id="scnsoft"] {
+  width: 160px !important;
+}
+[id="starrlink"] {
+  width: 116px !important;
+}
+[id="treehouse"] {
+  width: 139px !important;
+}
+[id="yandex-praktikum"] {
+  width: 160px !important;
+}

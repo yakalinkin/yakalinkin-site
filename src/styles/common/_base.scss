@@ -8,7 +8,7 @@
 
 :root {
   cursor: default;
-  line-height: 1.5;
+  line-height: $font-height-default;
   overflow-wrap: break-word;
   -moz-tab-size: 4;
   tab-size: 4;
@@ -29,13 +29,10 @@
   vertical-align: inherit;
 }
 
-html {
-  cursor: default;
-  tab-size: 4;
-  word-break: break-all;
-}
-
 body {
+  block-size: -moz-available;
+  block-size: -webkit-fill-available;
+  block-size: stretch;
   margin: 0;
   background-color: color-rgb('background');
 }

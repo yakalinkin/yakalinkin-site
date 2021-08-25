@@ -17,6 +17,7 @@ $grid-max-widths: map-deep-get($grid, 'max-widths') !default;
 //
 
 $spacers: map-deep-get($spacers) !default;
+$spacers-rem: rem-map($spacers) !default;
 $spacers-em: em-map($spacers) !default;
 
 
@@ -39,12 +40,13 @@ $font-size-sm: rem(16px - 2) !default;
 $font-size-lg: rem(16px + 2) !default;
 
 // Line height
-$font-height-default: 1.5em !default;
-$font-height-condensed: 1.25em !default;
+$font-height-default: 1.5 !default;
+$font-height-condensed: 1.25 !default;
 $font-height-condensed-ultra: 1 !default;
 
 // Font weight
 $font-weight-normal: 400 !default;
+$font-weight-semibold: 600 !default;
 $font-weight-bold: 700 !default;
 
 // Body
@@ -55,3 +57,31 @@ $body-size: $font-size !default;
 $body-line-height: $font-height-default !default;
 $body-weight: $font-weight-normal !default;
 $body-color: color-rgb('main') !default;
+
+// Headings
+//
+
+// Heading size
+$h0-size: rem(54px) !default;
+$h1-size: rem(48px) !default;
+$h2-size: rem(32px) !default;
+$h3-size: rem(24px) !default;
+$h4-size: rem(18px) !default;
+
+$h0-tablet-size: rem(36px) !default;
+
+$h0-mobile-size: rem(24px) !default;
+
+// Heading height
+$h0-height: $font-height-condensed !default;
+$h1-height: $font-height-condensed !default;
+$h2-height: $font-height-condensed !default;
+$h3-height: $font-height-condensed !default;
+$h4-height: $font-height-condensed !default;
+
+// Heading weight
+$h0-weight: $font-weight-semibold !default;
+$h1-weight: $font-weight-bold !default;
+$h2-weight: $font-weight-bold !default;
+$h3-weight: $font-weight-bold !default;
+$h4-weight: $font-weight-bold !default;

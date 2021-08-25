@@ -1,0 +1,52 @@
+@import '~styles/main-utils';
+
+.hero {}
+
+.hero__container {
+
+  // :TODO: add to structure/grid
+  @include grid-container();
+
+  margin-top: map-get($spacers, '7lg');
+
+  @include media-breakpoint-up(md) {
+    max-width: map-get($grid-max-widths, 'xl');
+    padding: 0 map-get($spacers, '5lg');
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: map-get($spacers, '5lg');
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-top: map-get($spacers, '4lg');
+  }
+}
+
+.hero__caption {
+  margin-right: map-get($spacers, 'md');
+
+  @include media-breakpoint-down(sm) {
+    margin-right: map-get($spacers, '6lg');
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-right: 0;
+  }
+}
+
+.hero__underline {
+  position: relative;
+
+  svg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: calc(100% + 0.5em);
+    height: auto;
+    z-index: -1;
+    stroke: color-rgb('line');
+    stroke-width: 4px;
+  }
+}

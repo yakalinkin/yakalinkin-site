@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader/root';
 import { useLoading } from './hooks/loading.hook';
 
 import { SplashScreen } from './components/splash-screen';
-import { Header } from './components/header';
+import { Hero } from '@components/hero';
 
 import { loadFontGroup } from './utils/load-fonts.util';
 
@@ -21,9 +21,8 @@ const Root = () => {
 
   return (
     <SplashScreen isLoading={isLoading}>
-      <Header />
+      <Hero />
 
-      {/* :TODO: Hero */}
       {/* :TODO: Portfolio */}
       {/* :TODO: Footer */}
 

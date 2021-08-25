@@ -1,5 +1,7 @@
 @charset 'UTF-8';
 
+@import '~swiper/swiper.scss';
+
 // Import variables as JSON into Scss
 @import 'main.scss.json';
 
@@ -8,3 +10,7 @@
 @import 'variables.scss';
 
 @import 'common/**/*.scss';
+
+.nowrap {
+  white-space: nowrap;
+}

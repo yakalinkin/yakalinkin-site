@@ -36,6 +36,7 @@
     "fontfaceobserver": "^2.1.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^5.3.2",
+    "luxon": "^2.0.2",
     "mini-css-extract-plugin": "^2.1.0",
     "node-sass-glob-importer": "^5.3.2",
     "node-sass-json-importer": "^4.3.0",
@@ -48,6 +49,7 @@
     "react-hot-loader": "^4.13.0",
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",
+    "swiper": "^6.8.2",
     "terser-webpack-plugin": "^5.1.4",
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
@@ -58,6 +60,7 @@
     "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
+    "@types/luxon": "^2.0.0",
     "@types/react": "^17.0.15",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",

@@ -73,6 +73,8 @@ export default (paths: Paths, config: Config) => {
         'fonts': paths.assets.fonts,
         '@components': join(paths.root.dev, 'components'),
         '@styles': join(paths.root.dev, 'styles'),
+        '@hooks': join(paths.root.dev, 'hooks'),
+        '@utils': join(paths.root.dev, 'utils'),
       },
     },
 
