@@ -1,7 +1,7 @@
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
 import chalk from 'chalk';
 
-// :FIX: Cannot find modules: @configs
+// :FIXME: Cannot find modules: @configs
 import { isProd } from '../../configs';
 
 import { PluginInstance } from './types';

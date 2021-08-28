@@ -27,7 +27,7 @@ const itemsProps: CompanyListProps = {
     children: (
       <>
         <ScnSoftSvg className={style.companyImage} />
-        <span className={style.companyText}>{calculateAge('2018-02-01')} вместе</span>
+        <span className={style.companyText}>Работаю {calculateAge('2018-02-01')}</span>
       </>
     ),
   }, {
@@ -36,7 +36,7 @@ const itemsProps: CompanyListProps = {
     children: (
       <>
         <StarrLinkSvg className={style.companyImage} />
-        <span className={style.companyText}>{calculateAge('2018-02-01')} вместе</span>
+        <span className={style.companyText}>Работаю {calculateAge('2018-02-01')}</span>
       </>
     ),
   }, {

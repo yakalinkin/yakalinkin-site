@@ -5,6 +5,7 @@ import { useLoading } from './hooks/loading.hook';
 
 import { SplashScreen } from './components/splash-screen';
 import { Hero } from '@components/hero';
+import { Portfolio } from '@components/portfolio';
 
 import { loadFontGroup } from './utils/load-fonts.util';
 
@@ -22,6 +23,7 @@ const Root = () => {
   return (
     <SplashScreen isLoading={isLoading}>
       <Hero />
+      <Portfolio />
 
       {/* :TODO: Portfolio */}
       {/* :TODO: Footer */}

@@ -1,0 +1,81 @@
+@import '~styles/main-utils';
+
+.coming-soon {
+  background-color: color-rgba('main', 0.1);
+  background-image: url('images/portfolio.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: map-get($spacers, '5lg');
+  display: flex;
+  overflow: hidden;
+  margin: 0 -#{map-get($spacers, '5lg')};
+  color: white;
+
+  @include media-breakpoint-down(xl) {
+    margin: 0 -#{map-get($spacers, '4lg')};
+    border-radius: map-get($spacers, '4lg');
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 #{map-get($spacers, 'md')};
+    border-radius: map-get($spacers, '2lg');
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin: 0 #{map-get($spacers, 'md')};
+    border-radius: map-get($spacers, 'md');
+  }
+
+  &:before {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 56%;
+  }
+}
+
+.coming-soon__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.coming-soon__heading {
+  font-size: 92px;
+  font-weight: 500;
+  line-height: 1;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 68px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 36px;
+  }
+}
+
+.coming-soon__subheading {
+  font-size: 24px;
+  font-weight: 500;
+  opacity: 0.6;
+  margin-bottom: 1em;
+  line-height: 1;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

@@ -3,7 +3,7 @@ import { merge } from 'lodash';
 
 import { Config, YargsOptions } from './types';
 
-// :FIX: Cannot find modules: @utils
+// :FIXME: Cannot find modules: @utils
 import { networkAddress } from '../utils';
 
 import builderConfig from '../../builder.config';

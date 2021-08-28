@@ -114,8 +114,7 @@
   transform: translate(-50%, 100%);
   white-space: nowrap;
   color: currentColor;
-  // padding-left: 1em;
-  // padding-right: 1em;
+  pointer-events: none;
 
   @include media-breakpoint-down(sm) {
     bottom: -#{map-get($spacers, 'md')};

@@ -2,6 +2,7 @@
 
 .navigation__item {
   position: relative;
+  color: color-rgba('main', 0.6);
 
   &:not(:last-child) {
     margin-right: map-get($spacers, '3lg');

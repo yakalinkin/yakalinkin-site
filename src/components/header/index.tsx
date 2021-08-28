@@ -19,15 +19,15 @@ export const Header: FC = () => {
         <div className="grid__col-sm">
           <div className={style.headerNav}>
             <Navigation>
-              <NavItem
+              {/* <NavItem
                 key="portfolio"
                 text="Портфолио"
                 tag={NavTagName.Soon}
-              />
+              /> */}
               <NavItem
                 key="resume"
                 text="Резюме"
-                tag={NavTagName.InProgress}
+                tag={NavTagName.Soon}
               />
             </Navigation>
           </div>
