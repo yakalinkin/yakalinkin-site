@@ -1,20 +1,22 @@
 @import '~styles/main-utils';
 
-.company {}
+.company {
+  padding-top: map-get($spacers, '7lg');
 
+  @include media-breakpoint-down(md) {
+    padding-top: map-get($spacers, '5lg');
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: map-get($spacers, '3lg');
+  }
+}
+
+// :TODO: add to utils/structure/containers
 .company__container {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: map-get($spacers, '7lg');
-
-  @include media-breakpoint-down(md) {
-    margin-top: map-get($spacers, '5lg');
-  }
-
-  @include media-breakpoint-down(xs) {
-    margin-top: map-get($spacers, '3lg');
-  }
 
   @include media-breakpoint-up(md) {
     max-width: map-get($grid-max-widths, 'xl');
@@ -83,10 +85,14 @@
     &:hover {
       .company__image {
         opacity: 1;
+
+        transition: opacity 100ms ease-in-out;
       }
 
       .company__text {
         opacity: 0.4;
+
+        transition: opacity 100ms ease-in-out;
       }
     }
   }

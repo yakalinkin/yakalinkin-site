@@ -1,25 +1,10 @@
 @import '~styles/main-utils';
 
-@mixin navigation-tag {
-  position: absolute;
-  bottom: 0;
-  right: -0.25rem;
-  transform: translateY(50%) rotate(-5deg);
-  display: inline-block;
-  font-size: 12px;
-  line-height: 18px;
-  padding: 0 map-get($spacers, 'xs');
-  border-radius: 6px;
-  background-color: rgba(black, 0.1);
-  text-transform: lowercase;
-  white-space: nowrap;
-}
-
 .navigation__tag {
   position: absolute;
-  bottom: 0;
-  right: -0.25rem;
-  transform: translateY(50%) rotate(-5deg);
+  bottom: 0.4rem;
+  right: -0.3rem;
+  transform: translateY(100%) rotate(-5deg);
   display: inline-block;
   font-size: 12px;
   line-height: 18px;
@@ -35,8 +20,6 @@
   }
 
   &._in-progress {
-    @include navigation-tag;
-
     color: rgba(black, 0.75);
     background-color: color-rgba('orange', 0.9);
   }

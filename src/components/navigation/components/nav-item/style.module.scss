@@ -1,10 +1,29 @@
 @import '~styles/main-utils';
 
 .navigation__item {
-  position: relative;
-  color: color-rgba('main', 0.6);
+  > a {
+    position: relative;
+    line-height: 1;
+  }
 
   &:not(:last-child) {
     margin-right: map-get($spacers, '3lg');
   }
+
+  @include media-breakpoint-down(sm) {
+    &:not(:last-child) {
+      margin-right: map-get($spacers, '2lg');
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    &:not(:last-child) {
+      margin-right: map-get($spacers, 'lg');
+    }
+  }
+}
+
+.navigation__link {
+  position: relative;
+  line-height: 1;
 }

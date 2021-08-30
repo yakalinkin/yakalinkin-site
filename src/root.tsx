@@ -6,6 +6,7 @@ import { useLoading } from './hooks/loading.hook';
 import { SplashScreen } from './components/splash-screen';
 import { Hero } from '@components/hero';
 import { Portfolio } from '@components/portfolio';
+import { Footer } from '@components/footer';
 
 import { loadFontGroup } from './utils/load-fonts.util';
 
@@ -24,10 +25,7 @@ const Root = () => {
     <SplashScreen isLoading={isLoading}>
       <Hero />
       <Portfolio />
-
-      {/* :TODO: Portfolio */}
-      {/* :TODO: Footer */}
-
+      <Footer />
     </SplashScreen>
   );
 };

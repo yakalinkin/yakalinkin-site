@@ -1,0 +1,47 @@
+@import '~styles/main-utils';
+
+.footer {
+  padding-top: map-get($spacers, '7lg');
+  padding-bottom: map-get($spacers, 'lg');
+
+  @include media-breakpoint-down(md) {
+    padding: map-get($spacers, '5lg') map-get($spacers, 'md') map-get($spacers, 'lg');
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: map-get($spacers, '3lg');
+  }
+}
+
+// :TODO: add to utils/structure/containers
+.footer__container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-breakpoint-up(md) {
+    max-width: map-get($grid-max-widths, 'xl');
+    padding: 0 map-get($spacers, '5lg');
+  }
+
+  & + & {
+    margin-top: map-get($spacers, 'md');
+  }
+}
+
+.footer__nav {}
+
+.footer__info {
+  font-size: $font-size-sm;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+
+  svg {
+    height: 1em;
+    margin-right: map-get($spacers, '2xs');
+    stroke: currentColor;
+    margin-bottom: 2px;
+  }
+}

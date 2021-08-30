@@ -1,22 +1,21 @@
 @import '~styles/main-utils';
 
-.portfolio {}
+.portfolio {
+  padding-top: map-get($spacers, '7lg');
+
+  @include media-breakpoint-down(md) {
+    padding-top: map-get($spacers, '5lg');
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: map-get($spacers, '3lg');
+  }
+}
 
 .portfolio__container {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-
-  margin-top: map-get($spacers, '7lg');
-  margin-bottom: map-get($spacers, '7lg');
-
-  @include media-breakpoint-down(md) {
-    margin-top: map-get($spacers, '5lg');
-  }
-
-  @include media-breakpoint-down(xs) {
-    margin-top: map-get($spacers, '3lg');
-  }
 
   @include media-breakpoint-up(md) {
     max-width: map-get($grid-max-widths, 'xl');

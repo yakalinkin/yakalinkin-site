@@ -16,7 +16,7 @@ export const Header: FC = () => {
           </div>
         </div>
         <div className="grid__col-sm">{/* empty */}</div>
-        <div className="grid__col-sm">
+        <div className="grid__col-sm m-0">
           <div className={style.headerNav}>
             <Navigation>
               {/* <NavItem
