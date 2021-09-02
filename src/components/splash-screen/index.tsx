@@ -25,6 +25,7 @@ export const SplashScreen: FC<Props> = ({ isLoading, children }) => {
     return () => clearTimeout(loadingTimer);
   }, [isLoading]);
 
+  // :TODO: logo
   const splashScreenElm = (
     <div className={className}>
       Загрузка...

@@ -12,51 +12,20 @@
   }
 }
 
-// :TODO: add to utils/structure/containers
 .company__container {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  @include container;
 
-  @include media-breakpoint-up(md) {
-    max-width: map-get($grid-max-widths, 'xl');
-    padding: 0 map-get($spacers, '5lg');
-  }
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .company__list {
+  @include gradient-overlay;
+
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   width: 100%;
-
-  &:before {
-    content: '';
-
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    background: linear-gradient(-90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
-    width: 16px;
-    height: 100%;
-
-    z-index: 9999;
-  }
-
-  &:after {
-    content: '';
-
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    background: linear-gradient(90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
-    width: 32px;
-    height: 100%;
-
-    z-index: 9999;
-  }
 }
 
 .company__item {

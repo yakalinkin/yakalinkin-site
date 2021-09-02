@@ -1,0 +1,9 @@
+@import '~styles/main-utils';
+
+.portfolio {
+  @include section;
+}
+
+.portfolio__container {
+  @include container;
+}

@@ -6,10 +6,10 @@ import style from './style.module.scss';
 
 export const Portfolio: FC = () => {
   return (
-    <div className={style.portfolio}>
+    <section className={style.portfolio}>
       <div className={style.portfolioContainer}>
         <ComingSoon />
       </div>
-    </div>
+    </section>
   );
 };

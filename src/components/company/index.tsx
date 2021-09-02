@@ -5,10 +5,10 @@ import styleJson from '@styles/main.scss.json';
 
 import { CompanyList } from './components/company-list';
 
-import ScnSoftSvg from './images/scnsoft.svg';
-import StarrLinkSvg from './images/starrlink.svg';
-import YandexPraktikumSvg from './images/yandex-praktikum.svg';
-import TreehouseSvg from './images/treehouse.svg';
+import ScnSoftSvg from '@svg/scnsoft.svg';
+import StarrLinkSvg from '@svg/starrlink.svg';
+import YandexPraktikumSvg from '@svg/yandex-praktikum.svg';
+import TreehouseSvg from '@svg/treehouse.svg';
 
 import { calculateAge } from './utils';
 

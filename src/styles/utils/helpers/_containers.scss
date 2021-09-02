@@ -1,0 +1,29 @@
+@mixin container {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: map-get($spacers, 'md');
+  padding-right: map-get($spacers, 'md');
+
+  @include media-breakpoint-up(md) {
+    max-width: map-get($grid-max-widths, 'xl');
+    padding-left: map-get($spacers, '5lg');
+    padding-right: map-get($spacers, '5lg');
+  }
+}
+
+@mixin section {
+  padding-top: map-get($spacers, '4lg');
+  padding-bottom: map-get($spacers, '4lg');
+
+  @include media-breakpoint-down(md) {
+    padding-top: map-get($spacers, '3lg');
+    padding-bottom: map-get($spacers, '3lg');
+  }
+
+  @include media-breakpoint-down(xs) {
+    adding-top: map-get($spacers, '2lg');
+    padding-bottom: map-get($spacers, '2lg');
+  }
+}

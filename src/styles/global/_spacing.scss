@@ -1,71 +1,9 @@
 @use "sass:meta";
 
-// :TODO: generate-spacing mixin
-
 .m {
-  @each $infix, $value in $spacers {
-    &-#{$infix} {
-      margin: $value !important;
-    }
-
-    &y-#{$infix} {
-      margin-top: $value !important;
-      margin-bottom: $value !important;
-    }
-
-    &x-#{$infix} {
-      margin-left: $value !important;
-      margin-right: $value !important;
-    }
-
-    &t-#{$infix} {
-      margin-top: $value !important;
-    }
-
-    &l-#{$infix} {
-      margin-left: $value !important;
-    }
-
-    &b-#{$infix} {
-      margin-bottom: $value !important;
-    }
-
-    &r-#{$infix} {
-      margin-right: $value !important;
-    }
-  }
+  @include generate-spacing(margin);
 }
 
 .p {
-  @each $infix, $value in $spacers {
-    &-#{$infix} {
-      padding: $value !important;
-    }
-
-    &y-#{$infix} {
-      padding-top: $value !important;
-      padding-bottom: $value !important;
-    }
-
-    &x-#{$infix} {
-      padding-left: $value !important;
-      padding-right: $value !important;
-    }
-
-    &t-#{$infix} {
-      padding-top: $value !important;
-    }
-
-    &l-#{$infix} {
-      padding-left: $value !important;
-    }
-
-    &b-#{$infix} {
-      padding-bottom: $value !important;
-    }
-
-    &r-#{$infix} {
-      padding-right: $value !important;
-    }
-  }
+  @include generate-spacing(padding);
 }

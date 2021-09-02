@@ -1,0 +1,14 @@
+@mixin hide-scrollbar {
+  // Chrome, Safari, Opera
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // IE, Edge, Firefox
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  > *:last-child {
+    padding-right: map-get($spacers, '2lg');
+  }
+}

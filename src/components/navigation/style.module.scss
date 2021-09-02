@@ -9,52 +9,13 @@
 }
 
 .navigation__links {
+  @include gradient-overlay;
+  @include hide-scrollbar;
+
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
 
   padding: map-get($spacers, 'md');
-
-  // Hide scrollbar for Chrome, Safari and Opera
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  // Hide scrollbar for IE, Edge and Firefox
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  // :TODO: gradient-over-text util
-  &:before {
-    content: '';
-
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    background: linear-gradient(-90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
-    width: map-get($spacers, 'md');
-    height: 100%;
-
-    z-index: 9999;
-  }
-
-  &:after {
-    content: '';
-
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    background: linear-gradient(90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
-    width: map-get($spacers, '3lg');
-    height: 100%;
-
-    z-index: 9999;
-  }
-
-  > *:last-child {
-    padding-right: map-get($spacers, '2lg');
-  }
 }
 

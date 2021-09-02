@@ -18,12 +18,11 @@
   }
 
   @include media-breakpoint-down(sm) {
-    margin: 0 #{map-get($spacers, 'md')};
+    margin: 0;
     border-radius: map-get($spacers, '2lg');
   }
 
   @include media-breakpoint-down(xs) {
-    margin: 0 #{map-get($spacers, 'md')};
     border-radius: map-get($spacers, 'md');
   }
 

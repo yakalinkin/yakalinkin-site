@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 
-import { Header } from '@components/header';
 import { Company } from '@components/company';
 
-import LineSvg from './images/line.svg';
+import LineSvg from '@svg/line.svg';
 
 import { getGreet } from './utils';
 
@@ -15,8 +14,6 @@ export const Hero: FC = () => {
 
   return (
     <section className={style.hero}>
-
-      <Header />
 
       <div className={style.heroContainer}>
         <div className={style.heroCaption}>
