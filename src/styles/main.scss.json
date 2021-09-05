@@ -6,6 +6,8 @@
       "main": "#2c2c2f",
       "line": "#74c0fc",
 
+      "white": "#fff",
+      "black": "#000",
       "cyan": "#39ade6",
       "yellow": "#ffcc00",
       "orange": "#ff9500",
@@ -45,35 +47,35 @@
     "columns": "12",
     "gutter": "32px",
     "breakpoints": {
-      "'xs'": "0px",
-      "'sm'": "576px",
-      "'md'": "768px",
-      "'lg'": "992px",
-      "'xl'": "1200px"
+      "xs": "0px",
+      "sm": "576px",
+      "md": "768px",
+      "lg": "992px",
+      "xl": "1200px"
     },
     "max-widths": {
-      "'sm'": "540px",
-      "'md'": "720px",
-      "'lg'": "960px",
-      "'xl'": "1070px"
+      "sm": "540px",
+      "md": "720px",
+      "lg": "960px",
+      "xl": "1070px"
     }
   },
 
   "spacers": {
-    "'0'": "0",
-    "'3xs'": "2px",
-    "'2xs'": "4px",
-    "'xs'": "8px",
-    "'sm'": "12px",
-    "'md'": "16px",
-    "'lg'": "24px",
-    "'2lg'": "32px",
-    "'3lg'": "40px",
-    "'4lg'": "48px",
-    "'5lg'": "64px",
-    "'6lg'": "80px",
-    "'7lg'": "96px",
-    "'8lg'": "160px"
+    "0": "0",
+    "3xs": "2px",
+    "2xs": "4px",
+    "xs": "8px",
+    "sm": "12px",
+    "md": "16px",
+    "lg": "24px",
+    "2lg": "32px",
+    "3lg": "40px",
+    "4lg": "48px",
+    "5lg": "64px",
+    "6lg": "80px",
+    "7lg": "96px",
+    "8lg": "160px"
   }
 
 }

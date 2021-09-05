@@ -28,7 +28,7 @@ export const SplashScreen: FC<Props> = ({ isLoading, children }) => {
   // :TODO: logo
   const splashScreenElm = (
     <div className={className}>
-      Загрузка...
+      Загружаю...
     </div>
   );
 

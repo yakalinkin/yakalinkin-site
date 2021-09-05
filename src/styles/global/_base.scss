@@ -44,16 +44,16 @@ nav :where(ol, ul) {
 }
 
 a {
-  color: color-rgba('main', 0.6);
+  color: rgba(var(--rgb-link), 0.6);
   text-decoration: none;
 
   &[href],
   [href=""] {
-    color: color-rgba('main', 1);
+    color: rgba(var(--rgb-link), 1);
     transition: color 250ms ease-in-out;
 
     &:hover {
-      color: color-rgba('main', 0.7);
+      color: rgba(var(--rgb-link), 0.7);
       transition: color 100ms ease-in-out;
     }
   }

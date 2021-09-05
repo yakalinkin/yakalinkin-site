@@ -17,7 +17,7 @@ import style from './style.module.scss';
 import { CompanyListProps } from './types';
 import { CompanySlider } from './components/company-slider';
 
-const BREAKPOINT_MD = parseInt(styleJson.grid['breakpoints']['\'md\'']);
+const BREAKPOINT_MD = parseInt(styleJson.grid['breakpoints']['md']);
 
 const itemsProps: CompanyListProps = {
   className: style.companyList,

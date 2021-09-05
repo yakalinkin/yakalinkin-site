@@ -1,6 +1,7 @@
 // Color palette
 //
 
+$colors: quote-map-keys($colors);
 $color-background: map-deep-get($colors, 'light', 'background') !default;
 $color-main: map-deep-get($colors, 'light', 'main') !default;
 
@@ -16,6 +17,7 @@ $grid-max-widths: map-deep-get($grid, 'max-widths') !default;
 // Spacing
 //
 
+$spacers: quote-map-keys($spacers);
 $spacers: map-deep-get($spacers) !default;
 $spacers-rem: rem-map($spacers) !default;
 $spacers-em: em-map($spacers) !default;

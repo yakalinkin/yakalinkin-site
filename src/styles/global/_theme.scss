@@ -8,6 +8,8 @@
 
 :root {
   @include light-mode;
+
+  --rgb-link: var(--rgb-blue-g);
 }
 
 [data-theme="light"] {

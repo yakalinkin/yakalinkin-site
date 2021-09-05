@@ -1,5 +1,5 @@
 @function color-property($color-key) {
-  @return #{'--color-#{$color-key}'};
+  @return #{'--rgb-#{$color-key}-g'};
 }
 
 @function color-rgb($color-name) {
@@ -8,4 +8,9 @@
 
 @function color-rgba($color-name, $opacity) {
   @return unquote('rgba(#{var(color-property($color-name))}, #{$opacity})');
+}
+
+@function get-rgb($color-name, $theme: 'light') {
+  $color: map-get($colors, $theme, $color-name);
+  @return red($color), green($color), blue($color);
 }
