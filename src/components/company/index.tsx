@@ -6,11 +6,9 @@ import styleJson from '@styles/main.scss.json';
 import { CompanyList } from './components/company-list';
 
 import ScnSoftSvg from '@svg/scnsoft.svg';
-import StarrLinkSvg from '@svg/starrlink.svg';
 import YandexPraktikumSvg from '@svg/yandex-praktikum.svg';
 import TreehouseSvg from '@svg/treehouse.svg';
-
-import { calculateAge } from './utils';
+import HackerRankSvg from '@svg/hacker-rank.svg';
 
 import style from './style.module.scss';
 
@@ -27,16 +25,7 @@ const itemsProps: CompanyListProps = {
     children: (
       <>
         <ScnSoftSvg className={style.companyImage} />
-        <span className={style.companyText}>Работаю {calculateAge('2018-02-01')}</span>
-      </>
-    ),
-  }, {
-    id: 'starrlink',
-    className: style.companyItem,
-    children: (
-      <>
-        <StarrLinkSvg className={style.companyImage} />
-        <span className={style.companyText}>Работаю {calculateAge('2018-02-01')}</span>
+        <span className={style.companyText}>Работаю с 2018 года</span>
       </>
     ),
   }, {
@@ -54,7 +43,16 @@ const itemsProps: CompanyListProps = {
     children: (
       <>
         <TreehouseSvg className={style.companyImage} />
-        <span className={style.companyText}>Диплом «Полный JavaScript стек»</span>
+        <span className={style.companyText}>Диплом «Full Stack JavaScript»</span>
+      </>
+    ),
+  }, {
+    id: 'hacker-rank',
+    className: style.companyItem,
+    children: (
+      <>
+        <HackerRankSvg className={style.companyImage} />
+        <span className={style.companyText}>Умею, знаю, практикую</span>
       </>
     ),
   }],

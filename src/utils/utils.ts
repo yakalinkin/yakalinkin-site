@@ -19,3 +19,5 @@ export function off<T extends Window | Document | HTMLElement | EventTarget>(
 }
 
 export const isBrowser = typeof window !== 'undefined';
+
+export const isExternal = (url: string) => /^https?:\/\//.test(url);

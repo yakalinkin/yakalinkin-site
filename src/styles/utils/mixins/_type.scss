@@ -1,0 +1,27 @@
+@mixin generate-type-style(
+  $name,
+  $tokens: $type-tokens
+) {
+  @if not map-has-key($tokens, $name) {
+    @error 'Unable to find a token with the name: `#{$name}`';
+  }
+
+  $token: map-get($tokens, $name);
+
+  @include properties(map-remove($token, 'breakpoints'));
+
+  @if map-has-key($token, 'breakpoints') {
+    $breakpoints: map-get($token, 'breakpoints');
+    $grid-breakpoints--rev: map-reverse($grid-breakpoints);
+
+    @each $breakpoint-name, $values in $grid-breakpoints--rev {
+      @if map-has-key($breakpoints, $breakpoint-name) {
+        $breakpoint: map-get($breakpoints, $breakpoint-name);
+
+        @include media-breakpoint-down($breakpoint-name) {
+          @include properties($breakpoint);
+        }
+      }
+    }
+  }
+}

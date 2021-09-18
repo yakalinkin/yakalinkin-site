@@ -7,7 +7,7 @@ export const ComingSoon: FC = () => {
     <div className={style.comingSoon}>
       <div className={style.comingSoonInner}>
         <span className={style.comingSoonSubheading}>Портфолио в процессе</span>
-        <h3 className={style.comingSoonHeading}>скоро будут</h3>
+        <span className={style.comingSoonHeading}>скоро будут</span>
       </div>
     </div>
   );

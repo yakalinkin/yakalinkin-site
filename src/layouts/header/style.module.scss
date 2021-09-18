@@ -44,8 +44,7 @@
 
 .header__logo {
   svg {
-    height: 18px;
-    margin-top: -4px;
+    @include logo;
   }
 }
 
@@ -56,6 +55,7 @@
 
   @include media-breakpoint-down(xs) {
     justify-content: flex-start;
+    height: auto;
   }
 }
 

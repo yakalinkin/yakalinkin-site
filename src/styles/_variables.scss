@@ -2,23 +2,23 @@
 //
 
 $colors: quote-map-keys($colors);
-$color-background: map-deep-get($colors, 'light', 'background') !default;
-$color-main: map-deep-get($colors, 'light', 'main') !default;
+$color-background: map-get($colors, 'light', 'background') !default;
+$color-main: map-get($colors, 'light', 'main') !default;
 
 
 // Breakpoints
 //
 
-$grid-columns: map-deep-get($grid, 'columns') !default;
-$grid-gutter: map-deep-get($grid, 'gutter') !default;
-$grid-breakpoints: map-deep-get($grid, 'breakpoints') !default;
-$grid-max-widths: map-deep-get($grid, 'max-widths') !default;
+$grid-columns: map-get($grid, 'columns') !default;
+$grid-gutter: map-get($grid, 'gutter') !default;
+$grid-breakpoints: map-get($grid, 'breakpoints') !default;
+$grid-max-widths: map-get($grid, 'max-widths') !default;
 
 // Spacing
 //
 
 $spacers: quote-map-keys($spacers);
-$spacers: map-deep-get($spacers) !default;
+$spacers: map-get($spacers) !default;
 $spacers-rem: rem-map($spacers) !default;
 $spacers-em: em-map($spacers) !default;
 
@@ -27,19 +27,17 @@ $spacers-em: em-map($spacers) !default;
 //
 
 // Font path
-$font-path: map-deep-get($font, 'path') !default;
+$font-path: map-get($font, 'path') !default;
 
 // Typefaces
-$font-typefaces: map-deep-get($font, 'typefaces') !default;
+$font-typefaces: map-get($font, 'typefaces') !default;
 
 // Font family
 $font-family: system-ui, sans-serif !default;
-$font-family-primary: map-deep-get($font-typefaces, 'primary', 'family'), $font-family !default;
+$font-family-primary: map-get($font-typefaces, 'primary', 'family'), $font-family !default;
 
 // Font size
-$font-size: rem(16px) !default;
-$font-size-sm: rem(16px - 2) !default;
-$font-size-lg: rem(16px + 2) !default;
+$font-size: get-type-size(3) !default;
 
 // Line height
 $font-height-default: 1.5 !default;
@@ -48,6 +46,7 @@ $font-height-condensed-ultra: 1 !default;
 
 // Font weight
 $font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
 $font-weight-semibold: 600 !default;
 $font-weight-bold: 700 !default;
 
@@ -63,27 +62,92 @@ $body-color: color-rgb('main') !default;
 // Headings
 //
 
-// Heading size
-$h0-size: rem(54px) !default;
-$h1-size: rem(48px) !default;
-$h2-size: rem(32px) !default;
-$h3-size: rem(24px) !default;
-$h4-size: rem(18px) !default;
+$type-tokens: (
+  'h1': (
+    font-size: get-type-size(10),
+    font-weight: $font-weight-bold,
+    line-height: $font-height-condensed,
+    margin: 0 0 map-get($spacers-em, 'md'),
+    breakpoints: (
+      'md': (
+        font-size: get-type-size(9),
+      ),
+      'xs': (
+        font-size: get-type-size(8),
+      )
+    )
+  ),
+  'h2': (
+    font-size: get-type-size(7),
+    font-weight: $font-weight-bold,
+    line-height: $font-height-condensed,
+    margin: 0 0 map-get($spacers-em, 'md'),
+  ),
+  'h3': (
+    font-size: get-type-size(5),
+    font-weight: $font-weight-bold,
+    line-height: $font-height-condensed,
+    margin: 0 0 map-get($spacers-em, 'md'),
+  ),
 
-$h0-tablet-size: rem(36px) !default;
+  'd1': (
+    font-size: get-type-size(16),
+    font-weight: $font-weight-medium,
+    line-height: $font-height-condensed,
+    margin: 0 0 map-get($spacers-em, 'md'),
+    breakpoints: (
+      'md': (
+        font-size: get-type-size(13),
+      ),
+      'xs': (
+        font-size: get-type-size(10),
+        font-weight: $font-weight-semibold,
+      )
+    )
+  ),
+  'd2': (
+    font-size: get-type-size(14),
+    font-weight: $font-weight-semibold,
+    line-height: $font-height-condensed,
+    margin: 0 0 map-get($spacers-em, 'md'),
+    breakpoints: (
+      'md': (
+        font-size: get-type-size(11),
+      ),
+      'xs': (
+        font-size: get-type-size(9),
+      )
+    )
+  ),
+  'd3': (
+    font-size: get-type-size(12),
+    font-weight: $font-weight-semibold,
+    line-height: $font-height-condensed,
+    margin: 0 0 map-get($spacers-em, 'md'),
+    breakpoints: (
+      'md': (
+        font-size: get-type-size(10),
+      ),
+      'xs': (
+        font-size: get-type-size(7),
+        letter-spacing: -0.75px
+      )
+    )
+  ),
 
-$h0-mobile-size: rem(24px) !default;
+  'sub': (
+    font-size: get-type-size(6),
+    font-weight: $font-weight-medium,
+    line-height: $font-height-condensed-ultra,
+    margin: 0 0 map-get($spacers-em, 'md'),
+    breakpoints: (
+      'md': (
+        font-size: get-type-size(4),
+      ),
+      'xs': (
+        font-size: get-type-size(2),
+      )
+    )
+  ),
 
-// Heading height
-$h0-height: $font-height-condensed !default;
-$h1-height: $font-height-condensed !default;
-$h2-height: $font-height-condensed !default;
-$h3-height: $font-height-condensed !default;
-$h4-height: $font-height-condensed !default;
-
-// Heading weight
-$h0-weight: $font-weight-semibold !default;
-$h1-weight: $font-weight-bold !default;
-$h2-weight: $font-weight-bold !default;
-$h3-weight: $font-weight-bold !default;
-$h4-weight: $font-weight-bold !default;
+)

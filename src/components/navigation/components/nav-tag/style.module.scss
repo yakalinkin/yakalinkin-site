@@ -6,7 +6,7 @@
   right: -0.3rem;
   transform: translateY(100%) rotate(-5deg);
   display: inline-block;
-  font-size: 12px;
+  font-size: get-type-size(1);
   line-height: 18px;
   padding: 0 map-get($spacers, 'xs');
   border-radius: 6px;

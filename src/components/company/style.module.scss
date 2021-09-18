@@ -83,8 +83,8 @@
 .company__text {
   position: absolute;
   opacity: 0;
-  font-size: 14px;
-  bottom: -#{map-get($spacers, 'lg')};
+  font-size: get-type-size(2);
+  bottom: -#{map-get($spacers, 'md')};
   left: 50%;
   transform: translate(-50%, 100%);
   white-space: nowrap;
@@ -92,21 +92,22 @@
   pointer-events: none;
 
   @include media-breakpoint-down(sm) {
-    bottom: -#{map-get($spacers, 'md')};
     left: 0;
     transform: translate(0, 100%);
   }
 }
 
+// :HACK: for swiper
+
 [id="scnsoft"] {
   width: 160px !important;
-}
-[id="starrlink"] {
-  width: 116px !important;
 }
 [id="treehouse"] {
   width: 139px !important;
 }
 [id="yandex-praktikum"] {
   width: 160px !important;
+}
+[id="hacker-rank"] {
+  width: 168px !important;
 }

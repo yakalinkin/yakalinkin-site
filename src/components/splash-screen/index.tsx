@@ -1,6 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
 import classNames from 'classnames';
 
+import LogoSvg from '@svg/logo.svg';
+
 import { Props } from './types';
 import style from './style.module.scss';
 import styleJson from './style.scss.json';
@@ -25,10 +27,10 @@ export const SplashScreen: FC<Props> = ({ isLoading, children }) => {
     return () => clearTimeout(loadingTimer);
   }, [isLoading]);
 
-  // :TODO: logo
   const splashScreenElm = (
     <div className={className}>
-      Загружаю...
+      <LogoSvg />
+      <span>Загружаю</span>
     </div>
   );
 

@@ -13,22 +13,16 @@
   color: white;
 
   h1 {
-    // :TODO: display1
-    font-size: 92px;
+    @include generate-type-style('d1');
 
-    @include media-breakpoint-down(sm) {
-      font-size: 42px;
-    }
+    font-weight: $font-weight-semibold;
+    line-height: $font-height-condensed-ultra;
   }
 
   h2 {
-    // :TODO: heading1
-    font-size: 42px;
-    font-weight: 500;
+    @include generate-type-style('h2');
 
-    @include media-breakpoint-down(sm) {
-      font-size: 28px;
-    }
+    font-weight: $font-weight-medium;
   }
 
   p {
