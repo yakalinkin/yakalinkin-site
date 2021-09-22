@@ -31,6 +31,7 @@ export type Config = {
   host?: string;
   assetsFilenames?: string;
   manifest?: Record<string, string>;
+  env?: Record<string, string>;
   target?: string;
   webpack: Pick<Configuration, 'entry' | 'resolve'>;
   enabled: {

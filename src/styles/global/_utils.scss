@@ -1,3 +1,9 @@
 .nowrap {
   white-space: nowrap;
 }
+
+.disable-transitions * {
+  &:not([class^="dark-mode-icon"]) {
+    transition: none !important;
+  }
+}

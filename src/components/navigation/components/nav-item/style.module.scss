@@ -9,12 +9,12 @@
   }
 
   &:not(:last-child) {
-    margin-right: map-get($spacers, '3lg');
+    margin-right: map-get($spacers, '3xl');
   }
 
   @include media-breakpoint-down(sm) {
     &:not(:last-child) {
-      margin-right: map-get($spacers, '2lg');
+      margin-right: map-get($spacers, '2xl');
     }
   }
 
@@ -27,5 +27,12 @@
 
 .navigation__link {
   position: relative;
+  display: flex;
   line-height: 1;
+
+  svg {
+    height: 0.75em;
+    margin-left: map-get($spacers, '3xs');
+    opacity: 0.5;
+  }
 }

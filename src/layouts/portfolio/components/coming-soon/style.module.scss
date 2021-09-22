@@ -6,20 +6,20 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: map-get($spacers, '5lg');
+  border-radius: map-get($spacers, '5xl');
   display: flex;
   overflow: hidden;
-  margin: 0 -#{map-get($spacers, '5lg')};
+  margin: 0 -#{map-get($spacers, '5xl')};
   color: white;
 
   @include media-breakpoint-down(xl) {
-    margin: 0 -#{map-get($spacers, '4lg')};
-    border-radius: map-get($spacers, '4lg');
+    margin: 0 -#{map-get($spacers, '4xl')};
+    border-radius: map-get($spacers, '4xl');
   }
 
   @include media-breakpoint-down(sm) {
     margin: 0;
-    border-radius: map-get($spacers, '2lg');
+    border-radius: map-get($spacers, '2xl');
   }
 
   @include media-breakpoint-down(xs) {

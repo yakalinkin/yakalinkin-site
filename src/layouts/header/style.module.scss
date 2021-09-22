@@ -1,7 +1,7 @@
 @import '~styles/main-utils';
 
 .header {
-  min-height: map-get($spacers, '5lg');
+  min-height: map-get($spacers, '5xl');
 
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
   > * {
     display: flex;
     align-items: center;
-    height: map-get($spacers, '5lg');
+    height: map-get($spacers, '5xl');
   }
 
   @include media-breakpoint-down(md) {

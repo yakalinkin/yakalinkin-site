@@ -2,7 +2,7 @@ import { Rule, Rules } from './types';
 
 export const imagesRule: Rule = function ({ paths }) {
   return {
-    test: /\.(png|jpe?g|gif)$/i,
+    test: /\.(png|jpe?g|gif|ico)$/i,
     exclude: /node_modules/,
     include: [paths.root.assets, paths.root.dev],
     use: [

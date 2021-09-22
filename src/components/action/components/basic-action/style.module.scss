@@ -5,8 +5,8 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  height: map-get($spacers, '4lg');
-  width: map-get($spacers, '4lg');
+  height: map-get($spacers, '4xl');
+  width: map-get($spacers, '4xl');
   cursor: pointer;
   user-select: none;
   transition: opacity 250ms ease-in-out;

@@ -5,9 +5,9 @@ import { Props } from './types';
 
 import style from './style.module.scss';
 
-export const DarkMode: FC<Props> = ({ className, isDarkMode = false }) => {
+export const DarkModeIcon: FC<Props> = ({ className, isDarkMode = false }) => {
   const darkModeStyle = classnames({
-    [style.darkMode]: true,
+    [style.darkModeIcon]: true,
     [style.toggle]: isDarkMode,
   });
 

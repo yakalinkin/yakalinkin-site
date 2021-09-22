@@ -5,6 +5,9 @@ const builderConfig: Configs = {
     publicUrl: '/',
   },
   config: {
+    env: {
+      SITE_TITLE: 'Ярослав Калинкин',
+    },
     webpack: {
       entry: {
         app: [

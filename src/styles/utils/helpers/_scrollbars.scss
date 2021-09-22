@@ -9,6 +9,6 @@
   scrollbar-width: none;
 
   > *:last-child {
-    padding-right: map-get($spacers, '2lg');
+    padding-right: map-get($spacers, '2xl');
   }
 }

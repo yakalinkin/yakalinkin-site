@@ -13,29 +13,29 @@ export const Footer: FC = () => {
         <div className={style.footerNav}>
           <Navigation>
             <NavItem
-              key="telegram"
+              to="https://t.me/yakalinkin"
               text="Телеграм"
-              href="https://t.me/yakalinkin"
+              key="telegram"
             />
             <NavItem
-              key="instagram"
+              to="https://instagram.com/yakalinkin"
               text="Инстаграм"
-              href="https://instagram.com/yakalinkin"
+              key="instagram"
             />
             <NavItem
-              key="vkontakte"
+              to="https://vk.com/yakalinkin"
               text="ВКонтакте"
-              href="https://vk.com/yakalinkin"
+              key="vkontakte"
             />
             <NavItem
-              key="github"
+              to="https://github.com/yakalinkin"
               text="Гитхаб"
-              href="https://github.com/yakalinkin"
+              key="github"
             />
             <NavItem
-              key="linkedin"
+              to="https://linkedin.com/in/yakalinkin"
               text="Линкедин"
-              href="https://linkedin.com/in/yakalinkin"
+              key="linkedin"
             />
           </Navigation>
         </div>

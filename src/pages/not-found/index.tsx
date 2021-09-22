@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import ArrowLeftSvg from '@svg/arrow-left.svg';
@@ -6,7 +7,10 @@ import ArrowLeftSvg from '@svg/arrow-left.svg';
 import style from './style.module.scss';
 
 export const NotFound = () => {
-  return (
+  return <>
+    <Helmet>
+      <title>Страница не найдена</title>
+    </Helmet>
     <div className={style.error}>
       <div className={style.errorContainer}>
         <h1>404</h1>
@@ -15,5 +19,5 @@ export const NotFound = () => {
         <Link to="/"><ArrowLeftSvg />Вернуться на главную</Link>
       </div>
     </div>
-  );
+  </>;
 };

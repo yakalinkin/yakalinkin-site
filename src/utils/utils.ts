@@ -21,3 +21,19 @@ export function off<T extends Window | Document | HTMLElement | EventTarget>(
 export const isBrowser = typeof window !== 'undefined';
 
 export const isExternal = (url: string) => /^https?:\/\//.test(url);
+
+export function getHtmlDataset(key: string) {
+  if (!key) throw new Error('The "key" value cannot be falsy in HTMLHtmlElement.dataset');
+
+  const html = document.querySelector('html') as HTMLHtmlElement;
+
+  return html.dataset[key] || '';
+}
+
+export function setHtmlDataset(key: string, value: string) {
+  if (!key) throw new Error('The "key" value cannot be falsy in HTMLHtmlElement.dataset');
+
+  const html = document.querySelector('html') as HTMLHtmlElement;
+
+  html.dataset[key] = value;
+}

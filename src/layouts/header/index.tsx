@@ -17,7 +17,7 @@ export const Header: FC = () => {
         <div className={style.headerNav}>
           <Navigation>
             <NavItem
-              to=""
+              to="#"
               text="Резюме"
               key="resume"
               tag={NavTagName.Soon}

@@ -13,9 +13,11 @@ import {
   cleanPlugin,
   copyPlugin,
   definePlugin,
+  interpolateHtmlPlugin,
   friendlyErrorsPlugin,
   htmlPlugin,
   miniCssExtractPlugin,
+  faviconsPlugin,
 } from './plugins';
 
 export default (paths: Paths, config: Config) => {
@@ -40,11 +42,13 @@ export default (paths: Paths, config: Config) => {
 
     plugins: [
       definePlugin({ paths, config }),
+      interpolateHtmlPlugin({ paths, config }),
       cleanPlugin({ paths, config }),
       copyPlugin({ paths, config }),
       miniCssExtractPlugin({ paths, config }),
       htmlPlugin({ paths, config }),
       friendlyErrorsPlugin({ paths, config }),
+      faviconsPlugin({ paths, config }),
     ],
 
     stats: 'errors-only',

@@ -3,14 +3,14 @@
 .hero {
   @include section;
 
-  padding-top: map-get($spacers, '6lg');
+  padding-top: map-get($spacers, '6xl');
 
   @include media-breakpoint-down(md) {
-    padding-top: map-get($spacers, '5lg');
+    padding-top: map-get($spacers, '5xl');
   }
 
   @include media-breakpoint-down(xs) {
-    padding-top: map-get($spacers, '4lg');
+    padding-top: map-get($spacers, '4xl');
   }
 }
 
@@ -22,7 +22,7 @@
   margin-right: map-get($spacers, 'md');
 
   @include media-breakpoint-down(sm) {
-    margin-right: map-get($spacers, '6lg');
+    margin-right: map-get($spacers, '6xl');
   }
 
   @include media-breakpoint-down(xs) {

@@ -3,7 +3,7 @@
 .footer {
   @include section;
 
-  padding-bottom: map-get($spacers, '2lg') !important;
+  padding-bottom: map-get($spacers, '2xl') !important;
 }
 
 .footer__container {
@@ -14,7 +14,9 @@
   }
 }
 
-.footer__nav {}
+.footer__nav {
+  margin-bottom: map-get($spacers, '2xl');
+}
 
 .footer__info {
   font-size: get-type-size(2);
