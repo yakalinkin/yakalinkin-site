@@ -1,0 +1,39 @@
+@import '~styles/main-utils';
+@import './style.scss.json';
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 1;
+
+  background-color: color-rgb('background');
+
+  z-index: 999;
+
+  &._loading {
+    opacity: 0;
+    transition: opacity #{$loadedDelay}ms ease-in-out;
+  }
+
+  svg {
+    @include logo;
+
+    opacity: 0.5;
+  }
+
+  span {
+    font-size: get-type-size(2);
+    margin-top: map-get($spacers, 'xs');
+    opacity: 0.5;
+  }
+}

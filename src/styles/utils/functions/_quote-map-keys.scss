@@ -1,0 +1,17 @@
+@function quote-map-keys($map, $keys...) {
+  $new-map: ();
+
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @each $key,$value in $map {
+    @if type-of($value) == 'map' {
+      $value: quote-map-keys($value);
+    }
+
+    $new-map: map-merge($new-map, (quote(#{$key}): $value));
+  }
+
+  @return $new-map;
+}

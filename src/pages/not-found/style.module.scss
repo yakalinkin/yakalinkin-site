@@ -1,0 +1,62 @@
+@import '~styles/main-utils';
+
+.error {
+  --rgb-link: #{get-rgb('white')};
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #2f7aff;
+  color: white;
+
+  h1 {
+    @include generate-type-style('d1');
+
+    font-weight: $font-weight-semibold;
+    line-height: $font-height-condensed-ultra;
+  }
+
+  h2 {
+    @include generate-type-style('h2');
+
+    font-weight: $font-weight-medium;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  a {
+    position: relative;
+    margin: 0 auto;
+    margin-top: map-get($spacers, '4xl');
+
+    &:hover svg {
+      left: -1.75em;
+      transition: left 100ms ease-in-out;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: -1.5em;
+    transform: translateY(-50%);
+    height: 1.25em;
+    margin-right: map-get($spacers, '2xs');
+
+    transition: left 250ms ease-in-out;
+  }
+}
+
+.error__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 map-get($spacers, 'md');
+  max-width: 424px;
+  text-align: center;
+}

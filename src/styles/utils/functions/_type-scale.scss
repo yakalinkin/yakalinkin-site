@@ -1,0 +1,7 @@
+@function get-type-size($step) {
+  @if $step == 1 {
+    @return 12px;
+  }
+
+  @return get-type-size($step - 1) + (floor(($step - 2) * 0.25) + 1) * 2;
+}

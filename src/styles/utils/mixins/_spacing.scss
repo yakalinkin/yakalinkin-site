@@ -1,0 +1,33 @@
+@mixin generate-spacing($property) {
+  @each $infix, $value in $spacers {
+    &-#{$infix} {
+      #{$property}: $value !important;
+    }
+
+    &y-#{$infix} {
+      #{$property}-top: $value !important;
+      #{$property}-bottom: $value !important;
+    }
+
+    &x-#{$infix} {
+      #{$property}-left: $value !important;
+      #{$property}-right: $value !important;
+    }
+
+    &t-#{$infix} {
+      #{$property}-top: $value !important;
+    }
+
+    &l-#{$infix} {
+      #{$property}-left: $value !important;
+    }
+
+    &b-#{$infix} {
+      #{$property}-bottom: $value !important;
+    }
+
+    &r-#{$infix} {
+      #{$property}-right: $value !important;
+    }
+  }
+}

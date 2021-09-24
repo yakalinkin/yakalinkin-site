@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+@import '~swiper/swiper.scss';
+
+// Import variables as JSON into Scss
+@import 'main.scss.json';
+
+// Import utils
+@import 'utils/**/*.scss';
+@import 'variables.scss';
+
+@import 'global/**/*.scss';
