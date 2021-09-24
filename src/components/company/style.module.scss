@@ -1,14 +1,14 @@
 @import '~styles/main-utils';
 
 .company {
-  padding-top: map-get($spacers, '7xl');
+  padding-top: map-get($spacers, '6xl');
 
   @include media-breakpoint-down(md) {
-    padding-top: map-get($spacers, '5xl');
+    padding-top: map-get($spacers, '4xl');
   }
 
   @include media-breakpoint-down(xs) {
-    padding-top: map-get($spacers, '3xl');
+    padding-top: map-get($spacers, '2xl');
   }
 }
 
@@ -30,7 +30,7 @@
 
 .company__item {
   position: relative;
-  margin-bottom: map-get($spacers, '3xl');
+  margin-bottom: map-get($spacers, '2xl');
 
   &[class*="active"] {
     .company__image {
@@ -43,7 +43,7 @@
   }
 
   @include media-breakpoint-between(sm, md) {
-    margin-right: map-get($spacers, '3xl');
+    margin-right: map-get($spacers, '2xl');
   }
 
   @include media-breakpoint-down(sm) {

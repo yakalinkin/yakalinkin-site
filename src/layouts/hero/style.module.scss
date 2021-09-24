@@ -3,14 +3,14 @@
 .hero {
   @include section;
 
-  padding-top: map-get($spacers, '6xl');
+  padding-top: map-get($spacers, '5xl');
 
   @include media-breakpoint-down(md) {
-    padding-top: map-get($spacers, '5xl');
+    padding-top: map-get($spacers, '4xl');
   }
 
   @include media-breakpoint-down(xs) {
-    padding-top: map-get($spacers, '4xl');
+    padding-top: map-get($spacers, '3xl');
   }
 }
 
@@ -19,10 +19,10 @@
 }
 
 .hero__caption {
-  margin-right: map-get($spacers, 'md');
+  margin-right: map-get($spacers, 'xl');
 
   @include media-breakpoint-down(sm) {
-    margin-right: map-get($spacers, '6xl');
+    margin-right: map-get($spacers, '5xl');
   }
 
   @include media-breakpoint-down(xs) {

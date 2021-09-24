@@ -33,7 +33,7 @@
   a {
     position: relative;
     margin: 0 auto;
-    margin-top: map-get($spacers, '5xl');
+    margin-top: map-get($spacers, '4xl');
 
     &:hover svg {
       left: -1.75em;

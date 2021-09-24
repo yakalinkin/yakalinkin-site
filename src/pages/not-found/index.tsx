@@ -15,7 +15,7 @@ export const NotFound = () => {
       <div className={style.errorContainer}>
         <h1>404</h1>
         <h2>Здесь ничего нет</h2>
-        <p>Вы думали, что страница существует... <span className="nowrap">a вот и нет</span></p>
+        <p>Вы думали, что страница существует... <span className="nowrap">a вот и нет :)</span></p>
         <Link to="/"><ArrowLeftSvg />Вернуться на главную</Link>
       </div>
     </div>

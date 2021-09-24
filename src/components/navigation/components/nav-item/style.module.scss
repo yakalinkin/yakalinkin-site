@@ -9,12 +9,12 @@
   }
 
   &:not(:last-child) {
-    margin-right: map-get($spacers, '3xl');
+    margin-right: map-get($spacers, '2xl');
   }
 
   @include media-breakpoint-down(sm) {
     &:not(:last-child) {
-      margin-right: map-get($spacers, '2xl');
+      margin-right: map-get($spacers, 'xl');
     }
   }
 
