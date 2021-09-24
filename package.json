@@ -8,7 +8,8 @@
     "start": "cross-env TS_NODE_PROJECT=builder/tsconfig.json webpack serve --config builder/webpack.config.ts",
     "build": "cross-env TS_NODE_PROJECT=builder/tsconfig.json webpack --config builder/webpack.config.ts",
     "build:prod": "cross-env TS_NODE_PROJECT=builder/tsconfig.json npm run build -- --mode production",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "audit:fix": "npx yarn-audit-fix"
   },
   "dependencies": {
     "@babel/core": "^7.14.6",
@@ -75,7 +76,8 @@
     "@typescript-eslint/parser": "^4.28.2",
     "eslint": "^7.30.0",
     "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "yarn-audit-fix": "^7.0.4"
   },
   "resolutions": {
     "@types/webpack-dev-server/@types/webpack": "^5.28.0"
