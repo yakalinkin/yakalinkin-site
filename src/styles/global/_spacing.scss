@@ -1,0 +1,9 @@
+@use "sass:meta";
+
+.m {
+  @include generate-spacing(margin);
+}
+
+.p {
+  @include generate-spacing(padding);
+}

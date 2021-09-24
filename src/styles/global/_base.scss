@@ -1,0 +1,73 @@
+@include load-fonts($font-typefaces);
+
+#root {
+  @include generate-type-style('body');
+
+  min-height: 100vh;
+}
+
+:root {
+  cursor: default;
+  line-height: $font-height-default;
+  overflow-wrap: break-word;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+body {
+  block-size: -moz-available;
+  block-size: -webkit-fill-available;
+  block-size: stretch;
+  margin: 0;
+  background-color: color-rgb('background');
+}
+
+nav :where(ol, ul) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: rgba(var(--rgb-link), 0.6);
+  text-decoration: none;
+  pointer-events: none;
+
+  &:not([href]),
+  &:not([href="#"]) {
+    color: rgba(var(--rgb-link), 1);
+    transition: color 250ms ease-in-out;
+    pointer-events: visible;
+
+    &:hover {
+      color: rgba(var(--rgb-link), 0.7);
+      transition: color 100ms ease-in-out;
+    }
+  }
+}
+
+img,
+svg {
+  vertical-align: middle;
+  width: auto;
+  height: 100%;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}

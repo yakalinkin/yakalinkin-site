@@ -1,0 +1,59 @@
+@import '~styles/main-utils';
+
+.coming-soon {
+  background-color: color-rgba('main', 0.1);
+  background-image: url('images/portfolio.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: map-get($spacers, '4xl');
+  display: flex;
+  overflow: hidden;
+  margin: 0 -#{map-get($spacers, '4xl')};
+  color: white;
+
+  @include media-breakpoint-down(xl) {
+    margin: 0 -#{map-get($spacers, '3xl')};
+    border-radius: map-get($spacers, '3xl');
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0;
+    border-radius: map-get($spacers, 'xl');
+  }
+
+  @include media-breakpoint-down(xs) {
+    border-radius: map-get($spacers, 'md');
+  }
+
+  &:before {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 56%;
+  }
+}
+
+.coming-soon__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.coming-soon__heading {
+  @include generate-type-style('d1');
+}
+
+.coming-soon__subheading {
+  @include generate-type-style('sub');
+
+  opacity: 0.6;
+}

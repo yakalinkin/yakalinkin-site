@@ -1,0 +1,59 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "react",
+      "react-hooks"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "rules": {
+      "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+      "quotes": ["warn", "single"],
+      "semi": ["error", "always"],
+      "comma-dangle": ["warn", "always-multiline"],
+      "space-before-blocks": ["warn", "always"],
+      "func-call-spacing": ["warn", "never"],
+      "block-spacing": ["warn", "always"],
+      "arrow-parens": ["warn", "always"],
+      "object-curly-spacing": ["warn", "always"],
+      "prefer-const": ["warn", {
+        "destructuring": "all"
+      }],
+      "no-useless-escape": "off",
+
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-explicit-any": [ "warn", {
+        "ignoreRestArgs": true
+      }],
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/no-inferrable-types": "warn",
+      "@typescript-eslint/member-delimiter-style": "warn",
+
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error",
+      "react/prop-types": "off",
+
+      "react-hooks/exhaustive-deps": "warn"
+    }
+  }

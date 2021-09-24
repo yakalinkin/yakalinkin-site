@@ -1,0 +1,26 @@
+// class="grid"
+// class="grid _fluid"
+.grid {
+  @include grid-container();
+
+  &:not(._fluid) {
+    @include grid-max-widths();
+  }
+}
+
+// class="grid__row"
+// class="grid__row _cols-{column}"
+// class="grid__row _cols-{breakpoint}-{column}"
+.grid__row {
+  @include grid-row();
+  @include grid-row-columns();
+}
+
+// class="grid__col"
+// class="grid__col _{breakpoint}"
+// class="grid__col _{breakpoint}-{column}"
+// class="grid__col _order-{breakpoint}-{column}"
+// class="grid__col _offset-{breakpoint}-{column}"
+.grid__col {
+  @include grid-columns();
+}

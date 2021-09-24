@@ -1,0 +1,34 @@
+// Display
+
+.d1 {
+  @include generate-type-style('d1');
+}
+
+.d2 {
+  @include generate-type-style('d2');
+}
+
+.d3 {
+  @include generate-type-style('d3');
+}
+
+// Heading
+
+h1,
+.h1 {
+  @include generate-type-style('h1');
+}
+
+h2,
+.h2 {
+  @include generate-type-style('h2');
+}
+
+h3,
+.h3 {
+  @include generate-type-style('h3');
+}
+
+.sub {
+  @include generate-type-style('sub');
+}

@@ -1,0 +1,68 @@
+@mixin font-face($path, $name, $family, $weight: 400, $style: normal, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+  $font-name: font-name($name, $weight, $style);
+
+  $ext-mods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $ext-mod: if(map-has-key($ext-mods, $ext), $ext + map-get($ext-mods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url('~#{$path}/#{$name}/#{$font-name}/#{$font-name}.#{$ext-mod}') format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($family);
+    src: $src;
+    font-style: $style;
+    font-weight: $weight;
+    font-stretch: normal;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@mixin load-fonts($typefaces, $path: $font-path) {
+  @each $key, $font in $typefaces {
+
+    $name: map-get($font, 'name');
+    $family: map-get($font, 'family');
+    $variants: map-get($font, 'variants');
+
+    @if type-of($variants) == 'map' {
+      @include font-face(
+        $path,
+        $name,
+        $family,
+        map-get($variants, 'weight'),
+        map-get($variants, 'style'),
+        woff woff2
+      );
+    }
+
+    @if type-of($variants) == 'list' {
+      @each $variant in $variants {
+        @include font-face(
+          $path,
+          $name,
+          $family,
+          map-get($variant, 'weight'),
+          map-get($variant, 'style'),
+          woff woff2
+        );
+      }
+    }
+  }
+}
+
+@function font-name($name, $weight, $style ) {
+  @return #{$name}-#{$weight}-#{$style};
+}

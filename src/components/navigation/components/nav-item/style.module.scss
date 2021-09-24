@@ -1,0 +1,38 @@
+@import '~styles/main-utils';
+
+.navigation__item {
+  --rgb-link: var(--rgb-main-g);
+
+  > a {
+    position: relative;
+    line-height: 1;
+  }
+
+  &:not(:last-child) {
+    margin-right: map-get($spacers, '2xl');
+  }
+
+  @include media-breakpoint-down(sm) {
+    &:not(:last-child) {
+      margin-right: map-get($spacers, 'xl');
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    &:not(:last-child) {
+      margin-right: map-get($spacers, 'lg');
+    }
+  }
+}
+
+.navigation__link {
+  position: relative;
+  display: flex;
+  line-height: 1;
+
+  svg {
+    height: 0.75em;
+    margin-left: map-get($spacers, '3xs');
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,113 @@
+@import '~styles/main-utils';
+
+.company {
+  padding-top: map-get($spacers, '6xl');
+
+  @include media-breakpoint-down(md) {
+    padding-top: map-get($spacers, '4xl');
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: map-get($spacers, '2xl');
+  }
+}
+
+.company__container {
+  @include container;
+
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.company__list {
+  @include gradient-overlay;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.company__item {
+  position: relative;
+  margin-bottom: map-get($spacers, '2xl');
+
+  &[class*="active"] {
+    .company__image {
+      opacity: 1;
+    }
+
+    .company__text {
+      opacity: 0.4;
+    }
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-right: map-get($spacers, '2xl');
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: map-get($spacers, 'md');
+  }
+
+  @include media-breakpoint-up(md) {
+    &:hover {
+      .company__image {
+        opacity: 1;
+
+        transition: opacity 100ms ease-in-out;
+      }
+
+      .company__text {
+        opacity: 0.4;
+
+        transition: opacity 100ms ease-in-out;
+      }
+    }
+  }
+}
+
+.company__image,
+.company__text {
+  transition: opacity 250ms ease-in-out;
+}
+
+.company__image {
+  opacity: 0.3;
+
+  @include media-breakpoint-down(xs) {
+    height: 24px;
+  }
+}
+
+.company__text {
+  position: absolute;
+  opacity: 0;
+  font-size: get-type-size(2);
+  bottom: -#{map-get($spacers, 'md')};
+  left: 50%;
+  transform: translate(-50%, 100%);
+  white-space: nowrap;
+  color: currentColor;
+  pointer-events: none;
+
+  @include media-breakpoint-down(sm) {
+    left: 0;
+    transform: translate(0, 100%);
+  }
+}
+
+// :HACK: for swiper
+
+[id="scnsoft"] {
+  width: 160px !important;
+}
+[id="treehouse"] {
+  width: 139px !important;
+}
+[id="yandex-praktikum"] {
+  width: 160px !important;
+}
+[id="hacker-rank"] {
+  width: 168px !important;
+}

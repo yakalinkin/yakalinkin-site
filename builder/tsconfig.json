@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+
+    "target": "es5",
+
+    "baseUrl": ".",
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "paths": {
+      "@configs": ["configs/index.ts"],
+      "@utils": ["utils/index.ts"]
+    },
+
+    "esModuleInterop": true
+
+  }
+}
