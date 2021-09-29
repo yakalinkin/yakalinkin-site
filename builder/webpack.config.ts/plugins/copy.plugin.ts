@@ -23,6 +23,13 @@ export const copyPlugin: PluginInstance = function ({ paths }) {
         },
       },
 
+      // Favicons
+      {
+        from: `${paths.assets.favicons}/**/*`,
+        to: `${paths.faviconsFolder}/[name][ext]`,
+        noErrorOnMissing: true,
+      },
+
     ],
   });
 };
