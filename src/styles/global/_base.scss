@@ -71,3 +71,7 @@ svg {
 svg:not([fill]) {
   fill: currentColor;
 }
+
+*:focus {
+  outline: none;
+}
