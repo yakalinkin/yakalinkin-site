@@ -17,7 +17,6 @@ import {
   friendlyErrorsPlugin,
   htmlPlugin,
   miniCssExtractPlugin,
-  faviconsPlugin,
 } from './plugins';
 
 export default (paths: Paths, config: Config) => {
@@ -48,7 +47,6 @@ export default (paths: Paths, config: Config) => {
       miniCssExtractPlugin({ paths, config }),
       htmlPlugin({ paths, config }),
       friendlyErrorsPlugin({ paths, config }),
-      faviconsPlugin({ paths, config }),
     ],
 
     stats: 'errors-only',

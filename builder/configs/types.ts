@@ -7,6 +7,7 @@ export type Paths = {
   prodFolder: string;
   assetsFolder: string;
   imagesFolder: string;
+  faviconsFolder: string;
   fontsFolder: string;
   stylesFolder: string;
   scriptsFolder: string;
@@ -18,6 +19,7 @@ export type Paths = {
   assets: {
     images: string;
     fonts: string;
+    favicons: string;
   };
   dev: {
     styles: string;
