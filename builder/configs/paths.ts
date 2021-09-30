@@ -12,6 +12,7 @@ const defaultPaths: Partial<Paths> = {
   prodFolder: 'dist',
   assetsFolder: 'public',
   imagesFolder: 'images',
+  faviconsFolder: 'favicons',
   fontsFolder: 'fonts',
   stylesFolder: 'styles',
   scriptsFolder: 'scripts',
@@ -26,6 +27,7 @@ paths.root = {
 };
 
 paths.assets = {
+  favicons: path.join(paths.root.assets, paths.faviconsFolder),
   images: path.join(paths.root.assets, paths.imagesFolder),
   fonts: path.join(paths.root.assets, paths.fontsFolder),
 };

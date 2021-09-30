@@ -12,7 +12,7 @@ import { Props } from './types';
 import style from './style.module.scss';
 
 export const NavItem: FC<Props> = ({ text, tag, to, ...props }) => {
-  const children = <>{ text }<NavTag tag={tag} /></>;
+  const children = <span tabIndex={-1}>{ text }<NavTag tag={tag} /></span>;
 
   if(to && to !=='#' && isExternal(to) && !props.target) props.target = '_blank';
 
@@ -20,8 +20,8 @@ export const NavItem: FC<Props> = ({ text, tag, to, ...props }) => {
     <li className={style.navigationItem}>
       {
         to && to !=='#' && !isExternal(to)
-          ? <Link className={style.navigationLink} to={to} {...props}>{children}</Link>
-          : <a className={style.navigationLink} href={to} {...props}>{children}{ props.target === '_blank' && <ArrowUpRightSvg /> }</a>
+          ? <Link className={style.navigationLink} to={to} {...props} tabIndex={0}>{children}</Link>
+          : <a className={style.navigationLink} href={to} {...props} tabIndex={0}>{children}{ props.target === '_blank' && <ArrowUpRightSvg /> }</a>
       }
     </li>
   );
