@@ -61,7 +61,7 @@ a {
   }
 
   &:focus {
-    box-shadow: inset 0 0 0 20px color-rgba('blue', 0.15);
+    box-shadow: inset 0 0 0 20px color-rgba('main', 0.15);
   }
 
   &:not(:-moz-focusring):focus {
