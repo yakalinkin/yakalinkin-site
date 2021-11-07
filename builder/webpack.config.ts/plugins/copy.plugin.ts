@@ -1,8 +1,10 @@
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
+import { isProd } from '../../configs';
+
 import { PluginInstance } from './types';
 
-export const copyPlugin: PluginInstance = function ({ paths }) {
+export const copyPlugin: PluginInstance = function ({ config, paths }) {
   return new CopyWebpackPlugin({
     patterns: [
 
@@ -30,6 +32,9 @@ export const copyPlugin: PluginInstance = function ({ paths }) {
         noErrorOnMissing: true,
       },
 
-    ],
+      // CNAME
+      isProd && `${paths.root.assets}/CNAME`,
+
+    ].filter(Boolean),
   });
 };

@@ -17,7 +17,7 @@ export const Hero: FC = () => {
 
       <div className={style.heroContainer}>
         <div className={style.heroCaption}>
-          <h1 className="d3">{helloText}, это Ярослав. <span className="nowrap">Веб-<span className={style.heroUnderline}>программист<LineSvg /></span></span> из Беларуси. Разрабатываю живые сайты.</h1>
+          <h1 className="d3">{helloText}, это Ярослав. <span className="nowrap">Веб-<span className={style.heroUnderline}>разработчик<LineSvg /></span></span> из Беларуси. Разрабатываю живые сайты.</h1>
         </div>
       </div>
 
