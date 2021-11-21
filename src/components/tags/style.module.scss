@@ -1,0 +1,27 @@
+@import '~styles/main-utils';
+
+.tags {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags__tag {
+  font-size: get-type-size(3);
+  line-height: get-type-size(7);
+  font-weight: $font-weight-medium;
+  background-color: color-rgba('main', 0.07);
+  margin-right: map-get($spacers, 'xs');
+  margin-top: map-get($spacers, 'xs');
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 6px;
+
+  transition: background-color 250ms ease-in-out;
+
+  &:hover {
+    background-color: color-rgba('main', 0.13);
+
+    transition: background-color 100ms ease-in-out;
+  }
+}

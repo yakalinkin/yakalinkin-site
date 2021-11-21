@@ -32,3 +32,15 @@ h3,
 .sub {
   @include generate-type-style('sub');
 }
+
+.lead {
+  @include generate-type-style('lead');
+}
+
+.paragraph {
+  @include generate-type-style('paragraph');
+}
+
+.quote {
+  @include generate-type-style('quote');
+}

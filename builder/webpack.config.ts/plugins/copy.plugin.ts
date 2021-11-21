@@ -32,6 +32,13 @@ export const copyPlugin: PluginInstance = function ({ config, paths }) {
         noErrorOnMissing: true,
       },
 
+      // Scripts
+      {
+        from: `${paths.assets.scripts}/**/*`,
+        to: `${paths.scriptsFolder}/[name][ext]`,
+        noErrorOnMissing: true,
+      },
+
       // CNAME
       isProd && `${paths.root.assets}/CNAME`,
 

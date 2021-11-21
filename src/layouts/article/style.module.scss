@@ -1,0 +1,19 @@
+@import '~styles/main-utils';
+
+.article {
+  @include section;
+
+  padding-top: map-get($spacers, '5xl');
+
+  @include media-breakpoint-down(md) {
+    padding-top: map-get($spacers, '4xl');
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: map-get($spacers, '3xl');
+  }
+}
+
+.article__container {
+  @include container;
+}

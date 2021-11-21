@@ -12,7 +12,8 @@
       "@styles/*": ["src/styles/*"],
       "@hooks/*": ["src/hooks/*"],
       "@utils/*": ["src/utils/*"],
-      "@svg/*": ["src/svg/*"]
+      "@svg/*": ["src/svg/*"],
+      "#consts": ["src/consts"]
     },
 
     "jsx": "react",

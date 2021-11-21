@@ -1,4 +1,7 @@
 import React, { FC } from 'react';
+import { NavLink } from 'react-router-dom';
+
+import { Routes } from '#consts';
 
 import { Navigation, NavItem, NavTagName } from '@components/navigation';
 import { ThemeAction } from '@components/action';
@@ -12,15 +15,26 @@ export const Header: FC = () => {
     <header className={style.header}>
       <div className={style.headerContainer}>
         <div className={style.headerLogo}>
-          <LogoSvg />
+          <NavLink
+            activeClassName={style.active}
+            isActive={(match, location) => (!!match?.isExact && location.pathname === Routes.HOME)}
+            to={Routes.HOME}
+          >
+            <LogoSvg tabIndex={-1} />
+          </NavLink>
         </div>
         <div className={style.headerNav}>
           <Navigation>
             <NavItem
               to="#"
+              text="Портфолио"
+              key="portfolio"
+              tag={NavTagName.Soon}
+            />
+            <NavItem
+              to={Routes.RESUME}
               text="Резюме"
               key="resume"
-              tag={NavTagName.Soon}
             />
           </Navigation>
         </div>

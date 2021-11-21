@@ -20,6 +20,7 @@ export type Paths = {
     images: string;
     fonts: string;
     favicons: string;
+    scripts: string;
   };
   dev: {
     styles: string;
