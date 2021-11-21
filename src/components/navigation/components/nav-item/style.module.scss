@@ -30,6 +30,23 @@
   display: flex;
   line-height: 1;
 
+  &._active {
+    pointer-events: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: calc(100% + 24px);
+      height: calc(100% + 16px);
+      background-color: color-rgba('main', 0.1);
+      border-radius: 8px;
+
+      transform: translate(-50%, -50%);
+    }
+  }
+
   svg {
     height: 0.75em;
     margin-left: map-get($spacers, '3xs');

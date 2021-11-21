@@ -1,0 +1,13 @@
+@import '~styles/main-utils';
+
+.article-heading {
+  &._h1 {
+    @include generate-type-style('h1');
+  }
+  &._h2 {
+    @include generate-type-style('h2');
+  }
+  &._h3 {
+    @include generate-type-style('h3');
+  }
+}

@@ -1,0 +1,76 @@
+@import '~styles/main-utils';
+
+.article-list__container {
+  margin-top: map-get($spacers, '4xl');
+  margin-bottom: map-get($spacers, '4xl');
+}
+
+.article-list {
+  @include generate-type-style('paragraph');
+
+  position: relative;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+
+  &._ul {
+    > li::before {
+      content: '';
+
+      position: absolute;
+      top: calc(#{get-type-size(7)} / 2);
+      left: -0.5em;
+
+      transform: translate(-100%, -50%);
+
+      width: 1em;
+      height: 2px;
+
+      background-color: color-rgba('main', 0.25);
+
+      @include media-breakpoint-down(md) {
+        left: -0.25em;
+        top: calc(#{get-type-size(6)} / 2);
+      }
+    }
+  }
+
+  &._ol {
+    counter-reset: list-counter;
+
+    > li {
+      @include media-breakpoint-down(md) {
+        padding-top: map-get($spacers, 'lg');
+      }
+    }
+
+    > li::before {
+      counter-increment: list-counter;
+      content: counter(list-counter) ".";
+
+      position: absolute;
+      top: calc(#{get-type-size(7)} / 2);
+      left: -0.5em;
+
+      transform: translate(-100%, -50%);
+
+      color: color-rgba('main', 0.25);
+      text-align: right;
+
+      @include media-breakpoint-down(md) {
+        top: 0;
+        left: 0;
+        transform: unset;
+        font-size: get-type-size(2);
+      }
+    }
+  }
+}
+
+.article-list__item {
+  position: relative;
+
+  & + & {
+    margin-top: map-get($spacers, 'md'),
+  }
+}

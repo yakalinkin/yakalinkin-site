@@ -43,6 +43,12 @@
 }
 
 .header__logo {
+  --rgb-link: var(--rgb-main-g);
+
+  a._active {
+    pointer-events: none;
+  }
+
   svg {
     @include logo;
   }

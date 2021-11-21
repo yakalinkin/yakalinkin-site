@@ -12,7 +12,8 @@
       "yellow": "#ffcc00",
       "orange": "#ff9500",
       "mint": "#3ec7be",
-      "blue": "#2f7aff"
+      "blue": "#2f7aff",
+      "green": "#30d89d"
     },
     "dark": {
       "background": "#171717",
@@ -23,7 +24,8 @@
       "yellow": "#fbd60c",
       "orange": "#f89f0d",
       "mint": "#53aba7",
-      "blue": "#3184ff"
+      "blue": "#3184ff",
+      "green": "#21ab7b"
     }
   },
 

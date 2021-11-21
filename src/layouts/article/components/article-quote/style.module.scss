@@ -1,0 +1,16 @@
+@import '~styles/main-utils';
+
+.article-quote {
+  @include generate-type-style('quote');
+
+  width: unset;
+
+  margin: #{map-get($spacers, '5xl')} 0 #{map-get($spacers, '7xl')};
+  margin-left: -#{map-get($spacers, '3xl')};
+
+  @include media-breakpoint-down(sm) {
+    margin: #{map-get($spacers, '4xl')} 0 #{map-get($spacers, '6xl')};
+    margin-left: 0;
+  }
+
+}

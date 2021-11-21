@@ -1,0 +1,76 @@
+@import '~styles/main-utils';
+
+@mixin line {
+  position: absolute;
+  z-index: -1;
+
+  path {
+    stroke-width: 4px;
+    vector-effect: non-scaling-stroke;
+    stroke: color-rgb('green');
+
+    @include media-breakpoint-down(md) {
+      stroke-width: 3px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      stroke-width: 2px;
+    }
+  }
+}
+
+.line-group {
+  position: relative;
+}
+
+.line-1 {
+  @include line;
+
+  z-index: 0;
+
+  height: 100px;
+  top: 0;
+  left: 0;
+
+  transform: translate(-13%, -10%);
+
+  @include media-breakpoint-down(xs) {
+    height: 75px;
+  }
+}
+
+.line-2 {
+  @include line;
+
+  height: 82px;
+  left: 0;
+  bottom: 0;
+
+  transform: translate(-5%, 0);
+
+  @include media-breakpoint-down(md) {
+    height: 65px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    height: 44px;
+  }
+}
+
+.line-3 {
+  @include line;
+
+  height: 40px;
+  right: 0;
+  top: 0;
+
+  transform: translate(54%, -80%);
+
+  @include media-breakpoint-down(md) {
+    height: 30px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    height: 24px;
+  }
+}
