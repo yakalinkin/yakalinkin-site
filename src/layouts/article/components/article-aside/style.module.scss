@@ -1,0 +1,42 @@
+@import '~styles/main-utils';
+
+.article-aside {
+  position: absolute;
+  top: 0;
+  right: -#{map-get($spacers, 'lg')};
+  transform: translateX(100%);
+  max-width: 200px;
+  z-index: 1000;
+
+  @include media-breakpoint-down(md) {
+    position: relative;
+    right: unset;
+    transform: translateX(0);
+    max-width: unset;
+
+    display: flex;
+    align-items: flex-end;
+    margin-top: map-get($spacers, 'lg');
+  }
+
+}
+
+.article-aside__image {
+  max-width: 100%;
+  height: 80px;
+  margin-bottom: map-get($spacers, 'xs');
+
+  @include media-breakpoint-down(xs) {
+    height: 60px;
+  }
+}
+
+.article-aside__text {
+  font-size: get-type-size(2);
+  color: color-rgba('main', 0.5);
+
+  @include media-breakpoint-down(md) {
+    margin-left: map-get($spacers, 'sm');
+    margin-bottom: map-get($spacers, 'xs');
+  }
+}

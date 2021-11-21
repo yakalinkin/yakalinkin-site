@@ -10,10 +10,13 @@ import { useLocalStorage } from '@hooks/local-storage.hook';
 import { SplashScreen } from '@components/splash-screen';
 
 import { Home } from '@pages/home';
+import { Resume } from '@pages/resume';
+
 import { NotFound } from '@pages/not-found';
 
 import styleJson from './styles/main.scss.json';
 import { setHtmlDataset } from '@utils/utils';
+import { Routes } from './consts';
 
 const Root = () => {
   const [themeStorage] = useLocalStorage<string>('theme');
@@ -31,7 +34,8 @@ const Root = () => {
   return (
     <SplashScreen isLoading={isLoading}>
       <Switch>
-        <Route path="/" component={Home} exact />
+        <Route path={Routes.HOME} component={Home} exact />
+        <Route path={Routes.RESUME} component={Resume} exact />
         <Route component={NotFound} />
       </Switch>
     </SplashScreen>

@@ -1,0 +1,10 @@
+@import '~styles/main-utils';
+
+.article-aside-group {
+  position: relative;
+  max-width: $article-width;
+
+  @include media-breakpoint-down(md) {
+    width: unset;
+  }
+}

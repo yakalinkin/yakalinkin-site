@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { isExternal } from '@utils/utils';
 
@@ -20,8 +20,8 @@ export const NavItem: FC<Props> = ({ text, tag, to, ...props }) => {
     <li className={style.navigationItem}>
       {
         to && to !=='#' && !isExternal(to)
-          ? <Link className={style.navigationLink} to={to} {...props} tabIndex={0}>{children}</Link>
-          : <a className={style.navigationLink} href={to} {...props} tabIndex={0}>{children}{ props.target === '_blank' && <ArrowUpRightSvg /> }</a>
+          ? <NavLink className={style.navigationLink} activeClassName={style.active} to={to} {...props} tabIndex={0} rel="noreferrer">{children}</NavLink >
+          : <a className={style.navigationLink} href={to} {...props} tabIndex={0} rel="noreferrer">{children}{ props.target === '_blank' && <ArrowUpRightSvg /> }</a>
       }
     </li>
   );

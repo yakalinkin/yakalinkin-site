@@ -1,0 +1,23 @@
+@import '~styles/main-utils';
+
+.article-header {
+  margin-bottom: map-get($spacers, '5xl');
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: unset;
+  }
+
+  & + aside {
+    @include media-breakpoint-down(md) {
+      margin-bottom: map-get($spacers, '4xl');
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: map-get($spacers, '2xl');
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
