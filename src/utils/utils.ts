@@ -20,7 +20,9 @@ export function off<T extends Window | Document | HTMLElement | EventTarget>(
 
 export const isBrowser = typeof window !== 'undefined';
 
-export const isExternal = (url: string) => /^https?:\/\//.test(url);
+export const isLinkExternal = (url: string) => /^https?:\/\//.test(url);
+
+export const isLinkEmpty = (url: string) => !url || url === '#';
 
 export function getHtmlDataset(key: string) {
   if (!key) throw new Error('The "key" value cannot be falsy in HTMLHtmlElement.dataset');

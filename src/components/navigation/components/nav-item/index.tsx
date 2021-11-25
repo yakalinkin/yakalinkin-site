@@ -1,7 +1,8 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { isExternal } from '@utils/utils';
+import { isLinkEmpty, isLinkExternal } from '@utils/utils';
+import { useIgnoreTabIndex } from '@hooks/ignore-tab-index.hook';
 
 import ArrowUpRightSvg from '@svg/arrow-up-right.svg';
 
@@ -12,16 +13,37 @@ import { Props } from './types';
 import style from './style.module.scss';
 
 export const NavItem: FC<Props> = ({ text, tag, to, ...props }) => {
+  const [ tabIndex, ignoreTabIndex ] = useIgnoreTabIndex(isLinkEmpty(to));
+
   const children = <span tabIndex={-1}>{ text }<NavTag tag={tag} /></span>;
 
-  if(to && to !=='#' && isExternal(to) && !props.target) props.target = '_blank';
+  if(!isLinkEmpty(to) && isLinkExternal(to) && !props.target) props.target = '_blank';
 
   return (
     <li className={style.navigationItem}>
       {
-        to && to !=='#' && !isExternal(to)
-          ? <NavLink className={style.navigationLink} activeClassName={style.active} to={to} {...props} tabIndex={0} rel="noreferrer">{children}</NavLink >
-          : <a className={style.navigationLink} href={to} {...props} tabIndex={0} rel="noreferrer">{children}{ props.target === '_blank' && <ArrowUpRightSvg /> }</a>
+        !isLinkEmpty(to) && !isLinkExternal(to)
+          ? <NavLink
+              className={(isActive) => {
+                ignoreTabIndex(isActive);
+                return style.navigationLink + ' ' + (isActive ? style.active : '');
+              }}
+              to={to}
+              tabIndex={tabIndex}
+              rel="noreferrer"
+              {...props}
+            >
+              {children}
+            </NavLink >
+          : <a
+              className={style.navigationLink}
+              href={to}
+              tabIndex={tabIndex}
+              rel="noreferrer"
+              {...props}
+            >
+              {children}{ props.target === '_blank' && <ArrowUpRightSvg /> }
+            </a>
       }
     </li>
   );
