@@ -60,7 +60,7 @@ a {
     }
   }
 
-  &:focus {
+  &:focus:not([tabindex="-1"]) {
     @include focus-style;
   }
 }

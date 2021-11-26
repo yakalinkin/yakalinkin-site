@@ -15,8 +15,8 @@
     opacity: 0.7;
     transition: opacity 100ms ease-in-out;
   }
+}
 
-  &:focus > * {
-    @include focus-style(color-rgba('main', 0.15));
-  }
+.action__focusable {
+  --rgb-focus: var(--rgb-main-g);
 }

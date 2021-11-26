@@ -2,6 +2,7 @@
 
 .navigation__item {
   --rgb-link: var(--rgb-main-g);
+  --rgb-focus: var(--rgb-link);
 
   > a {
     position: relative;
