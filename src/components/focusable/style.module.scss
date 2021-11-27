@@ -1,0 +1,16 @@
+@import '~styles/main-utils';
+
+.focusable {
+  display: flex;
+
+  &:focus:not([tabindex='-1']) {
+    @include focus-style;
+  }
+}
+
+.focusable__inner {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,5 @@
+@mixin focus-style($color: rgba(var(--rgb-focus), 0.15)) {
+  box-shadow: 0 0 0 0.125em $color;
+  background-color: $color;
+  z-index: 9999;
+}

@@ -60,12 +60,8 @@ a {
     }
   }
 
-  &:focus {
-    box-shadow: inset 0 0 0 20px rgba(var(--rgb-link), 0.15);
-  }
-
-  &:not(:-moz-focusring):focus {
-    box-shadow: none;
+  &:focus:not([tabindex="-1"]) {
+    @include focus-style;
   }
 }
 
@@ -82,4 +78,8 @@ svg:not([fill]) {
 
 :focus {
   outline: none;
+}
+
+:not(:-moz-focusring):focus {
+  box-shadow: none;
 }

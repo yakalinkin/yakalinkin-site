@@ -10,6 +10,7 @@
   @include light-mode;
 
   --rgb-link: var(--rgb-blue-g);
+  --rgb-focus: var(--rgb-link);
 }
 
 [data-theme="light"] {
