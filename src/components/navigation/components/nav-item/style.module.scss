@@ -54,3 +54,9 @@
     opacity: 0.5;
   }
 }
+
+[data-theme="dark"] .navigation__link {
+  &._active::before {
+    background-color: color-rgba('main', 0.13);
+  }
+}
