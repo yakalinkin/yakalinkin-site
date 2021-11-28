@@ -1,21 +1,24 @@
 import globalStyleJson from '@styles/main.scss.json';
-import { getHtmlDataset } from '@utils/utils';
 
-export function getThemeGenerator() {
-  const colors = Object.keys(globalStyleJson.colors).filter((color) => color !== getHtmlDataset('theme'));
-  return colors[Symbol.iterator]();
+export function getThemes() {
+  return Object.keys(globalStyleJson.colors);
 }
 
 export function initThemeGenerator() {
-  let themeGenerator: IterableIterator<string>;
+  let themes = getThemes();
 
   return {
-    next() {
-      if (!themeGenerator) this.update();
-      return themeGenerator.next();
+    next(curr: string) {
+      const index = themes.indexOf(curr);
+
+      const spliced = themes.splice(0, index + 1);
+
+      themes = [...themes, ...spliced];
+
+      return themes[0];
     },
-    update() {
-      themeGenerator = getThemeGenerator();
+    reset() {
+      themes = getThemes();
     },
   };
 }

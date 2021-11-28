@@ -2,8 +2,8 @@
   transform: translate(0, -50%);
   transform-origin: center;
   transition: all 100ms ease-in-out;
+}
 
-  &._toggle {
-    transform: translate(0, -100%);
-  }
+[data-theme="dark"] .dark-mode-icon {
+  transform: translate(0, -100%);
 }
