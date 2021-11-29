@@ -1,27 +1,46 @@
-import React, { FC } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { FC, useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import classnames from 'classnames';
 
 import { Routes } from '#consts';
 
 import { Navigation, NavItem, NavTagName } from '@components/navigation';
 import { ThemeAction } from '@components/action';
+import { Focusable } from '@components/focusable';
 
 import LogoSvg from '@svg/logo.svg';
 
 import style from './style.module.scss';
 
 export const Header: FC = () => {
+  const [isLogoActive, setIsLogoActive] = useState(false);
+  const [logoDisabled, setLogoDisabled] = useState(false);
+  const location = useLocation();
+
+  const classNames = classnames({
+    [style.active]: isLogoActive,
+  });
+
+  useEffect(() => {
+    setIsLogoActive(location.pathname === Routes.HOME);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    setLogoDisabled(isLogoActive);
+  }, [isLogoActive]);
+
   return (
     <header className={style.header}>
       <div className={style.headerContainer}>
         <div className={style.headerLogo}>
-          <NavLink
-            activeClassName={style.active}
-            isActive={(match, location) => (!!match?.isExact && location.pathname === Routes.HOME)}
-            to={Routes.HOME}
-          >
-            <LogoSvg tabIndex={-1} />
-          </NavLink>
+          <Focusable disabled={logoDisabled}>
+            <NavLink
+              className={classNames}
+              to={Routes.HOME}
+            >
+              <LogoSvg />
+            </NavLink>
+          </Focusable>
         </div>
         <div className={style.headerNav}>
           <Navigation>

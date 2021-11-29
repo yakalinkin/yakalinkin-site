@@ -2,6 +2,7 @@
 
 .navigation__item {
   --rgb-link: var(--rgb-main-g);
+  --rgb-focus: var(--rgb-link);
 
   > a {
     position: relative;
@@ -51,5 +52,11 @@
     height: 0.75em;
     margin-left: map-get($spacers, '3xs');
     opacity: 0.5;
+  }
+}
+
+[data-theme="dark"] .navigation__link {
+  &._active::before {
+    background-color: color-rgba('main', 0.13);
   }
 }

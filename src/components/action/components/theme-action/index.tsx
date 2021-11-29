@@ -8,14 +8,11 @@ import { DarkModeIcon } from './components/dark-mode-icon';
 import style from './style.module.scss';
 
 export const ThemeAction: FC = () => {
-  const { currentTheme, nextTheme } = useTheme();
+  const { nextTheme } = useTheme();
 
   return (
     <BasicAction onClick={nextTheme}>
-      <DarkModeIcon
-        className={style.themeAction}
-        isDarkMode={currentTheme === 'dark'}
-      />
+      <DarkModeIcon className={style.themeAction} />
     </BasicAction>
   );
 };

@@ -16,3 +16,7 @@
     transition: opacity 100ms ease-in-out;
   }
 }
+
+.action__focusable {
+  --rgb-focus: var(--rgb-main-g);
+}
