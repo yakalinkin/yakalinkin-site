@@ -8,6 +8,7 @@ import { useLoading } from '@hooks/loading.hook';
 import { useLocalStorage } from '@hooks/local-storage.hook';
 
 import { SplashScreen } from '@components/splash-screen';
+import { FocusDisplay } from '@components/focus-display';
 
 import { Home } from '@pages/home';
 import { Resume } from '@pages/resume';
@@ -32,13 +33,15 @@ const Root = () => {
   }, [themeStorage]);
 
   return (
-    <SplashScreen isLoading={isLoading}>
-      <Switch>
-        <Route path={Routes.HOME} component={Home} exact />
-        <Route path={Routes.RESUME} component={Resume} exact />
-        <Route component={NotFound} />
-      </Switch>
-    </SplashScreen>
+    <FocusDisplay>
+      <SplashScreen isLoading={isLoading}>
+        <Switch>
+          <Route path={Routes.HOME} component={Home} exact />
+          <Route path={Routes.RESUME} component={Resume} exact />
+          <Route component={NotFound} />
+        </Switch>
+      </SplashScreen>
+    </FocusDisplay>
   );
 };
 
