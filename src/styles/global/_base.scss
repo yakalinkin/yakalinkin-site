@@ -59,10 +59,6 @@ a {
       transition: color 100ms ease-in-out;
     }
   }
-
-  &:focus:not([tabindex="-1"]) {
-    @include focus-style;
-  }
 }
 
 img,
@@ -74,12 +70,4 @@ svg {
 
 svg:not([fill]) {
   fill: currentColor;
-}
-
-:focus {
-  outline: none;
-}
-
-:not(:-moz-focusring):focus {
-  box-shadow: none;
 }
