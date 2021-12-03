@@ -2,6 +2,7 @@
 
 .error {
   --rgb-link: #{get-rgb('white')};
+  --rgb-focus: #{get-rgb('white')};
 
   display: flex;
   flex-direction: column;
@@ -31,12 +32,15 @@
   }
 
   a {
+    $spacing: 1.5em;
+
     position: relative;
     margin: 0 auto;
     margin-top: map-get($spacers, '4xl');
+    padding-left: $spacing;
 
     &:hover svg {
-      left: -1.75em;
+      left: -0.25em;
       transition: left 100ms ease-in-out;
     }
   }
@@ -44,7 +48,7 @@
   svg {
     position: absolute;
     top: 50%;
-    left: -1.5em;
+    left: 0;
     transform: translateY(-50%);
     height: 1.25em;
     margin-right: map-get($spacers, '2xs');

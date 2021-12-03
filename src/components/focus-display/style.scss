@@ -5,6 +5,6 @@
 }
 
 :focus[data-focus-method="key"] {
-  outline: 4px solid color-rgba('blue', 0.5);
+  outline: 4px solid rgba(var(--rgb-focus), 0.5);
   outline-offset: 1px;
 }
