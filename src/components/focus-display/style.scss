@@ -1,0 +1,10 @@
+@import '~styles/main-utils';
+
+:focus {
+  outline: none;
+}
+
+:focus[data-focus-method="key"] {
+  outline: 4px solid rgba(var(--rgb-focus), 0.5);
+  outline-offset: 1px;
+}
