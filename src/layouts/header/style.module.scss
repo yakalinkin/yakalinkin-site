@@ -69,3 +69,75 @@
   margin-left: auto;
   margin-right: -#{map-get($spacers, 'md')};
 }
+
+// X-mas logo
+
+.header__nav {
+  @include media-breakpoint-down(xs) {
+    padding-top: map-get($spacers, 'md')
+  }
+}
+
+svg.logo__xmas :global {
+  height: 53px;
+  margin-bottom: -35px;
+  margin-left: -5px;
+
+  #logo-xmas_svg__logo {
+    fill: currentColor;
+  }
+
+  #logo-xmas_svg__yellow-lighting {
+    display: none;
+  }
+
+  #logo-xmas_svg__red-lighting {
+    display: none;
+  }
+
+  #logo-xmas_svg__blue-lighting {
+    display: none;
+  }
+}
+
+[data-theme="dark"] {
+  .logo__xmas :global {
+
+    #logo-xmas_svg__lighting path {
+      display: block;
+      opacity: 0;
+    }
+
+    #logo-xmas_svg__yellow-lighting {
+      animation: lighting-animation 1.5s ease-in-out infinite;
+    }
+
+    #logo-xmas_svg__red-lighting {
+      animation: lighting-animation 1.5s 0.5s ease-in-out infinite;
+    }
+
+    #logo-xmas_svg__blue-lighting {
+      animation: lighting-animation 1.5s 1s ease-in-out infinite;
+    }
+  }
+}
+
+[data-theme="light"] {
+  .logo__xmas :global {
+    #logo-xmas_svg__yellow {
+      fill: #ffaa00;
+    }
+
+    #logo-xmas_svg__blue {
+      fill: #457b9d;
+    }
+
+    #logo-xmas_svg__red {
+      fill: #da2c38;
+    }
+
+    #logo-xmas_svg__wire {
+      stroke: #8daa9d;
+    }
+  }
+}
