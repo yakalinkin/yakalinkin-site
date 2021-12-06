@@ -103,20 +103,21 @@ svg.logo__xmas :global {
 [data-theme="dark"] {
   .logo__xmas :global {
 
-    #logo-xmas_svg__lighting path {
+    #logo-xmas_svg__yellow-lighting {
       display: block;
       opacity: 0;
-    }
-
-    #logo-xmas_svg__yellow-lighting {
       animation: lighting-animation 1.5s ease-in-out infinite;
     }
 
     #logo-xmas_svg__red-lighting {
+      display: block;
+      opacity: 0;
       animation: lighting-animation 1.5s 0.5s ease-in-out infinite;
     }
 
     #logo-xmas_svg__blue-lighting {
+      display: block;
+      opacity: 0;
       animation: lighting-animation 1.5s 1s ease-in-out infinite;
     }
   }
