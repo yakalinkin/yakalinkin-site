@@ -60,7 +60,16 @@ export const svgReactComponentRule: Rule = function ({ paths }) {
     test: /\.(svg?)$/i,
     exclude: /node_modules/,
     include: [paths.root.assets, paths.root.dev],
-    use: '@svgr/webpack',
+    use: {
+      loader: '@svgr/webpack',
+      options: {
+        svgoConfig: {
+          plugins: [{
+            cleanupIDs: false,
+          }],
+        },
+      },
+    },
   };
 };
 

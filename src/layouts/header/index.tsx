@@ -8,8 +8,9 @@ import { Navigation, NavItem, NavTagName } from '@components/navigation';
 import { ThemeAction } from '@components/action';
 import { Focusable } from '@components/focusable';
 
-import LogoSvg from '@svg/logo.svg';
+import LogoSvg from '@svg/logo-xmas.svg';
 
+import './keyframes.scss';
 import style from './style.module.scss';
 
 export const Header: FC = () => {
@@ -38,7 +39,7 @@ export const Header: FC = () => {
               className={classNames}
               to={Routes.HOME}
             >
-              <LogoSvg />
+              <LogoSvg className={style.logoXmas} />
             </NavLink>
           </Focusable>
         </div>

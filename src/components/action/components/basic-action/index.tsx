@@ -8,7 +8,7 @@ import style from './style.module.scss';
 
 export const BasicAction: FC<Props> = ({ onClick, children }) => {
   return (
-    <Focusable className={style.actionFocusable}>
+    <Focusable>
       <div
         className={style.action}
         onClick={onClick}
