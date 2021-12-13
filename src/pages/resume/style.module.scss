@@ -17,6 +17,11 @@
 
 .line-group {
   position: relative;
+  display: inline-block;
+
+  @include media-breakpoint-down(xs) {
+    display: block;
+  }
 }
 
 .line-1 {
@@ -65,4 +70,14 @@
   @include media-breakpoint-down(md) {
     height: 30px;
   }
+}
+
+.line-4 {
+  @include line;
+
+  height: 112px;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
 }

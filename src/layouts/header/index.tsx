@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import classnames from 'classnames';
+import cn from 'classnames';
 
 import { Routes } from '#consts';
 
@@ -18,7 +18,7 @@ export const Header: FC = () => {
   const [logoDisabled, setLogoDisabled] = useState(false);
   const location = useLocation();
 
-  const classNames = classnames({
+  const navLinkClassNames = cn({
     [style.active]: isLogoActive,
   });
 
@@ -36,7 +36,7 @@ export const Header: FC = () => {
         <div className={style.headerLogo}>
           <Focusable disabled={logoDisabled}>
             <NavLink
-              className={classNames}
+              className={navLinkClassNames}
               to={Routes.HOME}
             >
               <LogoSvg className={style.logoXmas} />

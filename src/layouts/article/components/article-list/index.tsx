@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import classnames from 'classnames';
+import cn from 'classnames';
 
 import { Tags } from '@components/tags';
 
@@ -11,7 +11,7 @@ import style from './style.module.scss';
 import { ArticleHeading, ArticleHeadingLevel } from '../article-heading';
 
 export const ArticleList: FC<Props>= ({ list, title, type = ArticleListType.Unordered }) => {
-  const articleListClassName = classnames({
+  const articleListClassNames = cn({
     [style.articleList]: style.articleList,
     [style[type]]: type,
   });
@@ -32,7 +32,7 @@ export const ArticleList: FC<Props>= ({ list, title, type = ArticleListType.Unor
   return (
     <div className={style.articleListContainer}>
       { title && <ArticleHeading level={ArticleHeadingLevel.H3}>{ title }</ArticleHeading> }
-      { React.createElement(type, { className: articleListClassName }, listItemElms) }
+      { React.createElement(type, { className: articleListClassNames }, listItemElms) }
     </div>
   );
 };
