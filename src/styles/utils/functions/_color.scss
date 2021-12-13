@@ -3,14 +3,18 @@
 }
 
 @function color-rgb($color-name) {
-  @return unquote('rgb(#{var(color-property($color-name))})');
+  @return rgb(#{var(color-property($color-name))});
 }
 
 @function color-rgba($color-name, $opacity) {
-  @return unquote('rgba(#{var(color-property($color-name))}, #{$opacity})');
+  @return rgba(#{var(color-property($color-name))}, $opacity);
 }
 
 @function get-rgb($color-name, $theme: 'light') {
-  $color: map-get($colors, $theme, $color-name);
+  $color: get-hex($color-name, $theme);
   @return red($color), green($color), blue($color);
+}
+
+@function get-hex($color-name, $theme: 'light') {
+  @return map-get($colors, $theme, $color-name);
 }

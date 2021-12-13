@@ -1,8 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import cn from 'classnames';
+
+import { Button } from '@components/button';
 
 import { Header } from '@layouts/header';
 import { Footer } from '@layouts/footer';
+
+import DocumentPdfSvg from '@svg/document-pdf.svg';
 
 import {
   Article,
@@ -23,8 +28,10 @@ import style from './style.module.scss';
 import Line1Svg from './svg/line-1.svg';
 import Line2Svg from './svg/line-2.svg';
 import Line3Svg from './svg/line-3.svg';
+import Line4Svg from './svg/line-4.svg';
 
 export const Resume = () => {
+
   return (
     <>
       <Helmet>
@@ -136,9 +143,18 @@ export const Resume = () => {
 
         <ArticleHeading level={ArticleHeadingLevel.H3}>Как связаться</ArticleHeading>
 
-        <ArticleParagraph>Пишите в телеграмм <a href="https://t.me/yakalinkin" target="_blank" rel="noreferrer">@yakalinkin</a> или почту <a href="mailto:yakalinkin.job@gmail.com" target="_blank" rel="noreferrer">yakalinkin.job@gmail.com</a></ArticleParagraph>
+        <ArticleParagraph>Пишите в телеграм <a href="https://t.me/yakalinkin" target="_blank" rel="noreferrer">@yakalinkin</a> или почту <a href="mailto:yakalinkin.job@gmail.com" target="_blank" rel="noreferrer">yakalinkin.job@gmail.com</a></ArticleParagraph>
 
-        {/* :TODO: Download PDF */}
+        <div className={cn(style.lineGroup, 'mt-4xl')}>
+          <Button
+            className={style.downloadButton}
+            text="Скачать резюме"
+            icon={<DocumentPdfSvg />}
+            href={`${process.env.PUBLIC_URL}/documents/resume-2022.pdf`}
+            download
+          />
+          <Line4Svg className={style.line4} />
+        </div>
 
       </Article>
       <Footer />

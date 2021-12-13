@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useRef } from 'react';
-import classnames from 'classnames';
+import cn from 'classnames';
 
 import { useIgnoreTabIndex } from '@hooks/ignore-tab-index.hook';
 
@@ -12,7 +12,7 @@ export const Focusable: FC<Props> = ({ className, disabled, children }) => {
   const [ tabIndex, ignoreTabIndex ] = useIgnoreTabIndex(disabled);
   const focusableEl = useRef<HTMLDivElement>(null);
 
-  const classNames = classnames(style.focusable, className);
+  const classNames = cn(style.focusable, className);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'Enter') {
