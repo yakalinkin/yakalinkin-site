@@ -7,11 +7,11 @@ import { tagData } from './consts';
 import style from './style.module.scss';
 
 export const NavTag: FC<Props> = ({ tag = '' }) => {
-  const className = cn({
+  const classNames = cn({
     [style.navigationTag]: true,
     [style[tag]]: !!tag,
   });
-  return tag ? <span className={className}>{ tagData[tag].text }</span> : null;
+  return tag ? <span className={classNames}>{ tagData[tag].text }</span> : null;
 };
 
 export {

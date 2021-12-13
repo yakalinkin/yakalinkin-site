@@ -10,7 +10,7 @@ import styleJson from './style.scss.json';
 export const SplashScreen: FC<Props> = ({ isLoading, children }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const className = cn({
+  const classNames = cn({
     [style.splashScreen]: true,
     [style.loading]: !isLoading,
   });
@@ -28,7 +28,7 @@ export const SplashScreen: FC<Props> = ({ isLoading, children }) => {
   }, [isLoading]);
 
   const splashScreenElm = (
-    <div className={className}>
+    <div className={classNames}>
       <LogoSvg />
       <span>Загружаю</span>
     </div>
