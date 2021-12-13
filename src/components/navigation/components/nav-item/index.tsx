@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import classnames from 'classnames';
+import cn from 'classnames';
 
 import { isLinkEmpty, isLinkExternal } from '@utils/utils';
 import { Focusable } from '@components/focusable';
@@ -18,7 +18,7 @@ export const NavItem: FC<Props> = ({ text, tag, to, ...props }) => {
   const [disabled, setDisabled] = useState(isLinkEmpty(to));
   const location = useLocation();
 
-  const classNames = classnames(style.navigationLink, {
+  const navLinkClassNames = cn(style.navigationLink, {
     [style.active]: active,
   });
 
@@ -40,7 +40,7 @@ export const NavItem: FC<Props> = ({ text, tag, to, ...props }) => {
         {
           !isLinkEmpty(to) && !isLinkExternal(to)
             ? <NavLink
-                className={classNames}
+                className={navLinkClassNames}
                 to={to}
                 rel="noreferrer"
                 {...props}

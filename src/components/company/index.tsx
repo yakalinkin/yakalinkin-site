@@ -52,7 +52,7 @@ const itemsProps: CompanyListProps = {
     children: (
       <>
         <HackerRankSvg className={style.companyImage} />
-        <span className={style.companyText}>Сертификат JavaScript - средний</span>
+        <span className={style.companyText}>Сертификат «JavaScript (Intermt.)»</span>
       </>
     ),
   }],

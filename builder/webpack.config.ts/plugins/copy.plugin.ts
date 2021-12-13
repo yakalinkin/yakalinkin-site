@@ -25,6 +25,13 @@ export const copyPlugin: PluginInstance = function ({ config, paths }) {
         },
       },
 
+      // Documents
+      {
+        from: `${paths.assets.documents}/**/*`,
+        to: `${paths.documentsFolder}/[name][ext]`,
+        noErrorOnMissing: true,
+      },
+
       // Favicons
       {
         from: `${paths.assets.favicons}/**/*`,

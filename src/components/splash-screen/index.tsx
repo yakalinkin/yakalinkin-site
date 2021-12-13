@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import LogoSvg from '@svg/logo.svg';
 
@@ -10,7 +10,7 @@ import styleJson from './style.scss.json';
 export const SplashScreen: FC<Props> = ({ isLoading, children }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const className = classNames({
+  const className = cn({
     [style.splashScreen]: true,
     [style.loading]: !isLoading,
   });
