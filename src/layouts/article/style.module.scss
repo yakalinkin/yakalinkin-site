@@ -3,14 +3,14 @@
 .article {
   @include section;
 
-  padding-top: map-get($spacers, '5xl');
+  padding-top: spacer('5xl');
 
   @include media-breakpoint-down(md) {
-    padding-top: map-get($spacers, '4xl');
+    padding-top: spacer('4xl');
   }
 
   @include media-breakpoint-down(xs) {
-    padding-top: map-get($spacers, '3xl');
+    padding-top: spacer('3xl');
   }
 }
 

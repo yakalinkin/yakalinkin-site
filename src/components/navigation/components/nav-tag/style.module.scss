@@ -8,7 +8,7 @@
   display: inline-block;
   font-size: get-type-size(1);
   line-height: 18px;
-  padding: 0 map-get($spacers, 'xs');
+  padding: 0 spacer('xs');
   border-radius: 6px;
   background-color: rgba(black, 0.1);
   text-transform: lowercase;

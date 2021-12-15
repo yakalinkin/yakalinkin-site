@@ -1,8 +1,8 @@
 @import '~styles/main-utils';
 
 .article-list__container {
-  margin-top: map-get($spacers, '4xl');
-  margin-bottom: map-get($spacers, '4xl');
+  margin-top: spacer('4xl');
+  margin-bottom: spacer('4xl');
 }
 
 .article-list {
@@ -40,7 +40,7 @@
 
     > li {
       @include media-breakpoint-down(md) {
-        padding-top: map-get($spacers, 'lg');
+        padding-top: spacer('lg');
       }
     }
 
@@ -71,6 +71,6 @@
   position: relative;
 
   & + & {
-    margin-top: map-get($spacers, 'md'),
+    margin-top: spacer('md'),
   }
 }

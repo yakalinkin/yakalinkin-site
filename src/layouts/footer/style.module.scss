@@ -3,19 +3,19 @@
 .footer {
   @include section;
 
-  padding-bottom: map-get($spacers, 'xl') !important;
+  padding-bottom: spacer('xl') !important;
 }
 
 .footer__container {
   @include container;
 
   & + & {
-    margin-top: map-get($spacers, 'md');
+    margin-top: spacer('md');
   }
 }
 
 .footer__nav {
-  margin-bottom: map-get($spacers, 'xl');
+  margin-bottom: spacer('xl');
 }
 
 .footer__info {
@@ -27,7 +27,7 @@
 
   svg {
     height: 1em;
-    margin-right: map-get($spacers, '2xs');
+    margin-right: spacer('2xs');
     stroke: currentColor;
     margin-bottom: 2px;
   }

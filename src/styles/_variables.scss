@@ -20,8 +20,6 @@ $grid-max-widths: map-get($grid, 'max-widths') !default;
 
 $spacers: quote-map-keys($spacers);
 $spacers: map-get($spacers) !default;
-$spacers-rem: rem-map($spacers) !default;
-$spacers-em: em-map($spacers) !default;
 
 
 // Opacity
@@ -108,7 +106,7 @@ $type-tokens: (
     font-size: get-type-size(10),
     font-weight: $font-weight-bold,
     line-height: $font-height-condensed,
-    margin: 0 0 map-get($spacers-em, 'md'),
+    margin: 0 0 spacer-em('md'),
     breakpoints: (
       'md': (
         font-size: get-type-size(9),
@@ -122,13 +120,13 @@ $type-tokens: (
     font-size: get-type-size(7),
     font-weight: $font-weight-bold,
     line-height: $font-height-condensed,
-    margin: 0 0 map-get($spacers-em, 'md'),
+    margin: 0 0 spacer-em('md'),
   ),
   'h3': (
     font-size: get-type-size(5),
     font-weight: $font-weight-semibold,
     line-height: $font-height-condensed,
-    margin: 0 0 map-get($spacers, 'xs'),
+    margin: 0 0 spacer('xs'),
     opacity: opacity('50'),
     breakpoints: (
       'md': (
@@ -141,7 +139,7 @@ $type-tokens: (
     font-size: get-type-size(16),
     font-weight: $font-weight-medium,
     line-height: $font-height-condensed,
-    margin: 0 0 map-get($spacers-em, 'md'),
+    margin: 0 0 spacer-em('md'),
     breakpoints: (
       'md': (
         font-size: get-type-size(13),
@@ -156,7 +154,7 @@ $type-tokens: (
     font-size: get-type-size(14),
     font-weight: $font-weight-semibold,
     line-height: $font-height-condensed,
-    margin: 0 0 map-get($spacers-em, 'md'),
+    margin: 0 0 spacer-em('md'),
     breakpoints: (
       'md': (
         font-size: get-type-size(11),
@@ -170,7 +168,7 @@ $type-tokens: (
     font-size: get-type-size(12),
     font-weight: $font-weight-semibold,
     line-height: $font-height-condensed,
-    margin: 0 0 map-get($spacers-em, 'md'),
+    margin: 0 0 spacer-em('md'),
     breakpoints: (
       'md': (
         font-size: get-type-size(10),
@@ -186,7 +184,7 @@ $type-tokens: (
     font-size: get-type-size(6),
     font-weight: $font-weight-medium,
     line-height: $font-height-condensed-ultra,
-    margin: 0 0 map-get($spacers-em, 'md'),
+    margin: 0 0 spacer-em('md'),
     breakpoints: (
       'md': (
         font-size: get-type-size(4),

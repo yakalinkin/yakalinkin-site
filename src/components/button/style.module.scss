@@ -8,7 +8,7 @@
   height: 3.25rem;
   background-color: color-rgb('black');
   color: color-rgb('white');
-  border-radius: map-get($spacers, 'sm');
+  border-radius: spacer('sm');
   backdrop-filter: blur(4px);
 
   transition: background-color 250ms ease-in-out;

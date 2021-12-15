@@ -7,7 +7,7 @@
     top: 0;
 
     background: linear-gradient(-90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
-    width: map-get($spacers, 'md');
+    width: spacer('md');
     height: 100%;
 
     z-index: z('top');
@@ -21,7 +21,7 @@
     top: 0;
 
     background: linear-gradient(90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
-    width: map-get($spacers, '2xl');
+    width: spacer('2xl');
     height: 100%;
 
     z-index: z('top');

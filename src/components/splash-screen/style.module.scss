@@ -33,7 +33,7 @@
 
   span {
     font-size: get-type-size(2);
-    margin-top: map-get($spacers, 'xs');
+    margin-top: spacer('xs');
     opacity: opacity('50');
   }
 }

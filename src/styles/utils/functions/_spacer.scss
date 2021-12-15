@@ -1,0 +1,15 @@
+@function spacer($value) {
+  @return map-get($spacers, $value);
+}
+
+@function spacer-rem($value) {
+  $spacers-rem: rem-map($spacers);
+
+  @return map-get($spacers-rem, $value);
+}
+
+@function spacer-em($value) {
+  $spacers-em: em-map($spacers);
+
+  @return map-get($spacers-em, $value);
+}
