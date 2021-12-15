@@ -83,7 +83,7 @@
 .company__text {
   position: absolute;
   opacity: opacity('0');
-  font-size: get-type-size(2);
+  font-size: type-size(2);
   bottom: -#{spacer('md')};
   left: 50%;
   transform: translate(-50%, 100%);

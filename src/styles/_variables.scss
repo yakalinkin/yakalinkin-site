@@ -68,7 +68,7 @@ $font-family: system-ui, sans-serif !default;
 $font-family-primary: map-get($font-typefaces, 'primary', 'family'), $font-family !default;
 
 // Font size
-$font-size: get-type-size(3) !default;
+$font-size: type-size(3) !default;
 
 // Line height
 $font-height-default: 1.5 !default;
@@ -103,145 +103,145 @@ $article-width: 700px !default;
 
 $type-tokens: (
   'h1': (
-    font-size: get-type-size(10),
+    font-size: type-size(10),
     font-weight: $font-weight-bold,
     line-height: $font-height-condensed,
     margin: 0 0 spacer-em('md'),
     breakpoints: (
       'md': (
-        font-size: get-type-size(9),
+        font-size: type-size(9),
       ),
       'xs': (
-        font-size: get-type-size(8),
+        font-size: type-size(8),
       )
     )
   ),
   'h2': (
-    font-size: get-type-size(7),
+    font-size: type-size(7),
     font-weight: $font-weight-bold,
     line-height: $font-height-condensed,
     margin: 0 0 spacer-em('md'),
   ),
   'h3': (
-    font-size: get-type-size(5),
+    font-size: type-size(5),
     font-weight: $font-weight-semibold,
     line-height: $font-height-condensed,
     margin: 0 0 spacer('xs'),
     opacity: opacity('50'),
     breakpoints: (
       'md': (
-        font-size: get-type-size(4),
+        font-size: type-size(4),
       )
     )
   ),
 
   'd1': (
-    font-size: get-type-size(16),
+    font-size: type-size(16),
     font-weight: $font-weight-medium,
     line-height: $font-height-condensed,
     margin: 0 0 spacer-em('md'),
     breakpoints: (
       'md': (
-        font-size: get-type-size(13),
+        font-size: type-size(13),
       ),
       'xs': (
-        font-size: get-type-size(10),
+        font-size: type-size(10),
         font-weight: $font-weight-semibold,
       )
     )
   ),
   'd2': (
-    font-size: get-type-size(14),
+    font-size: type-size(14),
     font-weight: $font-weight-semibold,
     line-height: $font-height-condensed,
     margin: 0 0 spacer-em('md'),
     breakpoints: (
       'md': (
-        font-size: get-type-size(11),
+        font-size: type-size(11),
       ),
       'xs': (
-        font-size: get-type-size(9),
+        font-size: type-size(9),
       )
     )
   ),
   'd3': (
-    font-size: get-type-size(12),
+    font-size: type-size(12),
     font-weight: $font-weight-semibold,
     line-height: $font-height-condensed,
     margin: 0 0 spacer-em('md'),
     breakpoints: (
       'md': (
-        font-size: get-type-size(10),
+        font-size: type-size(10),
       ),
       'xs': (
-        font-size: get-type-size(7),
+        font-size: type-size(7),
         letter-spacing: -0.75px
       )
     )
   ),
 
   'sub': (
-    font-size: get-type-size(6),
+    font-size: type-size(6),
     font-weight: $font-weight-medium,
     line-height: $font-height-condensed-ultra,
     margin: 0 0 spacer-em('md'),
     breakpoints: (
       'md': (
-        font-size: get-type-size(4),
+        font-size: type-size(4),
       ),
       'xs': (
-        font-size: get-type-size(2),
+        font-size: type-size(2),
       )
     )
   ),
 
   'lead': (
-    font-size: get-type-size(7),
+    font-size: type-size(7),
     font-weight: $font-weight-semibold,
-    line-height: get-type-size(9),
+    line-height: type-size(9),
     max-width: $article-width,
-    margin: 0 0 get-type-size(7),
+    margin: 0 0 type-size(7),
     breakpoints: (
       'md': (
-        font-size: get-type-size(6),
-        line-height: get-type-size(8),
-        margin: 0 0 get-type-size(6),
+        font-size: type-size(6),
+        line-height: type-size(8),
+        margin: 0 0 type-size(6),
       ),
       'xs': (
-        font-size: get-type-size(5),
-        line-height: get-type-size(7),
+        font-size: type-size(5),
+        line-height: type-size(7),
       )
     )
   ),
 
   'paragraph': (
-    font-size: get-type-size(5),
+    font-size: type-size(5),
     font-weight: $font-weight-medium,
-    line-height: get-type-size(7),
+    line-height: type-size(7),
     max-width: $article-width,
-    margin: 0 0 get-type-size(7),
+    margin: 0 0 type-size(7),
     breakpoints: (
       'md': (
-        font-size: get-type-size(4),
-        line-height: get-type-size(6),
-        margin: 0 0 get-type-size(6),
+        font-size: type-size(4),
+        line-height: type-size(6),
+        margin: 0 0 type-size(6),
       ),
     )
   ),
 
   'quote': (
-    font-size: get-type-size(14),
+    font-size: type-size(14),
     font-weight: $font-weight-semibold,
-    line-height: get-type-size(16),
+    line-height: type-size(16),
     width: 100%,
     breakpoints: (
       'md': (
-        font-size: get-type-size(12),
-        line-height: get-type-size(14),
+        font-size: type-size(12),
+        line-height: type-size(14),
       ),
       'xs': (
-        font-size: get-type-size(9),
-        line-height: get-type-size(11),
+        font-size: type-size(9),
+        line-height: type-size(11),
       )
     )
   ),

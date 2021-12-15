@@ -32,7 +32,7 @@
 }
 
 .article-aside__text {
-  font-size: get-type-size(2);
+  font-size: type-size(2);
   color: color-rgba('main', 0.5);
 
   @include media-breakpoint-down(md) {

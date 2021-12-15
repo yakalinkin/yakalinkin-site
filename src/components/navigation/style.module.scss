@@ -2,7 +2,7 @@
 
 .navigation {
   position: relative;
-  font-size: get-type-size(4);
+  font-size: type-size(4);
 
   margin-left: -#{spacer('md')};
   margin-right: -#{spacer('md')};
