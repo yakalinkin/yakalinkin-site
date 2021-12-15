@@ -6,7 +6,7 @@
   right: -#{map-get($spacers, 'lg')};
   transform: translateX(100%);
   max-width: 200px;
-  z-index: 1000;
+  z-index: $z-100;
 
   @include media-breakpoint-down(md) {
     position: relative;

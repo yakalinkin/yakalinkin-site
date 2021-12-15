@@ -10,7 +10,7 @@
     width: map-get($spacers, 'md');
     height: 100%;
 
-    z-index: 9999;
+    z-index: $z-top;
   }
 
   &:after {
@@ -24,6 +24,6 @@
     width: map-get($spacers, '2xl');
     height: 100%;
 
-    z-index: 9999;
+    z-index: $z-top;
   }
 }

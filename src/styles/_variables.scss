@@ -14,6 +14,7 @@ $grid-gutter: map-get($grid, 'gutter') !default;
 $grid-breakpoints: map-get($grid, 'breakpoints') !default;
 $grid-max-widths: map-get($grid, 'max-widths') !default;
 
+
 // Spacing
 //
 
@@ -21,6 +22,19 @@ $spacers: quote-map-keys($spacers);
 $spacers: map-get($spacers) !default;
 $spacers-rem: rem-map($spacers) !default;
 $spacers-em: em-map($spacers) !default;
+
+
+// Z-index
+
+$z-auto: auto !default;
+$z-top: 99999 !default;
+$z-500: 500 !default;
+$z-400: 400 !default;
+$z-300: 300 !default;
+$z-200: 200 !default;
+$z-100: 100 !default;
+$z-0: 0 !default;
+$z-bottom: -100 !default;
 
 
 // Typography
@@ -50,6 +64,7 @@ $font-weight-medium: 500 !default;
 $font-weight-semibold: 600 !default;
 $font-weight-bold: 700 !default;
 
+
 // Body
 //
 
@@ -59,10 +74,12 @@ $body-line-height: $font-height-default !default;
 $body-weight: $font-weight-normal !default;
 $body-color: color-rgb('main') !default;
 
+
 // Article
 //
 
 $article-width: 700px !default;
+
 
 // Typography
 //

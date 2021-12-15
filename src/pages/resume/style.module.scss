@@ -2,7 +2,7 @@
 
 @mixin line {
   position: absolute;
-  z-index: -1;
+  z-index: $z-bottom;
 
   path {
     stroke-width: 4px;
@@ -27,7 +27,7 @@
 .line-1 {
   @include line;
 
-  z-index: 0;
+  z-index: $z-0;
 
   height: 100px;
   top: 0;

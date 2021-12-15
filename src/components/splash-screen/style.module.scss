@@ -18,7 +18,7 @@
 
   background-color: color-rgb('background');
 
-  z-index: 999;
+  z-index: $z-top;
 
   &._loading {
     opacity: 0;
