@@ -55,5 +55,5 @@
 .coming-soon__subheading {
   @include generate-type-style('sub');
 
-  opacity: 0.6;
+  opacity: opacity('60');
 }

@@ -34,11 +34,11 @@
 
   &[class*="active"] {
     .company__image {
-      opacity: 1;
+      opacity: opacity('100');
     }
 
     .company__text {
-      opacity: 0.4;
+      opacity: opacity('40');
     }
   }
 
@@ -53,13 +53,13 @@
   @include media-breakpoint-up(md) {
     &:hover {
       .company__image {
-        opacity: 1;
+        opacity: opacity('100');
 
         transition: opacity 100ms ease-in-out;
       }
 
       .company__text {
-        opacity: 0.4;
+        opacity: opacity('40');
 
         transition: opacity 100ms ease-in-out;
       }
@@ -73,7 +73,7 @@
 }
 
 .company__image {
-  opacity: 0.3;
+  opacity: opacity('30');
 
   @include media-breakpoint-down(xs) {
     height: 24px;
@@ -82,7 +82,7 @@
 
 .company__text {
   position: absolute;
-  opacity: 0;
+  opacity: opacity('0');
   font-size: get-type-size(2);
   bottom: -#{map-get($spacers, 'md')};
   left: 50%;

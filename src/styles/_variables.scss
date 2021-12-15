@@ -24,6 +24,23 @@ $spacers-rem: rem-map($spacers) !default;
 $spacers-em: em-map($spacers) !default;
 
 
+// Opacity
+
+$opacity-tokens: (
+  '0': 0,
+  '10': 0.1,
+  '20': 0.2,
+  '30': 0.3,
+  '40': 0.4,
+  '50': 0.5,
+  '60': 0.6,
+  '70': 0.7,
+  '80': 0.8,
+  '90': 0.9,
+  '100': 1
+) !default;
+
+
 // Z-index
 
 $z-auto: auto !default;
@@ -110,7 +127,7 @@ $type-tokens: (
     font-weight: $font-weight-semibold,
     line-height: $font-height-condensed,
     margin: 0 0 map-get($spacers, 'xs'),
-    opacity: 0.5,
+    opacity: opacity('50'),
     breakpoints: (
       'md': (
         font-size: get-type-size(4),
