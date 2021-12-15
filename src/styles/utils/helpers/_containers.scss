@@ -7,7 +7,7 @@
   padding-right: spacer('md');
 
   @include media-breakpoint-up(md) {
-    max-width: map-get($grid-max-widths, 'xl');
+    max-width: gird-max-width('xl');
     padding-left: spacer('4xl');
     padding-right: spacer('4xl');
   }
