@@ -43,7 +43,7 @@
 }
 
 .header__logo {
-  --rgb-link: var(--rgb-main-g);
+  --rgb-link: #{rgb-var('main')};
 
   a._active {
     pointer-events: none;

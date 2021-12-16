@@ -1,8 +1,8 @@
 @import '~styles/main-utils';
 
 .error {
-  --rgb-link: #{get-rgb('white')};
-  --rgb-focus: #{get-rgb('white')};
+  --rgb-link: #{rgb-var('white')};
+  --rgb-focus: #{rgb-var('white')};
 
   display: flex;
   flex-direction: column;
@@ -10,8 +10,8 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-color: #2f7aff;
-  color: white;
+  background-color: hex-code('blue');
+  color: hex-code('white');
 
   h1 {
     @include generate-type-style('d1');

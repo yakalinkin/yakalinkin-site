@@ -26,7 +26,7 @@
       width: 1em;
       height: 2px;
 
-      background-color: color-rgba('main', 0.25);
+      background-color: color('main', 0.25);
 
       @include media-breakpoint-down(md) {
         left: -0.25em;
@@ -54,7 +54,7 @@
 
       transform: translate(-100%, -50%);
 
-      color: color-rgba('main', 0.25);
+      color: color('main', 0.25);
       text-align: right;
 
       @include media-breakpoint-down(md) {

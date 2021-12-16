@@ -7,7 +7,7 @@
   path {
     stroke-width: 4px;
     vector-effect: non-scaling-stroke;
-    stroke: color-rgb('green');
+    stroke: color('green');
 
     @include media-breakpoint-down(md) {
       stroke-width: 3px;

@@ -6,7 +6,7 @@
     left: 0;
     top: 0;
 
-    background: linear-gradient(-90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
+    background: linear-gradient(-90deg, color('background', 0) 0%, color('background', 1) 100%);
     width: spacer('md');
     height: 100%;
 
@@ -20,7 +20,7 @@
     right: 0;
     top: 0;
 
-    background: linear-gradient(90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
+    background: linear-gradient(90deg, color('background', 0) 0%, color('background', 1) 100%);
     width: spacer('2xl');
     height: 100%;
 

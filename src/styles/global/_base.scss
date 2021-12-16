@@ -34,7 +34,7 @@ body {
   block-size: -webkit-fill-available;
   block-size: stretch;
   margin: 0;
-  background-color: color-rgb('background');
+  background-color: color('background');
 }
 
 nav :where(ol, ul) {

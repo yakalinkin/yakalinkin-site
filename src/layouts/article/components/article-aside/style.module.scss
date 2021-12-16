@@ -33,7 +33,7 @@
 
 .article-aside__text {
   font-size: type-size(2);
-  color: color-rgba('main', 0.5);
+  color: color('main', 0.5);
 
   @include media-breakpoint-down(md) {
     margin-left: spacer('sm');

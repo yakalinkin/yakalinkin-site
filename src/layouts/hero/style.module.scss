@@ -41,7 +41,7 @@
     width: calc(100% + 0.5em);
     height: auto;
     z-index: z('bottom');
-    stroke: color-rgb('line');
+    stroke: color('line');
     stroke-width: 4px;
   }
 }
