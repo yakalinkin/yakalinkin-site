@@ -9,8 +9,8 @@
 :root {
   @include light-mode;
 
-  --rgb-link: var(--rgb-blue-g);
-  --rgb-focus: var(--rgb-blue-g);
+  --rgb-link: #{rgb-var('blue')};
+  --rgb-focus: #{rgb-var('blue')};
 }
 
 [data-theme="light"] {

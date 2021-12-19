@@ -1,7 +1,7 @@
 @import '~styles/main-utils';
 
 .article-header {
-  margin-bottom: map-get($spacers, '5xl');
+  margin-bottom: spacing('5xl');
 
   @include media-breakpoint-down(md) {
     margin-bottom: unset;
@@ -9,11 +9,11 @@
 
   & + aside {
     @include media-breakpoint-down(md) {
-      margin-bottom: map-get($spacers, '4xl');
+      margin-bottom: spacing('4xl');
     }
 
     @include media-breakpoint-down(xs) {
-      margin-bottom: map-get($spacers, '2xl');
+      margin-bottom: spacing('2xl');
     }
   }
 

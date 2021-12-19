@@ -3,14 +3,14 @@
 .hero {
   @include section;
 
-  padding-top: map-get($spacers, '5xl');
+  padding-top: spacing('5xl');
 
   @include media-breakpoint-down(md) {
-    padding-top: map-get($spacers, '4xl');
+    padding-top: spacing('4xl');
   }
 
   @include media-breakpoint-down(xs) {
-    padding-top: map-get($spacers, '3xl');
+    padding-top: spacing('3xl');
   }
 }
 
@@ -19,10 +19,10 @@
 }
 
 .hero__caption {
-  margin-right: map-get($spacers, 'xl');
+  margin-right: spacing('xl');
 
   @include media-breakpoint-down(sm) {
-    margin-right: map-get($spacers, '5xl');
+    margin-right: spacing('5xl');
   }
 
   @include media-breakpoint-down(xs) {
@@ -40,8 +40,8 @@
     transform: translate(-50%, 50%);
     width: calc(100% + 0.5em);
     height: auto;
-    z-index: -1;
-    stroke: color-rgb('line');
+    z-index: z('bottom');
+    stroke: color('line');
     stroke-width: 4px;
   }
 }

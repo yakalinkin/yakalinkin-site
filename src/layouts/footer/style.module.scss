@@ -3,31 +3,31 @@
 .footer {
   @include section;
 
-  padding-bottom: map-get($spacers, 'xl') !important;
+  padding-bottom: spacing('xl') !important;
 }
 
 .footer__container {
   @include container;
 
   & + & {
-    margin-top: map-get($spacers, 'md');
+    margin-top: spacing('md');
   }
 }
 
 .footer__nav {
-  margin-bottom: map-get($spacers, 'xl');
+  margin-bottom: spacing('xl');
 }
 
 .footer__info {
-  font-size: get-type-size(2);
-  opacity: 0.5;
+  font-size: type-size(2);
+  opacity: opacity('50');
   display: flex;
   align-items: center;
   line-height: 1;
 
   svg {
     height: 1em;
-    margin-right: map-get($spacers, '2xs');
+    margin-right: spacing('2xs');
     stroke: currentColor;
     margin-bottom: 2px;
   }

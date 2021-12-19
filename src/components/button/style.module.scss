@@ -6,16 +6,16 @@
   justify-content: center;
   padding: 0 1rem;
   height: 3.25rem;
-  background-color: color-rgb('black');
-  color: color-rgb('white');
-  border-radius: map-get($spacers, 'sm');
+  background-color: color('black');
+  color: color('white');
+  border-radius: spacing('sm');
   backdrop-filter: blur(4px);
 
   transition: background-color 250ms ease-in-out;
 
   &:hover {
-    background-color: color-rgba('black', 0.85);
-    color: color-rgb('white');
+    background-color: color('black', 0.85);
+    color: color('white');
 
     transition: background-color 100ms ease-in-out;
   }
@@ -34,10 +34,10 @@
 
 [data-theme="dark"] {
   .button, .button[href] {
-    box-shadow: 0 0 0 1px color-rgba('white', 0.1) inset;
+    box-shadow: 0 0 0 1px color('white', 0.1) inset;
 
     &:hover {
-      $lighter: lighten(get-hex('black'), 5%);
+      $lighter: lighten(hex-code('black'), 5%);
 
       background-color: rgba($lighter, 0.85);
     }

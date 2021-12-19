@@ -2,7 +2,7 @@
 
 .article-aside-group {
   position: relative;
-  max-width: $article-width;
+  max-width: spacing('article');
 
   @include media-breakpoint-down(md) {
     width: unset;

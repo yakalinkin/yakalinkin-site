@@ -9,6 +9,6 @@
   scrollbar-width: none;
 
   > *:last-child {
-    padding-right: map-get($spacers, 'xl');
+    padding-right: spacing('xl');
   }
 }

@@ -1,0 +1,17 @@
+@use 'sass:map';
+
+@function spacing($value) {
+  @return map.get($spacing-tokens, $value);
+}
+
+@function spacing-rem($value) {
+  $spacing-tokens-rem: rem-map($spacing-tokens);
+
+  @return map.get($spacing-tokens-rem, $value);
+}
+
+@function spacing-em($value) {
+  $spacing-tokens-em: em-map($spacing-tokens);
+
+  @return map.get($spacing-tokens-em, $value);
+}

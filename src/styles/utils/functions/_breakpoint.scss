@@ -42,3 +42,7 @@
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
   @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$name}");
 }
+
+@function gird-max-width($name, $max-widths: $grid-max-widths) {
+  @return map-get($max-widths, $name);
+}

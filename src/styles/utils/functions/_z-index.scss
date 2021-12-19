@@ -1,0 +1,7 @@
+@function z-index($value) {
+  @return map-get($z-tokens, $value);
+}
+
+@function z($value) {
+  @return z-index($value);
+}
