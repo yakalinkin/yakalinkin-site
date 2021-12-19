@@ -84,10 +84,7 @@
   position: absolute;
   opacity: opacity('0');
   font-size: type-size(2);
-
-  // :TODO: spacing('neg-md')}
-  bottom: -#{spacing('md')};
-
+  bottom: spacing('neg-md');
   left: 50%;
   transform: translate(-50%, 100%);
   white-space: nowrap;

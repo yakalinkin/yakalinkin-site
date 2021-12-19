@@ -4,8 +4,8 @@
   position: relative;
   font-size: type-size(4);
 
-  margin-left: -#{spacing('md')};
-  margin-right: -#{spacing('md')};
+  margin-left: spacing('neg-md');
+  margin-right: spacing('neg-md');
 
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
   overflow-x: scroll;
 
   padding: spacing('md') spacing('md');
-  margin-bottom: -#{spacing('md')};
-  margin-top: -#{spacing('md')};
+  margin-bottom: spacing('neg-md');
+  margin-top: spacing('neg-md');
 }
 

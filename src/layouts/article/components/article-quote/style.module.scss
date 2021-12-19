@@ -5,11 +5,11 @@
 
   width: unset;
 
-  margin: #{spacing('5xl')} 0 #{spacing('7xl')};
-  margin-left: -#{spacing('3xl')};
+  margin: spacing('5xl') 0 spacing('7xl');
+  margin-left: spacing('neg-3xl');
 
   @include media-breakpoint-down(sm) {
-    margin: #{spacing('4xl')} 0 #{spacing('6xl')};
+    margin: spacing('4xl') 0 spacing('6xl');
     margin-left: 0;
   }
 

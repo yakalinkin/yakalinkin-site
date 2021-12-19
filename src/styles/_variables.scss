@@ -82,7 +82,7 @@ $type-tokens: (
     font-size: type-size(10),
     font-weight: $font-weight-bold,
     line-height: $font-height-condensed,
-    margin: 0 0 spacer-em('md'),
+    margin: 0 0 spacing-em('md'),
     breakpoints: (
       'md': (
         font-size: type-size(9),
@@ -96,7 +96,7 @@ $type-tokens: (
     font-size: type-size(7),
     font-weight: $font-weight-bold,
     line-height: $font-height-condensed,
-    margin: 0 0 spacer-em('md'),
+    margin: 0 0 spacing-em('md'),
   ),
   'h3': (
     font-size: type-size(5),
@@ -115,7 +115,7 @@ $type-tokens: (
     font-size: type-size(16),
     font-weight: $font-weight-medium,
     line-height: $font-height-condensed,
-    margin: 0 0 spacer-em('md'),
+    margin: 0 0 spacing-em('md'),
     breakpoints: (
       'md': (
         font-size: type-size(13),
@@ -130,7 +130,7 @@ $type-tokens: (
     font-size: type-size(14),
     font-weight: $font-weight-semibold,
     line-height: $font-height-condensed,
-    margin: 0 0 spacer-em('md'),
+    margin: 0 0 spacing-em('md'),
     breakpoints: (
       'md': (
         font-size: type-size(11),
@@ -144,7 +144,7 @@ $type-tokens: (
     font-size: type-size(12),
     font-weight: $font-weight-semibold,
     line-height: $font-height-condensed,
-    margin: 0 0 spacer-em('md'),
+    margin: 0 0 spacing-em('md'),
     breakpoints: (
       'md': (
         font-size: type-size(10),
@@ -160,7 +160,7 @@ $type-tokens: (
     font-size: type-size(6),
     font-weight: $font-weight-medium,
     line-height: $font-height-condensed-ultra,
-    margin: 0 0 spacer-em('md'),
+    margin: 0 0 spacing-em('md'),
     breakpoints: (
       'md': (
         font-size: type-size(4),

@@ -3,7 +3,7 @@
 .article-aside {
   position: absolute;
   top: 0;
-  right: -#{spacing('lg')};
+  right: spacing('neg-lg');
   transform: translateX(100%);
   max-width: 200px;
   z-index: z('100');

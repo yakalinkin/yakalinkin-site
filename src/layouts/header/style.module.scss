@@ -67,7 +67,7 @@
 
 .header__action {
   margin-left: auto;
-  margin-right: -#{spacing('md')};
+  margin-right: spacing('neg-md');
 }
 
 // X-mas logo

@@ -9,11 +9,11 @@
   border-radius: spacing('4xl');
   display: flex;
   overflow: hidden;
-  margin: 0 -#{spacing('4xl')};
+  margin: 0 spacing('neg-4xl');
   color: white;
 
   @include media-breakpoint-down(xl) {
-    margin: 0 -#{spacing('3xl')};
+    margin: 0 spacing('neg-3xl');
     border-radius: spacing('3xl');
   }
 
