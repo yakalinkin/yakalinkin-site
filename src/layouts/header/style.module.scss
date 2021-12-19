@@ -1,7 +1,7 @@
 @import '~styles/main-utils';
 
 .header {
-  min-height: map-get($spacers, '4xl');
+  min-height: spacing('4xl');
 
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
   > * {
     display: flex;
     align-items: center;
-    height: map-get($spacers, '4xl');
+    height: spacing('4xl');
   }
 
   @include media-breakpoint-down(md) {
@@ -43,7 +43,7 @@
 }
 
 .header__logo {
-  --rgb-link: var(--rgb-main-g);
+  --rgb-link: #{rgb-var('main')};
 
   a._active {
     pointer-events: none;
@@ -67,14 +67,14 @@
 
 .header__action {
   margin-left: auto;
-  margin-right: -#{map-get($spacers, 'md')};
+  margin-right: spacing('neg-md');
 }
 
 // X-mas logo
 
 .header__nav {
   @include media-breakpoint-down(xs) {
-    padding-top: map-get($spacers, 'md')
+    padding-top: spacing('md')
   }
 }
 

@@ -1,20 +1,26 @@
-@function color-property($color-key) {
+@function color($color-name, $alpha: null) {
+  @if ($alpha and $alpha != 100) {
+    @return rgba(rgb-var($color-name), $alpha);
+  }
+
+  @else {
+    @return rgb(rgb-var($color-name));
+  }
+}
+
+@function rgb-property($color-key) {
   @return #{'--rgb-#{$color-key}-g'};
 }
 
-@function color-rgb($color-name) {
-  @return rgb(#{var(color-property($color-name))});
+@function rgb-var($color-name) {
+  @return var(rgb-property($color-name));
 }
 
-@function color-rgba($color-name, $opacity) {
-  @return rgba(#{var(color-property($color-name))}, $opacity);
-}
-
-@function get-rgb($color-name, $theme: 'light') {
-  $color: get-hex($color-name, $theme);
+@function rgb-code($color-name, $theme: null) {
+  $color: hex-code($color-name, $theme);
   @return red($color), green($color), blue($color);
 }
 
-@function get-hex($color-name, $theme: 'light') {
+@function hex-code($color-name, $theme: 'light') {
   @return map-get($colors, $theme, $color-name);
 }

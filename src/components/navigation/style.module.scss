@@ -2,10 +2,10 @@
 
 .navigation {
   position: relative;
-  font-size: get-type-size(4);
+  font-size: type-size(4);
 
-  margin-left: -#{map-get($spacers, 'md')};
-  margin-right: -#{map-get($spacers, 'md')};
+  margin-left: spacing('neg-md');
+  margin-right: spacing('neg-md');
 
   display: flex;
   align-items: center;
@@ -19,8 +19,8 @@
   overflow-y: hidden;
   overflow-x: scroll;
 
-  padding: map-get($spacers, 'md') map-get($spacers, 'md');
-  margin-bottom: -#{map-get($spacers, 'md')};
-  margin-top: -#{map-get($spacers, 'md')};
+  padding: spacing('md') spacing('md');
+  margin-bottom: spacing('neg-md');
+  margin-top: spacing('neg-md');
 }
 

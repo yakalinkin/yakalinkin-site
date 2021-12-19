@@ -5,14 +5,14 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  height: map-get($spacers, '3xl');
-  width: map-get($spacers, '3xl');
+  height: spacing('3xl');
+  width: spacing('3xl');
   cursor: pointer;
   user-select: none;
   transition: opacity 250ms ease-in-out;
 
   &:hover {
-    opacity: 0.7;
+    opacity: opacity('70');
     transition: opacity 100ms ease-in-out;
   }
 }

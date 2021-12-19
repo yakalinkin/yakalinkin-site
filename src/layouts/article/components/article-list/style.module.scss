@@ -1,8 +1,8 @@
 @import '~styles/main-utils';
 
 .article-list__container {
-  margin-top: map-get($spacers, '4xl');
-  margin-bottom: map-get($spacers, '4xl');
+  margin-top: spacing('4xl');
+  margin-bottom: spacing('4xl');
 }
 
 .article-list {
@@ -18,7 +18,7 @@
       content: '';
 
       position: absolute;
-      top: calc(#{get-type-size(7)} / 2);
+      top: calc(#{type-size(7)} / 2);
       left: -0.5em;
 
       transform: translate(-100%, -50%);
@@ -26,11 +26,11 @@
       width: 1em;
       height: 2px;
 
-      background-color: color-rgba('main', 0.25);
+      background-color: color('main', 0.25);
 
       @include media-breakpoint-down(md) {
         left: -0.25em;
-        top: calc(#{get-type-size(6)} / 2);
+        top: calc(#{type-size(6)} / 2);
       }
     }
   }
@@ -40,7 +40,7 @@
 
     > li {
       @include media-breakpoint-down(md) {
-        padding-top: map-get($spacers, 'lg');
+        padding-top: spacing('lg');
       }
     }
 
@@ -49,19 +49,19 @@
       content: counter(list-counter) ".";
 
       position: absolute;
-      top: calc(#{get-type-size(7)} / 2);
+      top: calc(#{type-size(7)} / 2);
       left: -0.5em;
 
       transform: translate(-100%, -50%);
 
-      color: color-rgba('main', 0.25);
+      color: color('main', 0.25);
       text-align: right;
 
       @include media-breakpoint-down(md) {
         top: 0;
         left: 0;
         transform: unset;
-        font-size: get-type-size(2);
+        font-size: type-size(2);
       }
     }
   }
@@ -71,6 +71,6 @@
   position: relative;
 
   & + & {
-    margin-top: map-get($spacers, 'md'),
+    margin-top: spacing('md'),
   }
 }

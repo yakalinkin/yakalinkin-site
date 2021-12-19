@@ -1,29 +1,29 @@
 @import '~styles/main-utils';
 
 .coming-soon {
-  background-color: color-rgba('main', 0.1);
+  background-color: color('main', 0.1);
   background-image: url('images/portfolio.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: map-get($spacers, '4xl');
+  border-radius: spacing('4xl');
   display: flex;
   overflow: hidden;
-  margin: 0 -#{map-get($spacers, '4xl')};
+  margin: 0 spacing('neg-4xl');
   color: white;
 
   @include media-breakpoint-down(xl) {
-    margin: 0 -#{map-get($spacers, '3xl')};
-    border-radius: map-get($spacers, '3xl');
+    margin: 0 spacing('neg-3xl');
+    border-radius: spacing('3xl');
   }
 
   @include media-breakpoint-down(sm) {
     margin: 0;
-    border-radius: map-get($spacers, 'xl');
+    border-radius: spacing('xl');
   }
 
   @include media-breakpoint-down(xs) {
-    border-radius: map-get($spacers, 'md');
+    border-radius: spacing('md');
   }
 
   &:before {
@@ -55,5 +55,5 @@
 .coming-soon__subheading {
   @include generate-type-style('sub');
 
-  opacity: 0.6;
+  opacity: opacity('60');
 }

@@ -6,11 +6,11 @@
     left: 0;
     top: 0;
 
-    background: linear-gradient(-90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
-    width: map-get($spacers, 'md');
+    background: linear-gradient(-90deg, color('background', 0) 0%, color('background', 1) 100%);
+    width: spacing('md');
     height: 100%;
 
-    z-index: 9999;
+    z-index: z('top');
   }
 
   &:after {
@@ -20,10 +20,10 @@
     right: 0;
     top: 0;
 
-    background: linear-gradient(90deg, color-rgba('background', 0) 0%, color-rgba('background', 1) 100%);
-    width: map-get($spacers, '2xl');
+    background: linear-gradient(90deg, color('background', 0) 0%, color('background', 1) 100%);
+    width: spacing('2xl');
     height: 100%;
 
-    z-index: 9999;
+    z-index: z('top');
   }
 }

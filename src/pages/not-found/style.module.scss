@@ -1,8 +1,8 @@
 @import '~styles/main-utils';
 
 .error {
-  --rgb-link: #{get-rgb('white')};
-  --rgb-focus: #{get-rgb('white')};
+  --rgb-link: #{rgb-var('white')};
+  --rgb-focus: #{rgb-var('white')};
 
   display: flex;
   flex-direction: column;
@@ -10,8 +10,8 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-color: #2f7aff;
-  color: white;
+  background-color: hex-code('blue');
+  color: hex-code('white');
 
   h1 {
     @include generate-type-style('d1');
@@ -36,7 +36,7 @@
 
     position: relative;
     margin: 0 auto;
-    margin-top: map-get($spacers, '4xl');
+    margin-top: spacing('4xl');
     padding-left: $spacing;
 
     &:hover svg {
@@ -51,7 +51,7 @@
     left: 0;
     transform: translateY(-50%);
     height: 1.25em;
-    margin-right: map-get($spacers, '2xs');
+    margin-right: spacing('2xs');
 
     transition: left 250ms ease-in-out;
   }
@@ -60,7 +60,7 @@
 .error__container {
   display: flex;
   flex-direction: column;
-  margin: 0 map-get($spacers, 'md');
+  margin: 0 spacing('md');
   max-width: 424px;
   text-align: center;
 }

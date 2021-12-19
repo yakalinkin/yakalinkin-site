@@ -1,0 +1,3 @@
+@function opacity($value) {
+  @return map-get($opacity-tokens, $value);
+}
