@@ -8,7 +8,7 @@
   height: 3.25rem;
   background-color: color('black');
   color: color('white');
-  border-radius: spacer('sm');
+  border-radius: spacing('sm');
   backdrop-filter: blur(4px);
 
   transition: background-color 250ms ease-in-out;

@@ -3,7 +3,7 @@
 .article-aside {
   position: absolute;
   top: 0;
-  right: -#{spacer('lg')};
+  right: -#{spacing('lg')};
   transform: translateX(100%);
   max-width: 200px;
   z-index: z('100');
@@ -16,7 +16,7 @@
 
     display: flex;
     align-items: flex-end;
-    margin-top: spacer('lg');
+    margin-top: spacing('lg');
   }
 
 }
@@ -24,7 +24,7 @@
 .article-aside__image {
   max-width: 100%;
   height: 80px;
-  margin-bottom: spacer('xs');
+  margin-bottom: spacing('xs');
 
   @include media-breakpoint-down(xs) {
     height: 60px;
@@ -36,7 +36,7 @@
   color: color('main', 0.5);
 
   @include media-breakpoint-down(md) {
-    margin-left: spacer('sm');
-    margin-bottom: spacer('xs');
+    margin-left: spacing('sm');
+    margin-bottom: spacing('xs');
   }
 }

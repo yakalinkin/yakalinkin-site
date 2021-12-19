@@ -36,7 +36,7 @@
 
     position: relative;
     margin: 0 auto;
-    margin-top: spacer('4xl');
+    margin-top: spacing('4xl');
     padding-left: $spacing;
 
     &:hover svg {
@@ -51,7 +51,7 @@
     left: 0;
     transform: translateY(-50%);
     height: 1.25em;
-    margin-right: spacer('2xs');
+    margin-right: spacing('2xs');
 
     transition: left 250ms ease-in-out;
   }
@@ -60,7 +60,7 @@
 .error__container {
   display: flex;
   flex-direction: column;
-  margin: 0 spacer('md');
+  margin: 0 spacing('md');
   max-width: 424px;
   text-align: center;
 }

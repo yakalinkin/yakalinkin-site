@@ -1,7 +1,7 @@
 @import '~styles/main-utils';
 
 .header {
-  min-height: spacer('4xl');
+  min-height: spacing('4xl');
 
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
   > * {
     display: flex;
     align-items: center;
-    height: spacer('4xl');
+    height: spacing('4xl');
   }
 
   @include media-breakpoint-down(md) {
@@ -67,14 +67,14 @@
 
 .header__action {
   margin-left: auto;
-  margin-right: -#{spacer('md')};
+  margin-right: -#{spacing('md')};
 }
 
 // X-mas logo
 
 .header__nav {
   @include media-breakpoint-down(xs) {
-    padding-top: spacer('md')
+    padding-top: spacing('md')
   }
 }
 

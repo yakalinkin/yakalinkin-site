@@ -6,24 +6,24 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: spacer('4xl');
+  border-radius: spacing('4xl');
   display: flex;
   overflow: hidden;
-  margin: 0 -#{spacer('4xl')};
+  margin: 0 -#{spacing('4xl')};
   color: white;
 
   @include media-breakpoint-down(xl) {
-    margin: 0 -#{spacer('3xl')};
-    border-radius: spacer('3xl');
+    margin: 0 -#{spacing('3xl')};
+    border-radius: spacing('3xl');
   }
 
   @include media-breakpoint-down(sm) {
     margin: 0;
-    border-radius: spacer('xl');
+    border-radius: spacing('xl');
   }
 
   @include media-breakpoint-down(xs) {
-    border-radius: spacer('md');
+    border-radius: spacing('md');
   }
 
   &:before {

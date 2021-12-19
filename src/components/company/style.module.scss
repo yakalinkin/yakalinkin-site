@@ -1,14 +1,14 @@
 @import '~styles/main-utils';
 
 .company {
-  padding-top: spacer('6xl');
+  padding-top: spacing('6xl');
 
   @include media-breakpoint-down(md) {
-    padding-top: spacer('4xl');
+    padding-top: spacing('4xl');
   }
 
   @include media-breakpoint-down(xs) {
-    padding-top: spacer('2xl');
+    padding-top: spacing('2xl');
   }
 }
 
@@ -30,7 +30,7 @@
 
 .company__item {
   position: relative;
-  margin-bottom: spacer('2xl');
+  margin-bottom: spacing('2xl');
 
   &[class*="active"] {
     .company__image {
@@ -43,11 +43,11 @@
   }
 
   @include media-breakpoint-between(sm, md) {
-    margin-right: spacer('2xl');
+    margin-right: spacing('2xl');
   }
 
   @include media-breakpoint-down(sm) {
-    margin-left: spacer('md');
+    margin-left: spacing('md');
   }
 
   @include media-breakpoint-up(md) {
@@ -84,7 +84,10 @@
   position: absolute;
   opacity: opacity('0');
   font-size: type-size(2);
-  bottom: -#{spacer('md')};
+
+  // :TODO: spacing('neg-md')}
+  bottom: -#{spacing('md')};
+
   left: 50%;
   transform: translate(-50%, 100%);
   white-space: nowrap;

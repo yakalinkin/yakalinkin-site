@@ -7,7 +7,7 @@
     top: 0;
 
     background: linear-gradient(-90deg, color('background', 0) 0%, color('background', 1) 100%);
-    width: spacer('md');
+    width: spacing('md');
     height: 100%;
 
     z-index: z('top');
@@ -21,7 +21,7 @@
     top: 0;
 
     background: linear-gradient(90deg, color('background', 0) 0%, color('background', 1) 100%);
-    width: spacer('2xl');
+    width: spacing('2xl');
     height: 100%;
 
     z-index: z('top');

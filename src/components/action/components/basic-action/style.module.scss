@@ -5,8 +5,8 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  height: spacer('3xl');
-  width: spacer('3xl');
+  height: spacing('3xl');
+  width: spacing('3xl');
   cursor: pointer;
   user-select: none;
   transition: opacity 250ms ease-in-out;

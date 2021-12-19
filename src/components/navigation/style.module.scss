@@ -4,8 +4,8 @@
   position: relative;
   font-size: type-size(4);
 
-  margin-left: -#{spacer('md')};
-  margin-right: -#{spacer('md')};
+  margin-left: -#{spacing('md')};
+  margin-right: -#{spacing('md')};
 
   display: flex;
   align-items: center;
@@ -19,8 +19,8 @@
   overflow-y: hidden;
   overflow-x: scroll;
 
-  padding: spacer('md') spacer('md');
-  margin-bottom: -#{spacer('md')};
-  margin-top: -#{spacer('md')};
+  padding: spacing('md') spacing('md');
+  margin-bottom: -#{spacing('md')};
+  margin-top: -#{spacing('md')};
 }
 

@@ -3,14 +3,14 @@
 .hero {
   @include section;
 
-  padding-top: spacer('5xl');
+  padding-top: spacing('5xl');
 
   @include media-breakpoint-down(md) {
-    padding-top: spacer('4xl');
+    padding-top: spacing('4xl');
   }
 
   @include media-breakpoint-down(xs) {
-    padding-top: spacer('3xl');
+    padding-top: spacing('3xl');
   }
 }
 
@@ -19,10 +19,10 @@
 }
 
 .hero__caption {
-  margin-right: spacer('xl');
+  margin-right: spacing('xl');
 
   @include media-breakpoint-down(sm) {
-    margin-right: spacer('5xl');
+    margin-right: spacing('5xl');
   }
 
   @include media-breakpoint-down(xs) {
