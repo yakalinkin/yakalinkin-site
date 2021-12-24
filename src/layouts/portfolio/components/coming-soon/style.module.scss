@@ -1,16 +1,13 @@
 @import '~styles/main-utils';
 
 .coming-soon {
-  background-color: color('main', 0.1);
-  background-image: url('images/portfolio.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
   border-radius: spacing('4xl');
   display: flex;
   overflow: hidden;
   margin: 0 spacing('neg-4xl');
   color: white;
+  overflow: hidden;
 
   @include media-breakpoint-down(xl) {
     margin: 0 spacing('neg-3xl');
@@ -46,6 +43,14 @@
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.coming-soon__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
 }
 
 .coming-soon__heading {

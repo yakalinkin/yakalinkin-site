@@ -1,6 +1,15 @@
 @import '~styles/main-utils';
 
 .article-aside {
+  --aside-image-height: 80px;
+  --aside-image-width: calc(var(--aside-image-height) + (var(--aside-image-height) * 0.25));
+
+  @include media-breakpoint-down(xs) {
+    --aside-image-height: 60px;
+  }
+}
+
+.article-aside {
   position: absolute;
   top: 0;
   right: spacing('neg-lg');
@@ -22,13 +31,10 @@
 }
 
 .article-aside__image {
-  max-width: 100%;
-  height: 80px;
+  display: inline-block;
+  width: var(--aside-image-width);
+  height: var(--aside-image-height);
   margin-bottom: spacing('xs');
-
-  @include media-breakpoint-down(xs) {
-    height: 60px;
-  }
 }
 
 .article-aside__text {
