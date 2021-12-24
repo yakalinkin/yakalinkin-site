@@ -1,4 +1,6 @@
 export type Props = {
-  jpgName?: string;
+  className?: string;
+  src?: string;
+  srcSet?: string;
   text?: string;
 }
