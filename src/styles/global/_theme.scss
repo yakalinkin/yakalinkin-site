@@ -13,10 +13,6 @@
   --rgb-focus: #{rgb-var('blue')};
 }
 
-[data-theme="light"] {
-  @include light-mode;
-}
-
 [data-theme="dark"] {
   @include dark-mode;
 }
