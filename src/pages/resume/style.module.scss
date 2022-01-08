@@ -16,7 +16,7 @@
 }
 
 .avatar {
-  --aside-image-width: var(--aside-image-height);
+  --aside-image-width: calc(var(--aside-image-height) / 1.125);
 }
 
 .line-group {
@@ -33,14 +33,14 @@
 
   z-index: z('0');
 
-  height: 100px;
+  height: 86px;
   top: 0;
   left: 0;
 
-  transform: translate(-13%, -10%);
+  transform: translate(-9%, -4%);
 
   @include media-breakpoint-down(xs) {
-    height: 75px;
+    height: 65px;
   }
 }
 
