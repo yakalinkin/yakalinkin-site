@@ -57,7 +57,7 @@ export const fontsRule: Rule = function ({ paths }) {
 
 export const svgReactComponentRule: Rule = function ({ paths }) {
   return {
-    test: /\.(svg?)$/i,
+    test: /\.svg$/i,
     exclude: /node_modules/,
     include: [paths.root.assets, paths.root.dev],
     use: {
@@ -65,7 +65,11 @@ export const svgReactComponentRule: Rule = function ({ paths }) {
       options: {
         svgoConfig: {
           plugins: [{
-            cleanupIDs: false,
+            name: 'cleanupIDs',
+            active: false,
+          }, {
+            name: 'prefixIds',
+            active: true,
           }],
         },
       },
