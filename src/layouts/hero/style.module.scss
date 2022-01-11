@@ -41,7 +41,15 @@
     width: calc(100% + 0.5em);
     height: auto;
     z-index: z('bottom');
-    stroke: color('line');
+  }
+
+  path {
+    vector-effect: non-scaling-stroke;
     stroke-width: 4px;
+    stroke: color('line');
+
+    @include media-breakpoint-down(md) {
+      stroke-width: 2px;
+    }
   }
 }
