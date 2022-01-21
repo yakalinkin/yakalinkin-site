@@ -4,6 +4,8 @@ import { Navigation, NavItem } from '@components/navigation';
 
 import EyeCloseSvg from '@svg/eye-close.svg';
 
+import CONTACTS from '@mock-data/contacts.json';
+
 import style from './style.module.scss';
 
 export const Footer: FC = () => {
@@ -13,28 +15,28 @@ export const Footer: FC = () => {
         <div className={style.footerNav}>
           <Navigation>
             <NavItem
-              to="https://t.me/yakalinkin"
-              text="Телеграм"
+              to={CONTACTS.telegram.link}
+              text={CONTACTS.telegram.title}
               key="telegram"
             />
             <NavItem
-              to="https://instagram.com/yakalinkin"
-              text="Инстаграм"
+              to={CONTACTS.instagram.link}
+              text={CONTACTS.instagram.title}
               key="instagram"
             />
             <NavItem
-              to="https://vk.com/yakalinkin"
-              text="ВКонтакте"
+              to={CONTACTS.vk.link}
+              text={CONTACTS.vk.title}
               key="vkontakte"
             />
             <NavItem
-              to="https://github.com/yakalinkin"
-              text="Гитхаб"
+              to={CONTACTS.github.link}
+              text={CONTACTS.github.title}
               key="github"
             />
             <NavItem
-              to="https://linkedin.com/in/yakalinkin"
-              text="Линкедин"
+              to={CONTACTS.linkedin.link}
+              text={CONTACTS.linkedin.title}
               key="linkedin"
             />
           </Navigation>

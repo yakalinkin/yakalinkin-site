@@ -1,0 +1,26 @@
+{
+  "telegram":{
+     "title":"Телеграм",
+     "link":"https://t.me/yakalinkin"
+  },
+  "instagram":{
+     "title":"Инстаграм",
+     "link":"https://instagram.com/yakalinkin"
+  },
+  "vk":{
+     "title":"ВКонтакте",
+     "link":"https://vk.com/yakalinkin"
+  },
+  "github":{
+     "title":"Гитхаб",
+     "link":"https://github.com/yakalinkin"
+  },
+  "linkedin":{
+     "title":"Линкедин",
+     "link":"https://linkedin.com/in/yakalinkin"
+  },
+  "email":{
+     "title":"Почта",
+     "link":"mailto:yakalinkin.job@gmail.com"
+  }
+}

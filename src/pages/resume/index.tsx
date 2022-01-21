@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import cn from 'classnames';
 
+import { replace } from '@utils/replace.util';
+
 import { Button } from '@components/button';
 
 import { Header } from '@layouts/header';
@@ -23,135 +25,80 @@ import {
   ArticleQuote,
 } from '@layouts/article';
 
-import style from './style.module.scss';
+import CONTACTS from '@mock-data/contacts.json';
 
 import Line1Svg from './svg/line-1.svg';
 import Line2Svg from './svg/line-2.svg';
 import Line3Svg from './svg/line-3.svg';
 import Line4Svg from './svg/line-4.svg';
 
+import style from './style.module.scss';
+
+import DATA from './data.json';
+
 export const Resume = () => {
-  const publicUrl = process.env.PUBLIC_URL;
+  const data = generateData();
 
   return (
     <>
       <Helmet>
-        <title>Резюме</title>
+        <title>{ data.headTitle }</title>
       </Helmet>
       <Header />
       <Article>
         <ArticleAsideGroup>
-          <ArticleHeader>Меня зовут Ярослав.</ArticleHeader>
+          <ArticleHeader>{ data.title }</ArticleHeader>
           <ArticleAside
             className={style.avatar}
-            srcSet={`${publicUrl}/images/avatar@2x.jpg 2x`}
-            src={`${publicUrl}/images/avatar.jpg`}
-            text="Фото старое, давно пора обновлять"
+            srcSet={data.imageSrcSet}
+            src={data.imageSrc}
+            text={data.imageCaption}
           >
             <Line1Svg className={style.line1} />
           </ArticleAside>
         </ArticleAsideGroup>
 
-        <ArticleLead>Я — веб-разработчик из Беларуси в компании ScienceSoft. Cлабослышащий, но это меня не сильно беспокоит. Я могу общаться и на жестовом языке, и голосом.</ArticleLead>
-        <ArticleParagraph>Начал программировать с 2011 года. Пробовал разные направления, выбрал фронтенд — всё, что связано с веб-разработкой, сайтами и тем, что их окружает. За время работы накопился немалый опыт, как в программировании, так и в общении с людьми. Теперь разрабатываю приложения, создаю сайты, помогаю улучшить дизайн, также даю советы по саморазвитию. Стремлюсь создавать что-то полезное и нужное людям.</ArticleParagraph>
-        <ArticleParagraph>Помимо работы, мне нравится рисовать, заниматься математикой, исследовать новые технологии. Ещё люблю отличный кофе и минимализм.</ArticleParagraph>
+        <ArticleLead>{ data.lead }</ArticleLead>
 
-        <ArticleQuote>Хочешь почувствовать себя человеком, <span className={style.lineGroup}>победи<Line2Svg className={style.line2} /></span> свой недуг</ArticleQuote>
+        {
+          data.about.split('\n').map((paragraph, idx) => (
+            <ArticleParagraph key={idx}>{ paragraph }</ArticleParagraph>
+          ))
+        }
+
+        <ArticleQuote>{ data.quote }</ArticleQuote>
 
         <ArticleList
-          title="Работаю"
-          list={[
-            'Фронтенд-разработчиком в международной компании ScienceSoft с февраля 2018 года',
-          ]}
+          title={data.presentTenseTitle}
+          list={data.presentTenseList}
         />
 
         <ArticleList
-          title="Работал"
-          list={[
-            'Вордпресс-разработчиком в веб-студии с октября 2016 по январь 2018',
-            'Фронтенд-разработчиком в канадской компании Xiveti с марта 2017 по апрель',
-          ]}
+          title={data.pastTenseTitle}
+          list={data.pastTenseList}
         />
 
         <ArticleList
-          title="Учился"
-          list={[
-            '2020-21 · Мидл фронтенд, Яндекс.Практикум',
-            '2016-17 · Full Stack JavaScript, Treehouse',
-            '2011-16 · Математика и информационные технологии, Мехмат БГУ',
-          ]}
+          title={data.educationTitle}
+          list={data.educationList}
         />
 
         <ArticleList
-          title="Знаю и умею"
+          title={data.skillsTitle}
+          list={data.skillsList}
           type={ArticleListType.Ordered}
-          list={[
-            {
-              title:'Фронтенд',
-              tags: [
-                'HTML',
-                'CSS',
-                <span key={2} className={style.lineGroup}>JavaScript<Line3Svg className={style.line3} /></span>,
-                'Babel',
-                'TypeScript',
-                'Git',
-                'Sass',
-                'ESLint',
-                'Webpack',
-                'React',
-                'Redux',
-                'Angular',
-                'NgRx',
-                'RxJS',
-                'SSR',
-                'Тестирование',
-              ],
-            },
-            {
-              title: 'Бэкенд',
-              tags: [
-                'Node.js',
-                'Express.js',
-                'Sequelize',
-                'PostgreSQL',
-                'MongoDB',
-                'OAuth',
-                'REST',
-                'WebSocket',
-              ],
-            },
-            {
-              title: 'Девопс',
-              tags: [
-                'Linux',
-                'Nginx',
-                'Docker',
-                'CI/CD',
-              ],
-            },
-            {
-              title: 'Дизайн',
-              tags: [
-                'UI/UX',
-                'Вайрфрейм',
-                'Прототип',
-                'Figma',
-                'Sketch',
-              ],
-            },
-          ]}
         />
 
-        <ArticleHeading level={ArticleHeadingLevel.H3}>Как связаться</ArticleHeading>
+        <ArticleHeading level={ArticleHeadingLevel.H3}>{ data.contactsTitle }</ArticleHeading>
 
-        <ArticleParagraph>Пишите в телеграм <a href="https://t.me/yakalinkin" target="_blank" rel="noreferrer">@yakalinkin</a> или почту <a href="mailto:yakalinkin.job@gmail.com" target="_blank" rel="noreferrer">yakalinkin.job@gmail.com</a></ArticleParagraph>
+        <ArticleParagraph>{ data.contactsInfo }</ArticleParagraph>
 
         <div className={cn(style.lineGroup, 'mt-4xl')}>
           <Button
             className={style.downloadButton}
-            text="Скачать резюме"
+            text={data.downloadButtonText}
+            href={data.downloadButtonLink}
             icon={<DocumentPdfSvg />}
-            href={`${process.env.PUBLIC_URL}/documents/resume-2022.pdf`}
             download
           />
           <Line4Svg className={style.line4} />
@@ -162,3 +109,33 @@ export const Resume = () => {
     </>
   );
 };
+
+function generateData() {
+  const data = { ...DATA };
+
+  data.quote = replace(
+    data.quote,
+    'победи',
+    <span className={style.lineGroup} key="line-2">победи<Line2Svg className={style.line2} /></span>,
+  ) as any;
+
+  data.contactsInfo = replace(
+    data.contactsInfo,
+    '@yakalinkin',
+    <a href={CONTACTS.telegram.link} target="_blank" rel="noreferrer" key="tme">@yakalinkin</a>,
+  ) as any;
+
+  data.contactsInfo = replace(
+    data.contactsInfo,
+    'yakalinkin.job@gmail.com',
+    <a href={CONTACTS.email.link} target="_blank" rel="noreferrer" key="mailto">yakalinkin.job@gmail.com</a>,
+  ) as any;
+
+  data.skillsList[0].tags = replace(
+    DATA.skillsList[0].tags,
+    'JavaScript',
+    <span key={2} className={style.lineGroup}>JavaScript<Line3Svg className={style.line3} /></span>,
+  ) as any;
+
+  return data;
+}
