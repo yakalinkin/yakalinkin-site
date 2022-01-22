@@ -43,7 +43,7 @@ export const Footer: FC = () => {
         </div>
       </div>
       <div className={style.footerContainer}>
-        <span className={style.footerInfo}><EyeCloseSvg /> Не отслеживаю. Хорошего настроения!</span>
+        <span className={style.footerInfo}><EyeCloseSvg />Не отслеживаю. Хорошего настроения!</span>
       </div>
     </footer>
   );
