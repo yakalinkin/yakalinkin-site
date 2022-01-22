@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
 
@@ -15,16 +15,21 @@ import { Resume } from '@pages/resume';
 
 import { NotFound } from '@pages/not-found';
 
-import styleJson from './styles/main.scss.json';
 import { setHtmlDataset } from '@utils/utils';
+import { googleFontsData } from '@utils/google-fonts.util';
+
 import { Routes } from './consts';
+
+const googleFonts = googleFontsData();
 
 const Root = () => {
   const [themeStorage] = useLocalStorage<string>('theme');
-
-  const { isLoading } = useLoading(async () => {
-    await loadFontGroup(styleJson.font.typefaces['primary']);
-  });
+  const loadingCallback = useCallback(async () => {
+    for (const font of googleFonts) {
+      await loadFontGroup(font);
+    }
+  }, []);
+  const { isLoading } = useLoading(loadingCallback);
 
   useEffect(() => {
     if (themeStorage) {

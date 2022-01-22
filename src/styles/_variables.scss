@@ -39,15 +39,8 @@ $z-tokens: map-get($z-tokens) !default;
 // Typography
 //
 
-// Font path
-$font-path: map-get($font, 'path') !default;
-
-// Typefaces
-$font-typefaces: map-get($font, 'typefaces') !default;
-
 // Font family
-$font-family: system-ui, sans-serif !default;
-$font-family-primary: map-get($font-typefaces, 'primary', 'family'), $font-family !default;
+$font-family-primary: 'Inter', sans-serif !default;
 
 // Font size
 $font-size: type-size(3) !default;

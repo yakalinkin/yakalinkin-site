@@ -1,6 +1,8 @@
 import React, { FC, useState } from 'react';
 import cn from 'classnames';
 
+import { isLinkExternal } from '@utils/utils';
+
 import NoImageSvg from '@svg/no-image.svg';
 
 import { Props } from './types';
@@ -26,6 +28,17 @@ export const Image: FC<Props> = ({
     setIsLoading(false);
     setIsUnloaded(true);
   };
+
+  if(!isLinkExternal(src)) {
+    src = `${process.env.PUBLIC_URL}${src}`;
+  }
+
+  if(srcSet && !isLinkExternal(srcSet)) {
+    srcSet = srcSet.split(',').map((item) => {
+      const [src, size] = item.trim().split(' ');
+      return `${process.env.PUBLIC_URL}${src} ${size}`;
+    }).join(', ');
+  }
 
   const imageUnloadedEl =  (
     !isLoading && isUnloaded ? <div className={style.imageUnloaded}><NoImageSvg /></div> : null
