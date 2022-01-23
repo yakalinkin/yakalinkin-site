@@ -8,9 +8,8 @@ import { Navigation, NavItem, NavTagName } from '@components/navigation';
 import { ThemeAction } from '@components/action';
 import { Focusable } from '@components/focusable';
 
-import LogoSvg from '@svg/logo-xmas.svg';
+import LogoSvg from '@svg/logo.svg';
 
-import './keyframes.scss';
 import style from './style.module.scss';
 
 export const Header: FC = () => {
