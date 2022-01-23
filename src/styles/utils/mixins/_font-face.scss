@@ -15,7 +15,7 @@
   @each $ext in $exts {
     $ext-mod: if(map-has-key($ext-mods, $ext), $ext + map-get($ext-mods, $ext), $ext);
     $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $src: append($src, url('~#{$path}/#{$name}/#{$font-name}/#{$font-name}.#{$ext-mod}') format(quote($format)), comma);
+    $src: append($src, url('#{$path}/#{$name}/#{$font-name}/#{$font-name}.#{$ext-mod}') format(quote($format)), comma);
   }
 
   @font-face {

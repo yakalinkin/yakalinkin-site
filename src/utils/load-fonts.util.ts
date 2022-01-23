@@ -26,7 +26,7 @@ async function loadFont({ family, variant }, timeout = DEFAULT_TIMEOUT) {
 
   try {
     const font = new FontFaceObserver(family, variant);
-    return await font.load();
+    await font.load();
   } catch (error) {
     console.warn(`The '${fullName}' font didn't appear after ${timeout / 1000} seconds.`);
     throw null;
@@ -35,7 +35,7 @@ async function loadFont({ family, variant }, timeout = DEFAULT_TIMEOUT) {
 
 async function loadFontGroup(group?, timeout?) {
   const { family, variants } = group;
-  const loadFonts = variants.map(async (variant) => await loadFont({ family, variant }, timeout));
+  const loadFonts = variants.map((variant) => loadFont({ family, variant }, timeout));
 
   try {
     await Promise.all(loadFonts);

@@ -42,13 +42,15 @@ export const stylesRules: Rules = function (configs) {
 };
 
 export const getUseItems: UseItems = function ({ config, options = {} }) {
+  const cssOptions = { ...options };
+
   return [
     { loader: MiniCssExtractPlugin.loader },
     { loader: 'cache-loader' },
     {
       loader: 'css-loader',
       options: {
-        ...options,
+        ...cssOptions,
         sourceMap: config.enabled.sourceMaps,
       },
     },

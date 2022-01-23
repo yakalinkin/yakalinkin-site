@@ -13,6 +13,7 @@
       "@hooks/*": ["src/hooks/*"],
       "@utils/*": ["src/utils/*"],
       "@svg/*": ["src/svg/*"],
+      "@mock-data/*": ["src/mock-data/*"],
       "#consts": ["src/consts"]
     },
 

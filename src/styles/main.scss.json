@@ -29,22 +29,6 @@
     }
   },
 
-  "font": {
-    "path": " 'fonts' ",
-    "typefaces": {
-      "primary": {
-        "name": "inter",
-        "family": "Inter",
-        "variants": [
-          { "weight": 400, "style": "normal" },
-          { "weight": 600, "style": "normal" },
-          { "weight": 500, "style": "normal" },
-          { "weight": 700, "style": "normal" }
-        ]
-      }
-    }
-  },
-
   "grid": {
     "columns": "12",
     "gutter": "32px",
