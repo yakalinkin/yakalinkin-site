@@ -20,9 +20,6 @@ export type Paths = {
   assets: {
     images: string;
     fonts: string;
-    favicons: string;
-    scripts: string;
-    documents: string;
   };
   dev: {
     styles: string;
