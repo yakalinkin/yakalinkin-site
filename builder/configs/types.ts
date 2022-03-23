@@ -1,4 +1,4 @@
-import { Configuration } from 'webpack';
+import { Configuration, WebpackOptionsNormalized } from 'webpack';
 
 export type Paths = {
   rootPath: string;
@@ -38,7 +38,7 @@ export type Config = {
   manifest?: Record<string, string>;
   env?: Record<string, string>;
   target?: string;
-  webpack: Pick<Configuration, 'entry' | 'resolve'>;
+  webpack: Pick<WebpackConfiguration, 'entry' | 'resolve'>;
   enabled: {
     cacheBusting?: boolean;
     sourceMaps?: boolean;
@@ -55,3 +55,5 @@ export type Configs = {
 export type YargsOptions = {
   mode: string;
 }
+
+export type WebpackConfiguration = Configuration & Pick<WebpackOptionsNormalized, 'devServer'>;

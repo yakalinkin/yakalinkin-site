@@ -6,7 +6,6 @@ export const typescriptRule: Rule = function ({ paths }) {
     exclude: /node_modules/,
     include: paths.root.dev,
     use: [
-      { loader: 'cache-loader' },
       { loader: 'babel-loader' },
       { loader: 'ts-loader', options: { transpileOnly: true } },
     ],

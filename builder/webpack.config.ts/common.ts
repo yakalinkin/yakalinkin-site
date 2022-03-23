@@ -1,7 +1,6 @@
-import { Configuration } from 'webpack';
 import webpackMerge from 'webpack-merge';
 
-import { Paths, Config } from '@configs';
+import { Paths, Config, WebpackConfiguration } from '@configs';
 
 import { filesRules, stylesRules, typescriptRule } from './rules';
 
@@ -14,13 +13,13 @@ import {
   copyPlugin,
   definePlugin,
   interpolateHtmlPlugin,
-  friendlyErrorsPlugin,
   htmlPlugin,
   miniCssExtractPlugin,
+  forkTsCheckerPlugin,
 } from './plugins';
 
 export default (paths: Paths, config: Config) => {
-  return webpackMerge<Configuration>({
+  return webpackMerge<WebpackConfiguration>({
     mode: config.mode,
 
     context: paths.root.dev,
@@ -29,7 +28,11 @@ export default (paths: Paths, config: Config) => {
       publicPath: paths.publicUrl ?? '',
       path: paths.root.prod,
       filename: `${paths.scriptsFolder}/${config.assetsFilenames}.js`,
+      clean: true,
+      pathinfo: false,
     },
+
+    cache: true,
 
     module: {
       rules: [
@@ -46,14 +49,13 @@ export default (paths: Paths, config: Config) => {
       copyPlugin({ paths, config }),
       miniCssExtractPlugin({ paths, config }),
       htmlPlugin({ paths, config }),
-      friendlyErrorsPlugin({ paths, config }),
+      forkTsCheckerPlugin({ paths, config }),
     ],
 
-    stats: 'errors-only',
+    stats: 'minimal',
 
     optimization: {
-
-      // CommonsChunkPlugin
+      moduleIds: 'named',
       splitChunks: {
         cacheGroups: {
           vendor: {
@@ -65,10 +67,7 @@ export default (paths: Paths, config: Config) => {
           },
         },
       },
-
-      // NoEmitOnErrorsPlugin
       emitOnErrors: true,
-
     },
 
     resolve: {
@@ -78,6 +77,8 @@ export default (paths: Paths, config: Config) => {
         'fonts': paths.assets.fonts,
         ...tsconfigPathsToAlias(paths.rootPath, tsconfig.compilerOptions.paths),
       },
+      symlinks: false,
+      cacheWithContext: false,
     },
 
   }, config.webpack);

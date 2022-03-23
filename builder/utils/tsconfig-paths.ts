@@ -1,4 +1,4 @@
-import { endsWith } from 'lodash';
+import endsWith from 'lodash/endsWith';
 import { join } from 'path';
 
 function fromTsAlias(tsAlias: string) {

@@ -1,4 +1,4 @@
-export const Routes = {
+export const Path = {
   HOME: '/',
   RESUME: '/resume',
 };

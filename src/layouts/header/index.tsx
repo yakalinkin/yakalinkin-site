@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import cn from 'classnames';
 
-import { Routes } from '#consts';
+import { Path } from '#consts';
 
 import { Navigation, NavItem, NavTagName } from '@components/navigation';
 import { ThemeAction } from '@components/action';
@@ -22,7 +22,7 @@ export const Header: FC = () => {
   });
 
   useEffect(() => {
-    setIsLogoActive(location.pathname === Routes.HOME);
+    setIsLogoActive(location.pathname === Path.HOME);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export const Header: FC = () => {
           <Focusable disabled={logoDisabled}>
             <NavLink
               className={navLinkClassNames}
-              to={Routes.HOME}
+              to={Path.HOME}
             >
               <LogoSvg className={style.logoXmas} />
             </NavLink>
@@ -51,7 +51,7 @@ export const Header: FC = () => {
               tag={NavTagName.Soon}
             />
             <NavItem
-              to={Routes.RESUME}
+              to={Path.RESUME}
               text="Резюме"
               key="resume"
             />

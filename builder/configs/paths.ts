@@ -1,5 +1,5 @@
 import path from 'path';
-import { merge } from 'lodash';
+import merge from 'lodash/merge';
 
 import { Paths } from './types';
 

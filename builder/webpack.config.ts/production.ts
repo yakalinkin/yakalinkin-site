@@ -1,5 +1,5 @@
 import webpackMerge from 'webpack-merge';
-import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 
 import { Paths, Config } from '@configs';
@@ -15,8 +15,10 @@ export default (paths: Paths, config: Config) => {
     optimization: {
       minimizer: [
         new TerserPlugin(),
-        new OptimizeCSSAssetsPlugin(),
+        new CssMinimizerPlugin(),
       ],
+      moduleIds: 'deterministic',
+      runtimeChunk: 'single',
       nodeEnv: 'production',
       concatenateModules: true,
     },

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
 
 import { loadFontGroup } from '@utils/load-fonts.util';
@@ -18,7 +18,7 @@ import { NotFound } from '@pages/not-found';
 import { setHtmlDataset } from '@utils/utils';
 import { googleFontsData } from '@utils/google-fonts.util';
 
-import { Routes } from './consts';
+import { Path } from './consts';
 
 const googleFonts = googleFontsData();
 
@@ -40,11 +40,11 @@ const Root = () => {
   return (
     <FocusDisplay>
       <SplashScreen isLoading={isLoading}>
-        <Switch>
-          <Route path={Routes.HOME} component={Home} exact />
-          <Route path={Routes.RESUME} component={Resume} exact />
-          <Route component={NotFound} />
-        </Switch>
+        <Routes>
+          <Route path={Path.HOME} element={<Home />} />
+          <Route path={Path.RESUME} element={<Resume />} />
+          <Route element={<NotFound />} />
+        </Routes>
       </SplashScreen>
     </FocusDisplay>
   );
