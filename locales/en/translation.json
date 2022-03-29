@@ -1,0 +1,117 @@
+{
+  "HeadTitle.Home": "Yaroslav Kalinkin",
+  "HeadTitle.Resume": "Resume",
+
+  "Greeting": {
+    "Hi": "Hi",
+    "GoodMorning": "Good morning",
+    "GoodAfternoon": "Good afternoon",
+    "GoodEvening": "Good evening"
+  },
+  "Navigation.Tag": {
+    "Soon": "Soon",
+    "InProgress": "In process"
+  },
+  "CompanyDesc": {
+    "Scnsoft": "Working since 2018",
+    "Practicum": "Verified Middle Web Developer",
+    "Treehouse": "Verified Full Stack JavaScript",
+    "HackerRank": "Verified JavaScript (Intermt.)"
+  },
+  "Contact": {
+    "Telegram": "Telegram",
+    "Instagram": "Instagram",
+    "VKontakte": "VKontakte",
+    "GitHub": "GitHub",
+    "LinkedIn": "LinkedIn",
+    "Email": "Email"
+  },
+
+  "Header.Navigation": {
+    "Resume": "Resume",
+    "Portfolio": "Portfolio"
+  },
+
+  "Footer.Info": "No tracking here. Have a nice day!",
+
+  "Hero.Title": "{{greetingText}}, I'm Yaroslav. Remote <2>web <1>developer<1 /></1></2>. I develop real websites.",
+
+  "Portfolio.Title": "coming soon",
+  "Portfolio.SubTitle": "Portfolio in progress",
+
+
+  "Resume.Title": "My name is Yaroslav.",
+  "Resume.AvatarCaption": "The photo is outdated, it's time to update it",
+  "Resume.Lead": "I am a web developer at ScienceSoft. I'm deaf, but it doesn't bother me much. I can communicate both in Russian sign language and voice.",
+  "Resume.About": "I started programming in 2011. I tried different directions, but chose frontend — everything related to web development, websites and everything that surrounds them. During this time, I have gained a lot of experience in programming and communicating with people. Now I am developing applications, creating a website, helping to improve the design, and also giving advice on self-development. I strive to create something useful and necessary for people.\nIn addition to work, I like to draw, do things with math and learn new technologies. I also love great coffee and minimalism.",
+  "Resume.Quote": "If you want to feel human, <1>conquer<1/></1> your ailment.",
+  "Resume.PresentTense.Title": "Working",
+  "Resume.PresentTense.List": [
+    "As a web developer at ScienceSoft since February 2018"
+  ],
+  "Resume.PastTense.Title": "Worked",
+  "Resume.PastTense.List": [
+    "As a WordPress developer in a web studio from October 2016 to January 2018",
+    "As a frontend developer at Xiveti in Canada from March 2017 to April"
+  ],
+  "Resume.Education.Title": "Studied",
+  "Resume.Education.List": [
+    "2020-21 · Middle Web Developer, Yandex.Practicum",
+    "2016-17 · Full Stack JavaScript, Treehouse",
+    "2011-16 · Mathematics and Information Technology, BSU"
+  ],
+  "Resume.Skills.Title": "Skills",
+  "Resume.Skills.List": [{
+    "title": "Frontend",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Babel",
+      "TypeScript",
+      "Git",
+      "Sass",
+      "ESLint",
+      "Webpack",
+      "React",
+      "Redux",
+      "Angular",
+      "NgRx",
+      "RxJS",
+      "SSR",
+      "Testing"
+    ]
+  }, {
+    "title": "Backend",
+    "tags": [
+      "Node.js",
+      "Express.js",
+      "Sequelize",
+      "PostgreSQL",
+      "MongoDB",
+      "OAuth",
+      "REST",
+      "WebSocket"
+    ]
+  }, {
+    "title": "DevOps",
+    "tags": [
+      "Linux",
+      "Nginx",
+      "Docker",
+      "CI/CD"
+    ]
+  }, {
+    "title": "Design",
+    "tags": [
+      "UI/UX",
+      "Wireframe",
+      "Prototype",
+      "Figma",
+      "Sketch"
+    ]
+  }],
+  "Resume.Contacts.Title": "How to contact me",
+  "Resume.Contacts.Info": "You can message me on Telegram at <tme>@yakalinkin</tme> or email me at <mailto>yakalinkin.job@gmail.com</mailto>",
+  "Resume.DownloadButton": "Download resume"
+}
