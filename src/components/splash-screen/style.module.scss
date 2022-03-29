@@ -32,6 +32,8 @@
   }
 
   span {
+    display: block;
+    height: 1em;
     font-size: type-size(2);
     margin-top: spacing('xs');
     opacity: opacity('50');

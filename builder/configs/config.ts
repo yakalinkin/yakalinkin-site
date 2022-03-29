@@ -1,5 +1,5 @@
 import * as yargs from 'yargs';
-import { merge } from 'lodash';
+import merge from 'lodash/merge';
 
 import { Config, YargsOptions } from './types';
 
@@ -19,7 +19,7 @@ const defaultConfig: Config = {
   port: Number(process.env.PORT) || (isProd ? 5000 : 4000),
   host: process.env.HOST || '::',
   ip: process.env.IP || networkAddress(),
-  assetsFilenames: '[name]_[hash]',
+  assetsFilenames: '[name]_[contenthash]',
   target: process.env.npm_lifecycle_event,
   webpack: {},
   enabled: {},

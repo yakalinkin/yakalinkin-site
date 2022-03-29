@@ -1,0 +1,109 @@
+{
+  "HeadTitle.Home": "Ярослав Калинкин",
+  "HeadTitle.Resume": "Резюме",
+
+  "Greeting.Hi": "Привет",
+  "Greeting.GoodMorning": "Доброе утро",
+  "Greeting.GoodAfternoon": "Добрый день",
+  "Greeting.GoodEvening": "Добрый вечер",
+
+  "Navigation.Tag.Soon": "Скоро",
+  "Navigation.Tag.InProgress": "В работе",
+
+  "CompanyDesc.Scnsoft": "Работаю с 2018 года",
+  "CompanyDesc.Practicum": "Диплом «Мидл фронтенд»",
+  "CompanyDesc.Treehouse": "Диплом «Full Stack JavaScript»",
+  "CompanyDesc.HackerRank": "Сертификат «JavaScript (Intermt.)»",
+
+  "Contact.Telegram": "Телеграм",
+  "Contact.Instagram": "Инстаграм",
+  "Contact.VKontakte": "ВКонтакте",
+  "Contact.GitHub": "Гитхаб",
+  "Contact.LinkedIn": "Линкедин",
+  "Contact.Email": "Почта",
+
+  "Header.Navigation.Resume": "Резюме",
+  "Header.Navigation.Portfolio": "Портфолио",
+
+  "Footer.Info": "Не отслеживаю. Хорошего настроения!",
+
+  "Hero.Title": "{{greetingText}}, это Ярослав. Удаленный <2>веб-<1>разработчик<1 /></1></2>. Разрабатываю живые сайты.",
+
+  "Portfolio.Title": "скоро будет",
+  "Portfolio.SubTitle": "Портфолио в процессе",
+
+  "Resume.Title": "Меня зовут Ярослав.",
+  "Resume.AvatarCaption": "Фото старое, пора его обновить",
+  "Resume.Lead": "Я — веб-разработчик. Работаю в компании ScienceSoft. Cлабослышащий, но это меня не сильно беспокоит. Я могу общаться и на жестовом языке, и голосом.",
+  "Resume.About": "Начал программировать с 2011 года. Пробовал разные направления, выбрал фронтенд — всё, что связано с веб-разработкой, сайтами и тем, что их окружает. За время работы накопился немалый опыт, как в программировании, так и в общении с людьми. Теперь разрабатываю приложения, создаю сайты, помогаю улучшить дизайн, также даю советы по саморазвитию. Стремлюсь создавать что-то полезное и нужное людям.\nПомимо работы, мне нравится рисовать, заниматься математикой, исследовать новые технологии. Ещё люблю отличный кофе и минимализм.",
+  "Resume.Quote": "Хочешь почувствовать себя человеком, <1>победи<1/></1> свой недуг",
+  "Resume.PresentTense.Title": "Работаю",
+  "Resume.PresentTense.List": [
+    "Веб разработчиком в международной компании ScienceSoft с февраля 2018 года"
+  ],
+  "Resume.PastTense.Title": "Работал",
+  "Resume.PastTense.List": [
+    "Вордпресс-разработчиком в веб-студии с октября 2016 по январь 2018",
+    "Фронтенд-разработчиком в канадской компании Xiveti с марта 2017 по апрель"
+  ],
+  "Resume.Education.Title": "Учился",
+  "Resume.Education.List": [
+    "2020-21 · Мидл фронтенд, Яндекс.Практикум",
+    "2016-17 · Full Stack JavaScript, Treehouse",
+    "2011-16 · Математика и информационные технологии, Мехмат БГУ"
+  ],
+  "Resume.Skills.Title": "Знаю и умею",
+  "Resume.Skills.List": [{
+    "title": "Фронтенд",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Babel",
+      "TypeScript",
+      "Git",
+      "Sass",
+      "ESLint",
+      "Webpack",
+      "React",
+      "Redux",
+      "Angular",
+      "NgRx",
+      "RxJS",
+      "SSR",
+      "Тестирование"
+    ]
+  }, {
+    "title": "Бэкенд",
+    "tags": [
+      "Node.js",
+      "Express.js",
+      "Sequelize",
+      "PostgreSQL",
+      "MongoDB",
+      "OAuth",
+      "REST",
+      "WebSocket"
+    ]
+  }, {
+    "title": "Девопс",
+    "tags": [
+      "Linux",
+      "Nginx",
+      "Docker",
+      "CI/CD"
+    ]
+  }, {
+    "title": "Дизайн",
+    "tags": [
+      "UI/UX",
+      "Вайрфрейм",
+      "Прототип",
+      "Figma",
+      "Sketch"
+    ]
+  }],
+  "Resume.Contacts.Title": "Как связаться",
+  "Resume.Contacts.Info": "Пишите в телеграм <tme>@yakalinkin</tme> или почту <mailto>yakalinkin.job@gmail.com</mailto>",
+  "Resume.DownloadButton": "Скачать резюме"
+}

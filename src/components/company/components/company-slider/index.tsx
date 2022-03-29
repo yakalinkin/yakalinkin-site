@@ -1,10 +1,8 @@
 import React, { FC } from 'react';
+import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay } from 'swiper/core';
 
 import { CompanyListProps } from '@components/company/types';
-
-SwiperCore.use([Autoplay]);
 
 export const CompanySlider: FC<CompanyListProps> = ({ items, ...props }) => {
   const dubItems = [...items, ...items];
@@ -17,6 +15,7 @@ export const CompanySlider: FC<CompanyListProps> = ({ items, ...props }) => {
         delay: 2500,
         disableOnInteraction: false,
       }}
+      modules={[Autoplay]}
 
       {...props}
     >

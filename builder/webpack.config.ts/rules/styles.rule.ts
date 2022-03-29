@@ -46,7 +46,6 @@ export const getUseItems: UseItems = function ({ config, options = {} }) {
 
   return [
     { loader: MiniCssExtractPlugin.loader },
-    { loader: 'cache-loader' },
     {
       loader: 'css-loader',
       options: {

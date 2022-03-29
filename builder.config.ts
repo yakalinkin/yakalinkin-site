@@ -6,7 +6,7 @@ const builderConfig: Configs = {
   },
   config: {
     env: {
-      SITE_TITLE: 'Ярослав Калинкин',
+      SITE_TITLE: 'yakalinkin',
       GOOGLE_FONTS_URL: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     },
     webpack: {
@@ -24,6 +24,8 @@ const builderConfig: Configs = {
           '.scss',
         ],
         alias: {
+          // React-Hot-Loader: react-🔥-dom patch is not detected. React 16.6+ features may not work.
+          // https://github.com/gaearon/react-hot-loader/issues/1227
           'react-dom': '@hot-loader/react-dom',
         },
       },

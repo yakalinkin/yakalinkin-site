@@ -1,10 +1,11 @@
 import webpackMerge from 'webpack-merge';
-import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 
 import { Paths, Config } from '@configs';
 
 import webpackConfig from './common';
+import { forkTsCheckerPlugin } from './plugins';
 
 export default (paths: Paths, config: Config) => {
   const _webpackConfig = webpackConfig(paths, config);
@@ -15,10 +16,16 @@ export default (paths: Paths, config: Config) => {
     optimization: {
       minimizer: [
         new TerserPlugin(),
-        new OptimizeCSSAssetsPlugin(),
+        new CssMinimizerPlugin(),
       ],
+      moduleIds: 'deterministic',
+      runtimeChunk: 'single',
       nodeEnv: 'production',
       concatenateModules: true,
     },
+
+    plugins: [
+      forkTsCheckerPlugin({ paths, config }),
+    ],
   });
 };

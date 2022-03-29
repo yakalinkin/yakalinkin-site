@@ -2,21 +2,19 @@ name: deploy
 on:
   push:
     branches:
-      - master
+    - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Install and Build
-        run: |
-          yarn install --frozen-lockfile
-          yarn build:prod
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.8
-        with:
-          branch: deploy
-          folder: dist
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install and Build
+      run: |
+        yarn install --prod --frozen-lockfile
+        yarn build:prod
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.8
+      with:
+        branch: deploy
+        folder: dist
