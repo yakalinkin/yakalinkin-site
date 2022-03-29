@@ -11,8 +11,9 @@ i18n
   .use(languageDetector)
   .use(initReactI18next)
   .init({
+    load: 'currentOnly',
     fallbackLng: 'ru',
-    lng: isBrowser ? window.localStorage.i18nextLng : 'ru',
+    lng: (isBrowser && window.localStorage.i18nextLng) || 'ru',
     debug: isDev,
     ns: ['common', 'translation'],
     defaultNS: 'translation',
