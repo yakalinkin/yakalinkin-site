@@ -5,14 +5,15 @@ import { Header } from '@layouts/header';
 import { Footer } from '@layouts/footer';
 import { Hero } from '@layouts/hero';
 import { Portfolio } from '@layouts/portfolio';
+import { useTranslation } from 'react-i18next';
 
 export const Home = () => {
-  const { SITE_TITLE } = process.env;
+  const { t } = useTranslation();
 
   return (
     <>
       <Helmet>
-        <title>{ SITE_TITLE }</title>
+        <title>{t('HeadTitle.Home')}</title>
       </Helmet>
       <Header />
       <Hero />

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Trans, useTranslation } from 'react-i18next';
 import cn from 'classnames';
 
-import { replace } from '@utils/replace.util';
+import { replaceObjects } from '@utils/replace.util';
 
 import { Button } from '@components/button';
 
@@ -37,105 +38,97 @@ import style from './style.module.scss';
 import DATA from './data.json';
 
 export const Resume = () => {
-  const data = generateData();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
       <Helmet>
-        <title>{ data.headTitle }</title>
+        <title>{t('HeadTitle.Resume')}</title>
       </Helmet>
       <Header />
       <Article>
         <ArticleAsideGroup>
-          <ArticleHeader>{ data.title }</ArticleHeader>
+          <ArticleHeader>{t('Resume.Title')}</ArticleHeader>
           <ArticleAside
             className={style.avatar}
-            srcSet={data.imageSrcSet}
-            src={data.imageSrc}
-            text={data.imageCaption}
+            srcSet={DATA.imageSrcSet}
+            src={DATA.imageSrc}
+            text={t('Resume.AvatarCaption')}
           >
             <Line1Svg className={style.line1} />
           </ArticleAside>
         </ArticleAsideGroup>
 
-        <ArticleLead>{ data.lead }</ArticleLead>
+        <ArticleLead>{t('Resume.Lead')}</ArticleLead>
 
         {
-          data.about.split('\n').map((paragraph, idx) => (
+          t('Resume.About').split('\n').map((paragraph, idx) => (
             <ArticleParagraph key={idx}>{ paragraph }</ArticleParagraph>
           ))
         }
 
-        <ArticleQuote>{ data.quote }</ArticleQuote>
+        <ArticleQuote>
+          <Trans i18nKey="Resume.Quote">
+            null<span className={style.lineGroup} key="line-2">null<Line2Svg className={style.line2} /></span>null
+          </Trans>
+        </ArticleQuote>
 
         <ArticleList
-          title={data.presentTenseTitle}
-          list={data.presentTenseList}
+          title={t('Resume.PresentTense.Title')}
+          list={t('Resume.PresentTense.List', { returnObjects: true })}
         />
 
         <ArticleList
-          title={data.pastTenseTitle}
-          list={data.pastTenseList}
+          title={t('Resume.PastTense.Title')}
+          list={t('Resume.PastTense.List', { returnObjects: true })}
         />
 
         <ArticleList
-          title={data.educationTitle}
-          list={data.educationList}
+          title={t('Resume.Education.Title')}
+          list={t('Resume.Education.List', { returnObjects: true })}
         />
 
         <ArticleList
-          title={data.skillsTitle}
-          list={data.skillsList}
+          title={t('Resume.Skills.Title')}
+          list={
+            replaceObjects(
+              t('Resume.Skills.List', { returnObjects: true }),
+              'JavaScript',
+              <span key={2} className={style.lineGroup}>JavaScript<Line3Svg className={style.line3} /></span>,
+            )
+          }
           type={ArticleListType.Ordered}
         />
 
-        <ArticleHeading level={ArticleHeadingLevel.H3}>{ data.contactsTitle }</ArticleHeading>
+        <ArticleHeading level={ArticleHeadingLevel.H3}>{t('Resume.Contacts.Title')}</ArticleHeading>
 
-        <ArticleParagraph>{ data.contactsInfo }</ArticleParagraph>
-
-        <div className={cn(style.lineGroup, 'mt-4xl')}>
-          <Button
-            className={style.downloadButton}
-            text={data.downloadButtonText}
-            href={data.downloadButtonLink}
-            icon={<DocumentPdfSvg />}
-            download
+        <ArticleParagraph>
+          <Trans
+            i18nKey="Resume.Contacts.Info"
+            components={{
+              tme: <a href={CONTACTS.email.link} target="_blank" rel="noreferrer" />,
+              mailto: <a href={CONTACTS.email.link} target="_blank" rel="noreferrer" />,
+            }}
           />
-          <Line4Svg className={style.line4} />
-        </div>
+        </ArticleParagraph>
+
+        {
+          // :TODO: Add a resume in English
+          i18n.language === 'ru' &&
+          <div className={cn(style.lineGroup, 'mt-4xl')}>
+            <Button
+              className={style.downloadButton}
+              text={t('Resume.DownloadButton')}
+              href={DATA.downloadButtonLink}
+              icon={<DocumentPdfSvg />}
+              download
+            />
+            <Line4Svg className={style.line4} />
+          </div>
+        }
 
       </Article>
       <Footer />
     </>
   );
 };
-
-function generateData() {
-  const data = { ...DATA };
-
-  data.quote = replace(
-    data.quote,
-    'победи',
-    <span className={style.lineGroup} key="line-2">победи<Line2Svg className={style.line2} /></span>,
-  ) as any;
-
-  data.contactsInfo = replace(
-    data.contactsInfo,
-    '@yakalinkin',
-    <a href={CONTACTS.telegram.link} target="_blank" rel="noreferrer" key="tme">@yakalinkin</a>,
-  ) as any;
-
-  data.contactsInfo = replace(
-    data.contactsInfo,
-    'yakalinkin.job@gmail.com',
-    <a href={CONTACTS.email.link} target="_blank" rel="noreferrer" key="mailto">yakalinkin.job@gmail.com</a>,
-  ) as any;
-
-  data.skillsList[0].tags = replace(
-    DATA.skillsList[0].tags,
-    'JavaScript',
-    <span key={2} className={style.lineGroup}>JavaScript<Line3Svg className={style.line3} /></span>,
-  ) as any;
-
-  return data;
-}

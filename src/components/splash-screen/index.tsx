@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 
 import LogoSvg from '@svg/logo.svg';
@@ -8,10 +9,10 @@ import style from './style.module.scss';
 import styleJson from './style.scss.json';
 
 export const SplashScreen: FC<Props> = ({ isLoading, children }) => {
+  const { t, ready } = useTranslation();
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const classNames = cn({
-    [style.splashScreen]: true,
+  const classNames = cn(style.splashScreen, {
     [style.loading]: !isLoading,
   });
 
@@ -30,7 +31,7 @@ export const SplashScreen: FC<Props> = ({ isLoading, children }) => {
   const splashScreenElm = (
     <div className={classNames}>
       <LogoSvg />
-      <span>Загружаю</span>
+      <span>{ready && t('common:Loading')}</span>
     </div>
   );
 

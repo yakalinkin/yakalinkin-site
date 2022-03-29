@@ -107,11 +107,23 @@
   width: 139px !important;
   flex: 0 0 139px !important;
 }
-[id="yandex-praktikum"] {
+[id="yandex-practicum"] {
   width: 160px !important;
   flex: 0 0 160px !important;
 }
 [id="hacker-rank"] {
   width: 168px !important;
   flex: 0 0 168px !important;
+}
+
+svg.lng_ru,
+svg.lng_en {
+  g {
+    display: none;
+  }
+}
+
+svg.lng_ru :global(#ru),
+svg.lng_en :global(#en) {
+  display: block;
 }

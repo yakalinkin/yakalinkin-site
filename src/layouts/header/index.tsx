@@ -1,11 +1,12 @@
 import React, { FC, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 
 import { Path } from '#consts';
 
 import { Navigation, NavItem, NavTagName } from '@components/navigation';
-import { ThemeAction } from '@components/action';
+import { LanguageAction, ThemeAction } from '@components/action';
 import { Focusable } from '@components/focusable';
 
 import LogoSvg from '@svg/logo.svg';
@@ -13,6 +14,7 @@ import LogoSvg from '@svg/logo.svg';
 import style from './style.module.scss';
 
 export const Header: FC = () => {
+  const { t } = useTranslation();
   const [isLogoActive, setIsLogoActive] = useState(false);
   const [logoDisabled, setLogoDisabled] = useState(false);
   const location = useLocation();
@@ -46,19 +48,19 @@ export const Header: FC = () => {
           <Navigation>
             <NavItem
               to="#"
-              text="Портфолио"
+              text={t('Header.Navigation.Portfolio')}
               key="portfolio"
               tag={NavTagName.Soon}
             />
             <NavItem
               to={Path.RESUME}
-              text="Резюме"
+              text={t('Header.Navigation.Resume')}
               key="resume"
             />
           </Navigation>
         </div>
         <div className={style.headerAction}>
-          {/* :TODO: <LanguageAction /> */}
+          <LanguageAction />
           <ThemeAction />
         </div>
       </div>

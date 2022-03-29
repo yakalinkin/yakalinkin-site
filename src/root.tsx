@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
+import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 import { loadFontGroup } from '@utils/load-fonts.util';
 
@@ -17,12 +19,14 @@ import { NotFound } from '@pages/not-found';
 
 import { setHtmlDataset } from '@utils/utils';
 import { googleFontsData } from '@utils/google-fonts.util';
+import { defaultSiteTitle } from '@utils/env.util';
 
 import { Path } from './consts';
 
 const googleFonts = googleFontsData();
 
 const Root = () => {
+  const { ready: i18nIsReady } = useTranslation();
   const [themeStorage] = useLocalStorage<string>('theme');
   const loadingCallback = useCallback(async () => {
     for (const font of googleFonts) {
@@ -38,8 +42,12 @@ const Root = () => {
   }, [themeStorage]);
 
   return (
+   <>
+    <Helmet>
+      <title>{defaultSiteTitle}</title>
+    </Helmet>
     <FocusDisplay>
-      <SplashScreen isLoading={isLoading}>
+      <SplashScreen isLoading={!i18nIsReady || isLoading}>
         <Routes>
           <Route path={Path.HOME} element={<Home />} />
           <Route path={Path.RESUME} element={<Resume />} />
@@ -47,6 +55,7 @@ const Root = () => {
         </Routes>
       </SplashScreen>
     </FocusDisplay>
+   </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Navigation, NavItem } from '@components/navigation';
 
@@ -9,6 +10,8 @@ import CONTACTS from '@mock-data/contacts.json';
 import style from './style.module.scss';
 
 export const Footer: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className={style.footer}>
       <div className={style.footerContainer}>
@@ -16,34 +19,34 @@ export const Footer: FC = () => {
           <Navigation>
             <NavItem
               to={CONTACTS.telegram.link}
-              text={CONTACTS.telegram.title}
+              text={t(CONTACTS.telegram.title)}
               key="telegram"
             />
             <NavItem
               to={CONTACTS.instagram.link}
-              text={CONTACTS.instagram.title}
+              text={t(CONTACTS.instagram.title)}
               key="instagram"
             />
             <NavItem
               to={CONTACTS.vk.link}
-              text={CONTACTS.vk.title}
+              text={t(CONTACTS.vk.title)}
               key="vkontakte"
             />
             <NavItem
               to={CONTACTS.github.link}
-              text={CONTACTS.github.title}
+              text={t(CONTACTS.github.title)}
               key="github"
             />
             <NavItem
               to={CONTACTS.linkedin.link}
-              text={CONTACTS.linkedin.title}
+              text={t(CONTACTS.linkedin.title)}
               key="linkedin"
             />
           </Navigation>
         </div>
       </div>
       <div className={style.footerContainer}>
-        <span className={style.footerInfo}><EyeCloseSvg />Не отслеживаю. Хорошего настроения!</span>
+        <span className={style.footerInfo}><EyeCloseSvg />{t('Footer.Info')}</span>
       </div>
     </footer>
   );

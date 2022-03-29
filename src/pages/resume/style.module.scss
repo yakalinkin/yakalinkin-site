@@ -22,10 +22,6 @@
 .line-group {
   position: relative;
   display: inline-block;
-
-  @include media-breakpoint-down(xs) {
-    display: block;
-  }
 }
 
 .line-1 {
@@ -48,10 +44,10 @@
   @include line;
 
   height: 82px;
-  left: 0;
+  left: 50%;
   bottom: 0;
 
-  transform: translate(-5%, 0);
+  transform: translate(-50%, 0);
 
   @include media-breakpoint-down(md) {
     height: 65px;

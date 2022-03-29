@@ -20,6 +20,7 @@
 
 .hero__caption {
   margin-right: spacing('xl');
+  white-space: pre-line;
 
   @include media-breakpoint-down(sm) {
     margin-right: spacing('5xl');

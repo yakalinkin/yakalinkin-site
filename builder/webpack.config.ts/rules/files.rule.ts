@@ -67,9 +67,6 @@ export const svgReactComponentRule: Rule = function ({ paths }) {
           plugins: [{
             name: 'cleanupIDs',
             active: false,
-          }, {
-            name: 'prefixIds',
-            active: true,
           }],
         },
       },

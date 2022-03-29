@@ -5,6 +5,7 @@ import TerserPlugin from 'terser-webpack-plugin';
 import { Paths, Config } from '@configs';
 
 import webpackConfig from './common';
+import { forkTsCheckerPlugin } from './plugins';
 
 export default (paths: Paths, config: Config) => {
   const _webpackConfig = webpackConfig(paths, config);
@@ -22,5 +23,9 @@ export default (paths: Paths, config: Config) => {
       nodeEnv: 'production',
       concatenateModules: true,
     },
+
+    plugins: [
+      forkTsCheckerPlugin({ paths, config }),
+    ],
   });
 };

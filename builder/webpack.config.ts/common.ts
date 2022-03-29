@@ -15,7 +15,6 @@ import {
   interpolateHtmlPlugin,
   htmlPlugin,
   miniCssExtractPlugin,
-  forkTsCheckerPlugin,
 } from './plugins';
 
 export default (paths: Paths, config: Config) => {
@@ -49,7 +48,6 @@ export default (paths: Paths, config: Config) => {
       copyPlugin({ paths, config }),
       miniCssExtractPlugin({ paths, config }),
       htmlPlugin({ paths, config }),
-      forkTsCheckerPlugin({ paths, config }),
     ],
 
     stats: 'minimal',

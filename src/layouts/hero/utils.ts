@@ -1,15 +1,17 @@
-export const getGreet = () => {
+import { TFunction } from 'react-i18next';
+
+export const getGreetingText = (t: TFunction) => {
   const date = new Date();
   const hrs = date.getHours();
-  let greet = 'Привет';
+  let greeting = t('Greeting.Hi');
 
   if (hrs >= 4 && hrs < 11) {
-    greet = 'Доброе утро';
+    greeting = t('Greeting.GoodMorning');
   } else if (hrs >= 11 && hrs < 17) {
-    greet = 'Добрый день';
+    greeting = t('Greeting.GoodAfternoon');
   } else if (hrs >= 17 && hrs < 23) {
-    greet = 'Добрый вечер';
+    greeting = t('Greeting.GoodEvening');
   }
 
-  return greet;
+  return greeting;
 };

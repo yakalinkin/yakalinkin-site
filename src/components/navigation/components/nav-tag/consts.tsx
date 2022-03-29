@@ -1,8 +1,12 @@
-export const tagData = {
-  ['soon']: {
-    text: 'Скоро',
+import { TFunction } from 'react-i18next';
+
+import { NavTagName } from './types';
+
+export const getTagData = (t: TFunction) => ({
+  [NavTagName.Soon]: {
+    text: t('Navigation.Tag.Soon'),
   },
-  ['inProgress']: {
-    text: 'В работе',
+  [NavTagName.InProgress]: {
+    text: t('Navigation.Tag.InProgress'),
   },
-};
+});
