@@ -1,26 +1,26 @@
 {
   "telegram":{
-     "title":"Телеграм",
+     "title":"Contact.Telegram",
      "link":"https://t.me/yakalinkin"
   },
   "instagram":{
-     "title":"Инстаграм",
+     "title":"Contact.Instagram",
      "link":"https://instagram.com/yakalinkin"
   },
   "vk":{
-     "title":"ВКонтакте",
+     "title":"Contact.VKontakte",
      "link":"https://vk.com/yakalinkin"
   },
   "github":{
-     "title":"Гитхаб",
+     "title":"Contact.GitHub",
      "link":"https://github.com/yakalinkin"
   },
   "linkedin":{
-     "title":"Линкедин",
+     "title":"Contact.LinkedIn",
      "link":"https://linkedin.com/in/yakalinkin"
   },
   "email":{
-     "title":"Почта",
+     "title":"Contact.Email",
      "link":"mailto:yakalinkin.job@gmail.com"
   }
 }

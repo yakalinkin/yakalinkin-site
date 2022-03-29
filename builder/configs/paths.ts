@@ -1,5 +1,5 @@
 import path from 'path';
-import { merge } from 'lodash';
+import merge from 'lodash/merge';
 
 import { Paths } from './types';
 
@@ -12,8 +12,6 @@ const defaultPaths: Partial<Paths> = {
   prodFolder: 'dist',
   assetsFolder: 'public',
   imagesFolder: 'images',
-  documentsFolder: 'documents',
-  faviconsFolder: 'favicons',
   fontsFolder: 'fonts',
   stylesFolder: 'styles',
   scriptsFolder: 'scripts',
@@ -28,11 +26,8 @@ paths.root = {
 };
 
 paths.assets = {
-  favicons: path.join(paths.root.assets, paths.faviconsFolder),
   images: path.join(paths.root.assets, paths.imagesFolder),
   fonts: path.join(paths.root.assets, paths.fontsFolder),
-  scripts: path.join(paths.root.assets, paths.scriptsFolder),
-  documents: path.join(paths.root.assets, paths.documentsFolder),
 };
 
 paths.dev = {
