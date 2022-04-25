@@ -1,5 +1,8 @@
 {
   "imageSrc": "/images/avatar.jpg",
   "imageSrcSet": "/images/avatar@2x.jpg 2x",
-  "downloadButtonLink": "/documents/resume-2022.pdf"
+  "downloadButtonLink": {
+    "ru": "/documents/resume-2022.pdf",
+    "en": "/documents/resume-2022-en.pdf"
+  }
 }

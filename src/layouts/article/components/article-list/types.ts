@@ -7,4 +7,4 @@ export type Props = {
   title?: string;
 }
 
-export type ItemElement = string | ReactElement;
+export type ItemElement = string | [string, string] | ReactElement;
