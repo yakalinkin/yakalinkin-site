@@ -41,24 +41,24 @@
 
 
   "Resume.Title": "My name is Yaroslav.",
-  "Resume.AvatarCaption": "The photo is outdated, it's time to update it",
-  "Resume.Lead": "I am a web developer at ScienceSoft. I'm deaf, but it doesn't bother me much. I can communicate both in Russian sign language and voice.",
-  "Resume.About": "I started programming in 2011. I tried different directions, but chose frontend — everything related to web development, websites and everything that surrounds them. During this time, I have gained a lot of experience in programming and communicating with people. Now I am developing applications, creating a website, helping to improve the design, and also giving advice on self-development. I strive to create something useful and necessary for people.\nIn addition to work, I like to draw, do things with math and learn new technologies. I also love great coffee and minimalism.",
+  "Resume.AvatarCaption": "That's me, 5 years ago",
+  "Resume.Lead": "I am a web developer at ScienceSoft. I'm deaf, but it doesn't really bother me. I can communicate both in Russian sign language and by voice.",
+  "Resume.About": "I started programming in 2011. I tried different directions, but chose the frontend — everything related to web development, sites and everything that surrounds them. During this time, I have gained a lot of experience in programming and communicating with people. Now I develop apps, create a website, help improve the design, and also give self-development tips. I strive to create something useful and necessary for people.\nBesides work, I like drawing, doing things with math and learning new technologies. I also enjoy coffee and minimalism.",
   "Resume.Quote": "If you want to feel human, <1>conquer<1/></1> your ailment.",
   "Resume.PresentTense.Title": "Working",
   "Resume.PresentTense.List": [
-    "As a web developer at ScienceSoft since February 2018"
+    ["Web developer at ScienceSoft", "Feb 2018"]
   ],
   "Resume.PastTense.Title": "Worked",
   "Resume.PastTense.List": [
-    "As a WordPress developer in a web studio from October 2016 to January 2018",
-    "As a frontend developer at Xiveti in Canada from March 2017 to April"
+    ["WordPress developer in a web studio", "Oct 2016 – Jan 2018"],
+    ["Frontend developer at Xiveti in Canada", "Mar – Apr 2017"]
   ],
   "Resume.Education.Title": "Studied",
   "Resume.Education.List": [
-    "2020-21 · Middle Web Developer, Yandex.Practicum",
-    "2016-17 · Full Stack JavaScript, Treehouse",
-    "2011-16 · Mathematics and Information Technology, BSU"
+    ["Middle Web Developer, Yandex.Practicum", "2020–21"],
+    ["Full Stack JavaScript, Treehouse", "2016–17"],
+    ["Mathematics and Information Technology, BSU", "2011–16"]
   ],
   "Resume.Skills.Title": "Skills",
   "Resume.Skills.List": [{
@@ -111,7 +111,7 @@
       "Sketch"
     ]
   }],
-  "Resume.Contacts.Title": "How to contact me",
+  "Resume.Contacts.Title": "Contact",
   "Resume.Contacts.Info": "You can message me on Telegram at <tme>@yakalinkin</tme> or email me at <mailto>yakalinkin.job@gmail.com</mailto>",
   "Resume.DownloadButton": "Download resume"
 }
