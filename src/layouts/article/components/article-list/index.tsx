@@ -20,8 +20,17 @@ export const ArticleList: FC<Props>= ({ list, title, type = ArticleListType.Unor
     if(item?.title) {
       return (
         <li key={index} className={style.articleListItem}>
-          <span>{ item.title }</span>
+          <span className={style.articleListText}>{ item.title }</span>
           { item.tags && <Tags tags={item.tags} /> }
+        </li>
+      );
+    }
+
+    if (Array.isArray(item)) {
+      return (
+        <li key={index} className={style.articleListItem}>
+          <span className={style.articleListText}>{ item[0] }</span>
+          { item[1] && <span className={style.articleListSubText}>{ item[1] }</span> }
         </li>
       );
     }
