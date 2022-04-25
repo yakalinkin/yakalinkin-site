@@ -40,6 +40,8 @@ import DATA from './data.json';
 export const Resume = () => {
   const { t, i18n } = useTranslation();
 
+  const downloadButtonLink = DATA.downloadButtonLink[i18n.language];
+
   return (
     <>
       <Helmet>
@@ -113,13 +115,12 @@ export const Resume = () => {
         </ArticleParagraph>
 
         {
-          // :TODO: Add a resume in English
-          i18n.language === 'ru' &&
+          downloadButtonLink &&
           <div className={cn(style.lineGroup, 'mt-4xl')}>
             <Button
               className={style.downloadButton}
               text={t('Resume.DownloadButton')}
-              href={DATA.downloadButtonLink}
+              href={downloadButtonLink}
               icon={<DocumentPdfSvg />}
               download
             />
