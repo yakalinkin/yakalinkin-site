@@ -7,7 +7,7 @@ const builderConfig: Configs = {
   config: {
     env: {
       SITE_TITLE: 'yakalinkin',
-      GOOGLE_FONTS_URL: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=optional',
+      GOOGLE_FONTS_URL: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     },
     webpack: {
       entry: {
