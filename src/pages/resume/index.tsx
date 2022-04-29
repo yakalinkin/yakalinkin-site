@@ -69,7 +69,10 @@ export const Resume = () => {
           ))
         }
 
-        <ArticleQuote>
+        <ArticleQuote
+          author={t('Resume.Quote.Author')}
+          info={t('Resume.Quote.Info')}
+        >
           <Trans i18nKey="Resume.Quote">
             null<span className={style.lineGroup} key="line-2">null<Line2Svg className={style.line2} /></span>null
           </Trans>

@@ -54,7 +54,7 @@
   color: color('main', 0.5);
 
   @include media-breakpoint-down(md) {
-    margin-left: spacing('sm');
+    margin-left: spacing('md');
     margin-bottom: spacing('xs');
     max-width: 70%;
   }

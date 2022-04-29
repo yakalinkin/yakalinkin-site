@@ -215,6 +215,23 @@ $type-tokens: (
     )
   ),
 
+  'quote-lg': (
+    font-size: type-size(16),
+    font-weight: $font-weight-semibold,
+    line-height: type-size(18),
+    width: 100%,
+    breakpoints: (
+      'md': (
+        font-size: type-size(14),
+        line-height: type-size(16),
+      ),
+      'xs': (
+        font-size: type-size(9),
+        line-height: type-size(10),
+      )
+    )
+  ),
+
   'body': (
     color: $body-color,
     font-family: $body-family,
