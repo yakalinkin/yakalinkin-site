@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 
-import { replaceObjects } from '@utils/replace.util';
+import { reactReplaceElements, reactReplace } from '@utils/react.util';
 
 import { Button } from '@components/button';
 
@@ -18,7 +18,6 @@ import {
   ArticleAsideGroup,
   ArticleHeader,
   ArticleHeading,
-  ArticleHeadingLevel,
   ArticleLead,
   ArticleList,
   ArticleListType,
@@ -60,61 +59,50 @@ export const Resume = () => {
             <Line1Svg className={style.line1} />
           </ArticleAside>
         </ArticleAsideGroup>
-
-        <ArticleLead>{t('Resume.Lead')}</ArticleLead>
-
-        {
-          t('Resume.About').split('\n').map((paragraph, idx) => (
-            <ArticleParagraph key={idx}>{ paragraph }</ArticleParagraph>
-          ))
-        }
-
+        <ArticleLead>{ t('Resume.Lead') }</ArticleLead>
+        <ArticleParagraph>{ t('Resume.About') }</ArticleParagraph>
         <ArticleQuote
           author={t('Resume.Quote.Author')}
           info={t('Resume.Quote.Info')}
         >
-          <Trans i18nKey="Resume.Quote">
-            null<span className={style.lineGroup} key="line-2">null<Line2Svg className={style.line2} /></span>null
-          </Trans>
+          {
+            reactReplaceElements(t('Resume.Quote'), {
+              span: <span className={style.lineGroup} key="line-2" />,
+              line: <Line2Svg className={style.line2} />,
+            })
+          }
         </ArticleQuote>
-
         <ArticleList
           title={t('Resume.PresentTense.Title')}
           list={t('Resume.PresentTense.List', { returnObjects: true })}
         />
-
         <ArticleList
           title={t('Resume.PastTense.Title')}
           list={t('Resume.PastTense.List', { returnObjects: true })}
         />
-
         <ArticleList
           title={t('Resume.Education.Title')}
           list={t('Resume.Education.List', { returnObjects: true })}
         />
-
         <ArticleList
           title={t('Resume.Skills.Title')}
           list={
-            replaceObjects(
-              t('Resume.Skills.List', { returnObjects: true }),
+            reactReplace(t('Resume.Skills.List', { returnObjects: true }),
               'JavaScript',
               <span key={2} className={style.lineGroup}>JavaScript<Line3Svg className={style.line3} /></span>,
             )
           }
           type={ArticleListType.Ordered}
         />
-
-        <ArticleHeading level={ArticleHeadingLevel.H3}>{t('Resume.Contacts.Title')}</ArticleHeading>
+        <ArticleHeading level="h3">{ t('Resume.Contacts.Title') }</ArticleHeading>
 
         <ArticleParagraph>
-          <Trans
-            i18nKey="Resume.Contacts.Info"
-            components={{
-              tme: <a href={CONTACTS.email.link} target="_blank" rel="noreferrer" />,
+          {
+            reactReplaceElements(t('Resume.Contacts.Info'), {
+              tme: <a href={CONTACTS.telegram.link} target="_blank" rel="noreferrer" />,
               mailto: <a href={CONTACTS.email.link} target="_blank" rel="noreferrer" />,
-            }}
-          />
+            })
+          }
         </ArticleParagraph>
 
         {

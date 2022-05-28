@@ -1,16 +1,18 @@
 import React, { FC } from 'react';
 import cn from 'classnames';
 
+import { Heading } from '@components/heading';
+
 import { Props } from './types';
 import style from './style.module.scss';
 
-export const ArticleHeading: FC<Props> = ({ level = 'h1', children }) => {
-  const headingClassNames = cn(style.articleHeading, {
-    [style[level]]: !!level,
-  });
+export const ArticleHeading: FC<Props> = ({ level = 'h1', className, children }) => {
   return (
-    <p className={headingClassNames}>{ children }</p>
+    <Heading
+      className={cn(style.articleHeading, className)}
+      level={level}
+    >{ children }</Heading>
   );
 };
 
-export * from './consts';
+export * from './types';
