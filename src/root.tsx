@@ -18,18 +18,17 @@ import { Resume } from '@pages/resume';
 import { NotFound } from '@pages/not-found';
 
 import { setHtmlDataset } from '@utils/utils';
-import { googleFontsData } from '@utils/google-fonts.util';
 import { defaultSiteTitle } from '@utils/env.util';
+
+import stylesJson from '@styles/main.scss.json';
 
 import { Path } from './consts';
 
-const googleFonts = googleFontsData();
-
-const Root = () => {
+const fontsData = Object.entries(stylesJson.fonts.typefaces);
   const { ready: i18nIsReady } = useTranslation();
   const [themeStorage] = useLocalStorage<string>('theme');
   const loadingCallback = useCallback(async () => {
-    for (const font of googleFonts) {
+    for (const [_, font] of fontsData) {
       await loadFontGroup(font);
     }
   }, []);

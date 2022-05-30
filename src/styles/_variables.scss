@@ -39,8 +39,12 @@ $z-tokens: map-get($z-tokens) !default;
 // Typography
 //
 
+$fonts: quote-map-keys($fonts);
+$font-path:  map-get($fonts, 'path') !default;
+$font-typefaces:  map-get($fonts, 'typefaces') !default;
+
 // Font family
-$font-family-primary: 'Inter', sans-serif !default;
+$font-family-primary: map-get($font-typefaces, 'primary', 'family'), sans-serif !default;
 
 // Font size
 $font-size: type-size(3) !default;

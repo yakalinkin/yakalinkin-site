@@ -45,7 +45,11 @@ export const getUseItems: UseItems = function ({ config, options = {} }) {
   const cssOptions = { ...options };
 
   return [
-    { loader: MiniCssExtractPlugin.loader },
+    {
+      loader: config.enabled.watcher
+        ? 'style-loader'
+        : MiniCssExtractPlugin.loader,
+    },
     {
       loader: 'css-loader',
       options: {
