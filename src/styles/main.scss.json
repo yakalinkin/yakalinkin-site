@@ -1,5 +1,21 @@
 {
 
+  "fonts": {
+    "path": " '~fonts' ",
+    "typefaces": {
+      "primary": {
+        "name": "inter",
+        "family": "Inter",
+        "variants": [
+          { "weight": 400, "style": "normal" },
+          { "weight": 500, "style": "normal" },
+          { "weight": 600, "style": "normal" },
+          { "weight": 700, "style": "normal" }
+        ]
+      }
+    }
+  },
+
   "colors": {
     "light": {
       "background": "#f5f5f5",

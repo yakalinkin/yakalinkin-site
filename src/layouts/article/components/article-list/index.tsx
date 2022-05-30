@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import cn from 'classnames';
+import { isArray } from 'lodash-es';
 
+import { tp } from '@utils/typograf.util';
 import { Tags } from '@components/tags';
 
 import { ArticleListType } from './consts';
@@ -8,7 +10,7 @@ import { Props } from './types';
 
 import style from './style.module.scss';
 
-import { ArticleHeading, ArticleHeadingLevel } from '../article-heading';
+import { ArticleHeading } from '../article-heading';
 
 export const ArticleList: FC<Props>= ({ list, title, type = ArticleListType.Unordered }) => {
   const articleListClassNames = cn({
@@ -20,27 +22,27 @@ export const ArticleList: FC<Props>= ({ list, title, type = ArticleListType.Unor
     if(item?.title) {
       return (
         <li key={index} className={style.articleListItem}>
-          <span className={style.articleListText}>{ item.title }</span>
+          <span className={style.articleListText}>{ tp.execute(item.title) }</span>
           { item.tags && <Tags tags={item.tags} /> }
         </li>
       );
     }
 
-    if (Array.isArray(item)) {
+    if (isArray(item)) {
       return (
         <li key={index} className={style.articleListItem}>
-          <span className={style.articleListText}>{ item[0] }</span>
-          { item[1] && <span className={style.articleListSubText}>{ item[1] }</span> }
+          <span className={style.articleListText}>{ tp.execute(item[0]) }</span>
+          { item[1] && <span className={style.articleListSubText}>{ tp.execute(item[1]) }</span> }
         </li>
       );
     }
 
-    return <li key={index} className={style.articleListItem}>{ item }</li>;
+    return <li key={index} className={style.articleListItem}>{ tp.execute(item) }</li>;
   });
 
   return (
     <div className={style.articleListContainer}>
-      { title && <ArticleHeading level={ArticleHeadingLevel.H3}>{ title }</ArticleHeading> }
+      { title && <ArticleHeading level="h3">{ title }</ArticleHeading> }
       { React.createElement(type, { className: articleListClassNames }, listItemElms) }
     </div>
   );

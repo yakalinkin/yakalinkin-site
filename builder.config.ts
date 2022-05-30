@@ -7,7 +7,6 @@ const builderConfig: Configs = {
   config: {
     env: {
       SITE_TITLE: 'yakalinkin',
-      GOOGLE_FONTS_URL: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     },
     webpack: {
       entry: {
@@ -33,4 +32,4 @@ const builderConfig: Configs = {
   },
 };
 
-export default builderConfig;
+export default builderConfig as any;

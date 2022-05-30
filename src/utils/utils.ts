@@ -24,6 +24,22 @@ export const isLinkExternal = (url: string) => /^https?:\/\//.test(url);
 
 export const isLinkEmpty = (url: string) => !url || url === '#';
 
+export const isEmpty = (value) => {
+  if (value === null || value === undefined) {
+    return true;
+  }
+
+  if (typeof value === 'string') {
+    return value.trim() === '';
+  }
+
+  if (typeof value === 'object') {
+    return Object.keys(value).length === 0;
+  }
+
+  return false;
+};
+
 export function getHtmlDataset(key: string) {
   if (!key) throw new Error('The "key" value cannot be falsy in HTMLHtmlElement.dataset');
 

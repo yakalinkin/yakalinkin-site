@@ -7,13 +7,6 @@ import { PluginInstance } from './types';
 export const copyPlugin: PluginInstance = function ({ config, paths }) {
   const patterns: Pattern[] = [
 
-    // Fonts
-    {
-      from: `${paths.assets.fonts}/**/*`,
-      to: `${paths.fontsFolder}/[name][ext]`,
-      noErrorOnMissing: true,
-    },
-
     // Images
     {
       from: `${paths.assets.images}/**/*`,
@@ -33,6 +26,7 @@ export const copyPlugin: PluginInstance = function ({ config, paths }) {
         globOptions: {
           ignore: [
             '**/*.html',
+            `${paths.assets.fonts}/**/*`,
             ...patterns.map((pattern: ObjectPattern) => pattern.from),
           ],
         },

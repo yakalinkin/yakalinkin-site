@@ -1,16 +1,65 @@
 @import '~styles/main-utils';
 
 .article-quote {
-  @include generate-type-style('quote');
+  display: flex;
+  flex-direction: column;
 
   width: unset;
 
   margin: spacing('5xl') 0 spacing('7xl');
   margin-left: spacing('neg-3xl');
 
+  font-size: type-size(2);
+  font-weight: $font-weight-normal;
+  line-height: type-size(4);
+
   @include media-breakpoint-down(sm) {
     margin: spacing('4xl') 0 spacing('6xl');
     margin-left: 0;
   }
+}
+.article-quote__row {
+  display: flex;
+  flex-direction: row;
+}
 
+.article-quote__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-quote__sup {
+  position: relative;
+
+  &_show::after {
+    content: '*';
+    display: inline-block;
+    font-size: smaller;
+    width: spacing-em('2xs');
+    margin-right: spacing-em('2xs');
+    transform: translateY(-0.25em);
+  }
+}
+
+.article-quote__title {
+  @include generate-type-style('quote-lg');
+
+  margin: 0;
+  margin-bottom: spacing('3xl');
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: spacing('lg');
+  }
+}
+
+.article-quote__label {
+  color: color('main', 0.5);
+  margin-top: spacing('lg');
+}
+
+.article-quote__author { }
+
+.article-quote__info {
+  margin-top: spacing('2xs');
+  color: color('main', 0.5)
 }
