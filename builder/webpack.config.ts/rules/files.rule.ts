@@ -5,16 +5,12 @@ export const imagesRule: Rule = function ({ paths }) {
     test: /\.(png|jpe?g|gif|ico)$/i,
     exclude: /node_modules/,
     include: [paths.root.assets, paths.root.dev],
-    use: [
-      {
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: paths.imagesFolder,
-          publicPath: `../${paths.imagesFolder}`,
-        },
-      },
-    ],
+    type: 'asset/resource',
+    generator: {
+      filename: '[name][ext]',
+      outputPath: `${paths.fontsFolder}/`,
+      publicPath: `../${paths.fontsFolder}/`,
+    },
   };
 };
 
@@ -24,16 +20,12 @@ export const svgRule: Rule = function ({ paths }) {
     exclude: /node_modules/,
     include: [paths.root.assets, paths.root.dev],
     issuer: { not: [/\.[jt]sx$/] },
-    use: [
-      {
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: paths.imagesFolder,
-          publicPath: `../${paths.imagesFolder}`,
-        },
-      },
-    ],
+    type: 'asset/resource',
+    generator: {
+      filename: '[name][ext]',
+      outputPath: `${paths.fontsFolder}/`,
+      publicPath: `../${paths.fontsFolder}/`,
+    },
   };
 };
 
@@ -42,16 +34,12 @@ export const fontsRule: Rule = function ({ paths }) {
     test: /\.(woff2?)$/i,
     exclude: /node_modules/,
     include: [paths.root.assets, paths.root.dev],
-    use: [
-      {
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: paths.fontsFolder,
-          publicPath: `../${paths.fontsFolder}`,
-        },
-      },
-    ],
+    type: 'asset/resource',
+    generator: {
+      filename: '[name][ext]',
+      outputPath: `${paths.fontsFolder}/`,
+      publicPath: `../${paths.fontsFolder}/`,
+    },
   };
 };
 

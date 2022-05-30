@@ -15,6 +15,12 @@
   }
 }
 
+.text {
+  display: inline-block;
+  color: color('main', 0.5);
+  margin-bottom: spacing('4xl');
+}
+
 .avatar {
   --aside-image-width: calc(var(--aside-image-height) / 1.125);
 }
@@ -43,19 +49,12 @@
 .line-2 {
   @include line;
 
-  height: 82px;
+  height: 1.25em;
+  width: calc(100% + 0.25em);
   left: 50%;
-  bottom: 0;
+  top: 50%;
 
-  transform: translate(-50%, 0);
-
-  @include media-breakpoint-down(md) {
-    height: 65px;
-  }
-
-  @include media-breakpoint-down(xs) {
-    height: 44px;
-  }
+  transform: translate(-50%, -50%);
 }
 
 .line-3 {

@@ -1,5 +1,6 @@
-import { ArticleHeadingLevel } from './consts';
+import { HeadingLevelType } from '@components/heading';
 
 export type Props = {
-  level?: ArticleHeadingLevel;
+  className?: string;
+  level?: HeadingLevelType;
 }

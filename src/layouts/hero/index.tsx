@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
+import { reactReplaceElements } from '@utils/react.util';
 import { Company } from '@components/company';
+import { Heading } from '@components/heading';
 
 import LineSvg from '@svg/line.svg';
 
@@ -13,17 +15,22 @@ export const Hero: FC = () => {
   const { t } = useTranslation();
 
   const greetingText = getGreetingText(t);
+  const title = t('Hero.Title', { greetingText });
 
   return (
     <section className={style.hero}>
 
       <div className={style.heroContainer}>
         <div className={style.heroCaption}>
-          <h1 className="d3">
-            <Trans i18nKey='Hero.Title' shouldUnescape>
-              {{ greetingText }}null<span className="nowrap">null<span className={style.heroUnderline}>null<LineSvg /></span></span>null
-            </Trans>
-          </h1>
+          <Heading level="d3">
+            {
+              reactReplaceElements(title, {
+                nowrap: <span className="nowrap"/>,
+                span: <span className={style.heroUnderline}/>,
+                line: <LineSvg />,
+              })
+            }
+          </Heading>
         </div>
       </div>
 

@@ -39,8 +39,12 @@ $z-tokens: map-get($z-tokens) !default;
 // Typography
 //
 
+$fonts: quote-map-keys($fonts);
+$font-path:  map-get($fonts, 'path') !default;
+$font-typefaces:  map-get($fonts, 'typefaces') !default;
+
 // Font family
-$font-family-primary: 'Inter', sans-serif !default;
+$font-family-primary: map-get($font-typefaces, 'primary', 'family'), sans-serif !default;
 
 // Font size
 $font-size: type-size(3) !default;
@@ -207,6 +211,23 @@ $type-tokens: (
       'md': (
         font-size: type-size(12),
         line-height: type-size(14),
+      ),
+      'xs': (
+        font-size: type-size(9),
+        line-height: type-size(10),
+      )
+    )
+  ),
+
+  'quote-lg': (
+    font-size: type-size(16),
+    font-weight: $font-weight-semibold,
+    line-height: type-size(18),
+    width: 100%,
+    breakpoints: (
+      'md': (
+        font-size: type-size(14),
+        line-height: type-size(16),
       ),
       'xs': (
         font-size: type-size(9),
