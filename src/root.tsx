@@ -24,11 +24,13 @@ import stylesJson from '@styles/main.scss.json';
 
 import { Path } from './consts';
 
-const fontsData = Object.entries(stylesJson.fonts.typefaces);
+const typefaces = Object.entries(stylesJson.fonts.typefaces);
+
+const Root = () => {
   const { ready: i18nIsReady } = useTranslation();
   const [themeStorage] = useLocalStorage<string>('theme');
   const loadingCallback = useCallback(async () => {
-    for (const [_, font] of fontsData) {
+    for (const [_, font] of typefaces) {
       await loadFontGroup(font);
     }
   }, []);
