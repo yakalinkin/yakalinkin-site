@@ -61,10 +61,7 @@ export const Resume = () => {
         </ArticleAsideGroup>
         <ArticleLead>{ t('Resume.Lead') }</ArticleLead>
         <ArticleParagraph>{ t('Resume.About') }</ArticleParagraph>
-        <ArticleQuote
-          author={t('Resume.Quote.Author')}
-          info={t('Resume.Quote.Info')}
-        >
+        <ArticleQuote>
           {
             reactReplaceElements(t('Resume.Quote'), {
               span: <span className={style.lineGroup} key="line-2" />,

@@ -43,9 +43,7 @@
   "Resume.AvatarCaption": "That's me, 5 years ago",
   "Resume.Lead": "I am a web developer at ScienceSoft. I'm deaf, but it doesn't bother me much. I communicate by sign language and by voice.",
   "Resume.About": "I started programming in 2011. I tried different directions, but chose the frontend — everything related to web development, sites and everything around them. During this time, I gained a lot of experience in programming and communicating with people. Now I develop apps, create websites, help improve designs, and also give self-development tips. I strive to create something useful and necessary for people.\nIn my free time, I like to draw, work on math problems, and learn about new technologies. I also enjoy coffee and minimalism.",
-  "Resume.Quote": "I finally have more <span>confidence<line/></span>",
-  "Resume.Quote.Author": "Troy Kotsur",
-  "Resume.Quote.Info": "The first deaf man to win an Oscar in 2022",
+  "Resume.Quote": "I don't believe in the word <span>impossible<line/></span>",
   "Resume.PresentTense.Title": "Working",
   "Resume.PresentTense.List": [
     ["Web developer at ScienceSoft", "Feb 2018"]
